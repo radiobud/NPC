@@ -1,0 +1,193 @@
+<style>
+
+:root {
+--light-color:#9fc;
+--ltbrown: #963;
+--darkbrown:#630;
+--transp-bg:rgba(0, 51, 51, 50%);
+--div-bg:rgba(153, 255, 204, .6);
+--nav-bg:rgba(230, 242, 255, .8);
+}
+
+body {
+background-image: url(https://plus.unsplash.com/premium_photo-1739452120316-77ca202308f9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+background-size:cover;
+}
+
+.petImage{
+content:url(https://u.cubeupload.com/audiobuddy/chomby.png);
+position: absolute;
+bottom: 305px;
+right: 50%;
+width: 200px;
+}
+
+.petpetpet img:first-of-type{
+content:url(https://u.cubeupload.com/audiobuddy/ducky.png);
+position: absolute;
+bottom: 315px;
+right: 40%;
+width: 75px;}
+
+.petStatsBlock {
+background-color: rgba(102, 51, 0, 0);
+/*Must be set to transparent or default overrides it*/
+}
+
+.petlinks, .petbdstats, hr { display: none;}
+#retroTopBar, .navhover, .hdr, #mb, #hdr, .results, .footertext { display:none;}
+
+#center.petpetpet {
+/*position: absolute;*/
+left: 100px;
+top: 350px;
+}
+
+.petLookupContainer {
+border: 0px solid red;
+border-radius: 20px;
+color:var(--light-color);
+background-color: var(--transp-bg);
+padding: 50px;
+margin: 0 50px;
+min-width: 900px;
+max-width: 1200px;
+max-height: 30px;
+overflow:scroll;
+}
+
+.petbelongingscontainer{
+background-color: var(--darkbrown);
+border-left: 10px var(--ltbrown) ridge;
+border-right: 10px var(--ltbrown) ridge;
+border-top: 5px var(--ltbrown) solid;
+border-bottom: 20px var(--ltbrown) solid;
+width: 400px;
+position:fixed;
+bottom:0;
+right:40%;
+z-index: -1;
+box-shadow: 0 -150px 200px rgba(204, 255, 204, 0.3);
+}
+
+.petbelongingscontainer p:first-of-type{
+text-align:center !important;}
+
+
+.sidebar-container{
+position: fixed;
+transform: scale(0.8);
+right: 10px;
+top: 30px;
+max-height: 300px;
+overflow: scroll;
+color: var(--light-color);}
+
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: var(--transp-bg);
+}
+
+.sidebar-container * {color: var(--light-color);}
+
+/*
+.sidebar-section.sm-filler {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarmd.png);
+background-size: 229px auto;}
+
+.sidebar-section.st {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebartop.png);
+background-size: 229px auto;}
+
+.sidebar-section.se {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarbtmfix.png);
+background-size: 229px auto;}
+*/
+
+.petLookupContainer img {
+border-radius: 20px;
+}
+
+p {color:var(--light-color);}
+
+.thanks{
+font-size:.5rem;
+color:var(--light-color);
+}
+
+.bubble {
+background-color:var(--div-bg);
+color:var(--darkbrown);
+border: 2px solid gold;
+border-radius: 20px;
+box-shadow: 5px 5px 20px #630;
+margin: auto;
+padding: 20px;
+text-align: left;
+font-family: monospace;
+font-size: 1.5rem;
+width: 500px;
+}
+
+p.text {
+color:var(--darkbrown);
+font-family: monospace;
+font-size: 1.5rem;
+}
+
+.petpage:hover {display:inline;}
+
+nav {
+display:none;
+position: fixed;
+left: 180px;
+top: 5%;
+background-color:var(--transp-bg);
+padding: 20px;
+border-radius: 30px;
+border: 2px dotted navy;
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav ul a {
+display: block;
+padding: 10px 0;
+margin-left: 0;
+}
+
+
+</style>
+
+<main>
+<!--cut
+<div class="bubble">
+<h3>I'm a forestry researcher!</h3>
+<p class="text">My goal is to study the Medusoid Mycelium and continue reducing its harmful effects. </p>
+<p class="thanks"><i>Background image by Donnie Ray Crisp on Unsplash</i></p>
+</div>
+-->
+
+<div class="contacts">
+<a href="/~Botanist/"><img src="https://i.imgur.com/VMDQjAu.png" width="50px">
+</a><br>
+<span id="petpage" style="display:hidden;">Botanist's Page</span>
+</div>
+<nav>
+<details>
+<summary>Neopia Links</summary>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</details>
+</nav>
+
+</main>

@@ -1,0 +1,304 @@
+<style>
+:root{
+--light-color: lightblue;}
+
+body {
+background-color: black;
+interpolate-size: allow-keywords;
+box-sizing: border-box;
+}
+
+.pettop, .petbelongingscontainer {
+background-color: linen;
+font-family:Garamond;
+}
+
+.petlinks, .petbdstats { display: none;}
+
+.pettop {
+position: relative;
+}
+
+/*
+#center.petpetpet {
+position: absolute;
+right: 40px;
+top: 300px;
+}
+*/
+
+.petLookupContainer {
+background-image: url(https://u.cubeupload.com/audiobuddy/leguin3.png);
+background-size: contain;
+border-top: 4px dashed gray;
+border-radius: 20px;
+box-shadow: 0 5px 10px rgba(179, 179, 255, 0.5);
+color: black;
+font-family: Garamond;
+font-size: 1.2rem;
+background-color: linen;
+padding: 50px;
+margin: 0 200px 0 50px;
+width: 686px;
+z-index: 10;
+position: relative;
+left: 20%;
+}
+
+.petbelongingscontainer{
+position:absolute;
+bottom: -450px;
+left:40%;
+color:gray;}
+
+.petpetpet{display:none;}
+
+#retroTopBar, .navhover, .hdr, #mb, hr, #hdr { display:none;}
+
+.sidebar-container{
+position: absolute;
+right: 10px;
+top: 30px;
+max-height: .8vh;
+overflow: scroll;
+color: var(--light-color);}
+
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: var(--transp-bg);
+color: var(--light-color);
+}
+
+.sidebar-container * {color: var(--light-color);}
+
+#nst_clock{background: black; color:gray;}
+
+.retro_txt_clr{color: black;}
+
+/*
+.sidebar-section.sm-filler {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarmd.png);
+background-size: 229px auto;}
+
+.sidebar-section.st {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebartop.png);
+background-size: 229px auto;}
+
+.sidebar-section.se {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarbtmfix.png);
+background-size: 229px auto;}
+*/
+
+.petLookupContainer img {
+border-radius: 20px;
+}
+
+.petimage{
+content: url("https://u.cubeupload.com/audiobuddy/ogrinleguin.png");
+width: 180px;
+position: relative;
+top: 200px;
+transform: rotateZ(10deg);}
+
+.petStatsBlock {
+background-color: lightgray;
+max-height: 100px;
+overflow-y: scroll;
+overflow-x: hidden;
+scrollbar-width: thin;
+scrollbar-color: black lightgray;
+position: relative;
+left: 100px;
+border: 1px dashed black;
+}
+
+#center{
+font-size:2.5rem;
+position: relative;
+left: 100px;}
+
+#center b{
+background-color:lightgray;border: 2px dashed black;border-radius:10px; padding: 10px;}
+
+a {
+text-decoration: none;
+font-family: monospace;
+color: gray;
+}
+
+a:hover {
+background-color: var(--light-color);
+}
+
+.thanks{
+font-size:.5rem;
+color: rgb(0, 51, 51);
+}
+
+.bubble {
+color: black;
+background-color: lightgray;
+border: 2px dotted lightblue;
+border-radius: 20px;
+box-shadow: 5px 5px 20px gray;
+margin: auto;
+padding: 20px;
+text-align: left;
+font-family: monospace;
+font-size: 1.5rem;
+min-width: 450px;
+max-width: 800px;
+position: relative;
+top: 300px;
+}
+
+p {
+color: black;
+font-family: Garamond serif;
+font-size: 1.5rem;
+}
+
+h3{text-align:center;}
+
+q {
+font-weight: lighter;
+font-family: monospace;
+text-align: right;
+}
+
+b, font {color: black;}
+
+.petpage:hover {
+display:inline;
+}
+
+
+.sidebyside {
+display: flex;
+justify-items: center;
+}
+
+.side--small{
+flex-grow: 1;
+max-width: 20%;
+}
+
+.side--big{
+flex-grow: 4;
+max-width: 50%;
+font-size: 1.5em;
+padding-top: .5em;
+}
+
+nav {
+position: absolute;
+right: -150px;
+top: -350px;
+background-color: rgba(217, 217, 217, .5);
+padding: 20px;
+border-radius: 30px;
+font-family:Garamond;
+border: 2px dotted gray;
+transform: rotateZ(-90deg);
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav ul a {
+display: block;
+padding: 10px 0;
+margin-left: 0;
+color:black;
+}
+
+details::details-content {
+transition: height 1s;
+transition: transform 1s;
+}
+
+details[open]::details-content {
+height: 220px;
+transform: rotateZ(90deg);}
+
+/*
+#happy {
+position: absolute;
+top: -30px;
+right: -40px;
+width: 120px;
+border-radius: 20px;
+box-shadow: 0 5px 10px gray;
+}
+*/
+
+#leguin_photo{
+align-items:center;
+position:fixed;
+left:10px;
+top: 5%;
+z-index: -1;
+}
+
+#happypose {
+width: 80px;
+}
+
+.poem pre{
+max-width:fit-content;
+font-family:Garamond;
+font-size:1.5rem;
+margin:auto;}
+
+</style>
+
+<main>
+<div class="bubble">
+<h3>Ursula K. LeGuin</h3>
+<p class="text">LeGuin was an American author of fantasy and science fiction, among other genres.</p>
+<p>Her novel <i>The Left Hand of Darkness</i> is set on a world with no real gender, and is a story of exploration, culture, authoritarianism, and shared survival. It is one of my favorite books of all time.</p>
+<p>LeGuin writes on the scale of civilizations, cities, villages, and single friendships, and in all her writing, I have found something to hold onto and strive for. I love her.</p>
+<div class="poem">
+<pre>
+<b>Come to Dust</b>
+Spirit, rehearse the journeys of the body
+that are to come, the motions
+of the matter that held you.
+Rise up in the smoke of palo santo.
+Fall to the earth in the falling rain.
+Sink in, sink down to the farthest roots.
+Mount slowly in the rising sap
+to the branches, the crown, the leaf-tips.
+Come down to earth as leaves in autumn
+to lie in the patient rot of winter.
+Rise again in spring’s green fountains.
+Drift in sunlight with the sacred pollen
+to fall in blessing.
+
+                                   All earth’s dust
+has been life, held soul, is holy.
+</pre>
+</div>
+
+<p>(Her petpet will be her cat named Pard, who she blogged about into her 80s, because she was the coolest old lady.) <a href="https://www.ursulakleguin.com/blog" style="font-size:1rem;">You can still read her blog here.</a></p>
+<p><a href="https://www.neh.gov/article/ursula-k-le-guin-was-creator-worlds"><i>Image of LeGuin from National Endowment for the Humanities</i></a></i></p>
+
+<nav>
+<details>
+<summary>Back to Neopia</summary>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</details>
+</nav>
+
+</div>
+
+</main>

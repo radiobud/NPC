@@ -1,0 +1,427 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Combo" rel="stylesheet">
+
+
+<style>
+
+:root{
+    --bg: #264d73; /*a dark blue*/
+    --bgpost: #cce0ff; /*a light blue*/
+    --fcolor: navy;
+    --linkcolor: #cc0066; /*a hot pink*/
+    --border: 3px solid goldenrod;
+    --mainwidth: 600px;
+    --headertext: 2.5rem;
+    --bigtext: 2rem;
+    --medtext: 1.8rem;
+    --normtext: 1.2rem; 
+    --font: "Combo", system-ui;
+}
+
+body{
+ background-color:var(--bg);
+ color:var(--fcolor);
+ font-size: var(--normtext);
+ font-family: var(--font);
+ box-sizing: border-box;
+padding-bottom: 20px;
+}
+
+header{
+font-size: var(--headertext);
+font-family: var(--font);
+text-align: center;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+max-width: 80vw;
+padding: 10px 30px;
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;}
+
+/*Credits and nav links are here.*/
+footer{
+width: var(--mainwidth);
+font-family: "Combo", system-ui;
+border: var(--border);
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;
+display:flex;
+flex-direction:column;
+align-items:center;}
+
+footer p{margin:0;}
+
+footer a{
+text-decoration: none;
+color: var(--linkcolor);}
+
+footer a:hover{font-weight:bold;}
+
+.main{
+display:flex;
+flex-direction:column;
+margin: 1em auto;
+gap:50px;
+justify-content:center;
+align-items:center;
+max-width: var(--mainwidth);
+}
+
+section{
+border: var(--border);
+width: var(--mainwidth);
+display:flex;
+flex-direction:column;
+align-items:center;
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;}
+
+article{
+display:flex;
+flex-direction:column;
+padding: 30px;
+align-items:center;
+}
+
+figure img{width: 550px; margin-bottom:1em;}
+
+figure{text-align:center;
+font-size: var(--normtext);}
+
+/*END OF FIGURE SECTION*/
+
+/*BELOW: fiddly things with header sizes etc*/
+
+h2{font-size: var(--bigtext);}
+
+h1, h3{padding:0; margin: 0;}
+
+h3{font-size:var(--medtext);
+font-family: "brush script MT", cursive;}
+
+/*BELOW: styles for the nav links*/
+
+.nav ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+
+.nav ul a {
+display: block;
+text-decoration: none;
+background-color: var(--bgpost);
+padding: 10px;
+margin: 0;
+}
+
+.nav ul a:hover{
+background-color: var(--bg);
+color: pink;}
+
+/*REMOVE for copy-paste box*/
+.code{
+border: var(--border);
+padding: 0 1em 2em 1em;
+margin: auto;
+width: var(--mainwidth);
+display:flex;
+flex-direction:column;
+align-items:center;
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;}
+
+</style>
+
+<header>
+<h1>Screenshot Gallery</h1>
+</header>
+
+
+<div class="main">
+<section>
+<h2>Section 1: Avatars</h2>
+
+<article>
+<h3>Avatar: Plushie!</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/avatarplushiedance.png">
+    <figcaption>Playing with a plushie with my plushie pet. (Dream pet, too).</figcaption>
+</figure>
+</article>
+
+<article>
+<h3>Avatar: Chia!</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/avatarchiayummy.png">
+    <figcaption>A food chia - I did this by accident, making the William Carlos Williams joke chia. Heh heh.</figcaption>
+</figure>
+</article>
+
+<article>
+<h3>Avatar: Elephante</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/guilavatarpeanuts.png">
+    <figcaption>Fed Bag of Peanuts. Those were so expensive on retail because of this avatar.</figcaption>
+</figure>
+</article>
+
+<article>
+<h3>Avatar: can't read</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/icantreadavatar.png">
+    <figcaption>LMAO at this avatar</figcaption>
+</figure>
+</article>
+
+</section>
+
+<section>
+<h2>Random Events and Dailies</h2>
+
+<article>
+<h3>Fruit Machine</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/fruitmachinefirstwin.png">
+    <figcaption>Wahoo!</figcaption>
+</figure>
+</article>
+</section>
+
+<footer>
+<p>Layout coded by <a href="/userlookup/?user=audiobuddy">audiobuddy</a></p>
+<p>Basic Neo Links:</p>
+<div class="nav">
+<ul>
+<li><a href="/petcentral/">Pet Central</a></li>
+<li><a href="/explore/">Explore</a></li>
+<li><a href="/neoboards/">Boards</a></li>
+<li><a href="/gameroom/">Games</a></li>
+<li><a href="/objects/">Shops</a></li>
+<li><a href="/help/">Help</a></li>
+</ul>
+</div>
+</footer>
+</div>
+
+<div class="code">
+<h2>Get this Code</h2>
+<p>You can use this code for your own screenshot gallery or petpage. You are free to change anything you want about it. Credit is requested (you can leave it in the footer). If you copy-paste the below code, it will not include this section!</p>
+<p>I'll try my best to respond to questions about edits or any troubleshooting. Please message me on discord or NM here.</p>
+<p>Happy coding!</p>
+<h3>-Buddy</h3>
+<textarea class="freecode" rows="15" cols="75">
+<!--BELOW are links to the Google font "Combo". You can switch to a standard web-safe font like Tahoma or Courier. Use quotation marks around your font name if it has spaces.-->
+<!--this is an HTML comment and will not be visible-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Combo" rel="stylesheet">
+
+
+<style>
+
+/*in the root: VARIABLES - change colors, font size here*/
+:root{
+    --bg: #264d73; /*a dark blue*/
+    --bgpost: #cce0ff; /*a light blue*/
+    --fcolor: navy;
+    --linkcolor: #cc0066; /*a hot pink*/
+    --border: 3px solid goldenrod;
+    --mainwidth: 600px;
+/*below are text sizes - search the code for them to find where they are used.
+NOTE: "rem" is default 16px on most browsers. So 1rem=16 px */
+    --headertext: 2.5rem;
+    --bigtext: 2rem;
+    --medtext: 1.8rem;
+    --normtext: 1.2rem; 
+    --font: "Combo", system-ui;
+}
+
+/*below you can see the color and size variables in use.*/
+
+body{
+ background-color:var(--bg);
+ color:var(--fcolor);
+ font-size: var(--normtext);
+ font-family: var(--font);
+ box-sizing: border-box;
+}
+
+header{
+font-size: var(--headertext);
+font-family: var(--font);
+text-align: center;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+max-width: 80vw; /*change to var(--mainwidth); if you want to match the width of the main body*/
+padding: 10px 30px;
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;}
+
+/*Credits and nav links are here.*/
+footer{
+width: var(--mainwidth);
+font-family: "Combo", system-ui;
+border: var(--border);
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;
+display:flex;
+flex-direction:column;
+align-items:center;}
+
+footer p{margin:0;}
+
+footer a{
+text-decoration: none;
+color: var(--linkcolor);}
+
+footer a:hover{font-weight:bold;}
+
+/*MAIN is the container for all sections*/
+.main{
+display:flex;
+flex-direction:column;
+margin: 1em auto;
+gap:50px;
+justify-content:center;
+align-items:center;
+max-width: var(--mainwidth);
+}
+
+section{
+border: var(--border);
+width: var(--mainwidth);
+display:flex;
+flex-direction:column;
+align-items:center;
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;}
+
+article{
+display:flex;
+flex-direction:column;
+padding: 30px;
+align-items:center;
+}
+
+figure img{width: 550px; margin-bottom:1em;}
+
+figure{text-align:center;
+font-size: var(--normtext);}
+
+/*END OF FIGURE SECTION*/
+
+/*BELOW: fiddly things with header sizes etc*/
+
+h2{font-size: var(--bigtext);}
+
+h1, h3{padding:0; margin: 0;}
+
+h3{font-size:var(--medtext);
+font-family: "brush script MT", cursive;}
+
+/*BELOW: styles for the nav links*/
+
+.nav ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+
+.nav ul a {
+display: block;
+text-decoration: none;
+background-color: var(--bgpost);
+padding: 10px;
+margin: 0;
+}
+
+.nav ul a:hover{
+background-color: var(--bg);
+color: pink;}
+
+</style>
+
+<header>
+<h1>Screenshot Gallery</h1>
+</header>
+
+<div class="main">
+<section>
+<h2>Section Title Here</h2>
+
+<!--BELOW: I used the html <figure> to post each screenshot, and give it a built-in caption. If you just want images without captions, you could cut all the figure and figcaption html and just use img-->   
+
+<article>
+<h3>Avatar: Plushie!</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/avatarplushiedance.png">
+    <figcaption>Playing with a plushie with my plushie pet. (Dream pet, too).</figcaption>
+</figure>
+</article>
+
+<article>
+<h3>Title Here</h3>
+<p>Description for your section if you want, here.</p>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/avatarchiayummy.png">
+    <figcaption>Caption Text Here</figcaption>
+</figure>
+</article>
+
+</section>
+
+<section>
+<h2>Section Title Here</h2>
+
+<article>
+<h3>Title Here</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/fruitmachinefirstwin.png">
+    <figcaption>Caption Text Here</figcaption>
+</figure>
+</article>
+</section>
+
+<footer>
+<p>Layout coded by <a href="/userlookup/?user=audiobuddy">audiobuddy</a></p>
+<p>Basic Neo Links:</p>
+<div class="nav">
+<ul>
+<li><a href="/petcentral/">Pet Central</a></li>
+<li><a href="/explore/">Explore</a></li>
+<li><a href="/neoboards/">Boards</a></li>
+<li><a href="/gameroom/">Games</a></li>
+<li><a href="/objects/">Shops</a></li>
+<li><a href="/help/">Help</a></li>
+</ul>
+</div>
+</footer>
+</div>
+</textarea>
+
+</div>
+

@@ -1,0 +1,246 @@
+<style>
+:root{
+--light-color: lightgray;}
+
+body {
+background-color: gray;
+/*background-image: url(https://radiobud.neocities.org/assets/pics/notebook%20paper.png);
+background-repeat:repeat-y;
+background-size:cover;*/
+interpolate-size: allow-keywords;
+}
+
+.pettop, .petbelongingscontainer {
+background-color: linen;
+font-family:Garamond;
+}
+
+.pettop {
+position: relative;
+}
+
+/*
+#center.petpetpet {
+position: absolute;
+right: 40px;
+top: 300px;
+}
+*/
+.petLookupContainer {
+border-top: 4px dashed gray;
+border-radius: 20px;
+box-shadow: 0 5px 10px rgba(179, 179, 255, 0.5);
+color: black;
+font-family: Garamond;
+font-size: 1.2rem;
+background-color: linen;
+padding: 50px;
+margin: 0 200px 0 50px;
+min-width: 500px;
+max-width: 1200px;
+z-index: 10;
+position: relative;
+left: 40%;
+}
+
+#retroTopBar, .navhover, .hdr, #mb, #hdr, hr { display:none;}
+.petlinks, .petbdstats { display: none;}
+
+
+.sidebar-container{
+position: absolute;
+right: 10px;
+top: 30px;
+max-height: .8vh;
+overflow: scroll;
+color: var(--light-color);}
+
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: var(--transp-bg);
+color: var(--light-color);
+}
+
+.sidebar-container * {color: var(--light-color);}
+
+#nst_clock{background: black; color:gray;}
+
+.retro_txt_clr{color: black;}
+
+/*
+.sidebar-section.sm-filler {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarmd.png);
+background-size: 229px auto;}
+
+.sidebar-section.st {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebartop.png);
+background-size: 229px auto;}
+
+.sidebar-section.se {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarbtmfix.png);
+background-size: 229px auto;}
+*/
+
+.petLookupContainer img {
+border-radius: 20px;
+}
+
+.petStatsBlock {
+background-color: linen;
+}
+
+.petImage {
+content: url(https://u.cubeupload.com/audiobuddy/greygrarrl.png);}
+
+#center{font-size:2rem;}
+
+a {
+text-decoration: none;
+font-family: monospace;
+color: gray;
+}
+
+a:hover {
+background-color: rgba(255, 230, 255, .2);
+}
+
+.thanks{
+font-size:.5rem;
+color: rgb(0, 51, 51);
+}
+
+.bubble {
+color: black;
+border: 2px dotted lightblue;
+border-radius: 20px;
+box-shadow: 5px 5px 20px gray;
+margin: auto;
+padding: 20px;
+text-align: left;
+font-family: monospace;
+font-size: 1.5rem;
+min-width: 450px;
+max-width: 800px;
+position: relative;
+}
+
+p {
+color: black;
+font-family: Garamond serif;
+font-size: 1.5rem;
+}
+
+q {
+font-weight: lighter;
+font-family: monospace;
+text-align: right;
+}
+
+b, font {color: black;}
+
+.petpage:hover {
+display:inline;
+}
+
+
+.sidebyside {
+display: flex;
+justify-items: center;
+}
+
+.side--small{
+flex-grow: 1;
+max-width: 20%;
+}
+
+.side--big{
+flex-grow: 4;
+max-width: 50%;
+font-size: 1.5em;
+padding-top: .5em;
+}
+
+nav {
+position: absolute;
+right: -150px;
+top: -350px;
+background-color: rgba(217, 217, 217, .5);
+padding: 20px;
+border-radius: 30px;
+font-family:Garamond;
+border: 2px dotted gray;
+transform: rotateZ(-90deg);
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav ul a {
+display: block;
+padding: 10px 0;
+margin-left: 0;
+}
+
+details::details-content {
+transition: height 1s;
+transition: transform 1s;
+}
+
+details[open]::details-content {
+height: 220px;
+transform: rotateZ(90deg);}
+
+/*
+#happy {
+position: absolute;
+top: -30px;
+right: -40px;
+width: 120px;
+border-radius: 20px;
+box-shadow: 0 5px 10px gray;
+}
+*/
+
+#borges_photo{
+align-items:center;
+position:fixed;
+left:10px;
+top: 5%;
+z-index: -1;
+}
+
+#happypose {
+width: 80px;
+}
+
+</style>
+
+<main>
+<figure id="borges_photo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Jorge_Luis_Borges.jpg" alt="Borges photo in black and white: an elderly man in a suit, with a long face and an expression of thought">
+<figcaption>Jorge Luis Borges</figcaption>
+</figure>
+<div class="bubble">
+<p class="text">Borges was an Argentinian author and one of the greatest influences on magical realism in literature.</p>
+<p>His book <i>Ficciones</i> contains stories about labyrinths, infinite libraries, and supernaturally inescapable obsession that have been an influence on <i>me</i>, too!</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/c/c6/Jorge_Luis_Borges.jpg"><i>Image of Borges from Wikimedia</i></a></i></p>
+
+<nav>
+<details>
+<summary>Back to Neopia</summary>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</details>
+</nav>
+
+</div>
+
+</main>

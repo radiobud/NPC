@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<head>
+<style>
+body {
+/*
+background-color: rgb(255, 230, 255);
+*/
+background-image: url("https://radiobud.neocities.org/assets/pics/notebook%20paper.png");
+background-repeat: repeat;
+color: navy;
+font-family: monospace;
+font-size: 1rem;
+box-sizing: border-box;
+}
+
+/*Trying to make the whole page work with flexbox*/
+.flex-container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+
+/*General Body with icons*/
+.main--wrapper {
+flex-grow: 6;
+max-width: 60vw;
+background-color: rgb(255, 230, 255);
+border: 3px dotted hotpink;
+border-radius: 30px;
+margin-top: 50px;
+text-align: center;
+padding: 50px 100px 100px 100px;
+position: relative;
+}
+
+.intro {
+margin: auto;
+max-width: 60%;
+padding: 20px;
+border: 1px dotted navy;
+box-shadow: 0 5px 10px rgba(153, 153, 255, .5);
+}
+
+/*speech bubble about cloud*/
+.brag {
+position: absolute;
+right: -120px;
+top: 50px;
+width: 130px;
+background-color: rgba(230, 242, 255, .4);
+border: 1px dotted navy;
+border-radius: 40px;
+box-shadow: 0 5px 10px rgba(153, 153, 255, .5);
+transform: rotateZ(20deg);
+font-size: .8rem;
+padding: 10px;
+}
+
+a {
+text-decoration: none;
+font-weight: bold;
+color: navy;
+}
+
+a:hover {
+background-color: lightblue;
+font-size: 1.2em;
+}
+
+/*makes icons and captions into units I can mess with*/
+.icon--wrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+figure, figcaption {
+font-size: .8rem;
+align-items: center;
+max-width: 60px;
+}
+
+figure img {
+max-width: 50px;
+}
+
+/*The only ordered list is the how-to instructions for now*/
+ol {
+text-align: left;
+}
+
+h3 {margin: 0;}
+
+.sidebyside {
+display: flex;
+justify-items: center;
+}
+
+.side--small{
+flex-grow: 1;
+max-width: 20%;
+}
+
+.side--big{
+flex-grow: 4;
+max-width: 80%;
+}
+
+/*divs that hold clouds*/
+.cloud--container{
+position: relative;
+margin-top: 40px;
+/* border: 2px solid red; */
+/*box-shadow: 0 5px 10px rgba(153, 153, 255, .5); */
+}
+
+/*container for icons*/
+.text {
+position: absolute;
+left: 5%;
+bottom: 10px;
+z-index: 10;
+background-color: white;
+border-radius: 50%;
+}
+
+.text-mini {
+position: absolute;
+left: 20%;
+bottom: 10%;
+z-index: 10;
+}
+
+.cloud {
+background-color: white;
+width: 600px;
+height: 240px;
+border-radius: 120px;
+position: relative;
+z-index: 9;
+box-shadow: 0 5px 20px rgba(153, 153, 255, .4);
+}
+
+.cloud::before, .cloud::after {
+content: "";
+background: white;
+border-radius: 50%;
+position: absolute;
+}
+
+.cloud::before {
+width: 240px;
+height: 200px;
+top: -30px;
+left: 40px;
+}
+
+.cloud::after{
+width: 320px;
+height: 240px;
+top: -40px;
+right: 90px;
+}
+
+.cloud-mini {
+background-color: white;
+width: 300px;
+height: 120px;
+border-radius: 60px;
+position: relative;
+z-index: 9;
+box-shadow: 0 5px 20px rgba(153, 153, 255, .4);
+}
+
+.cloud-mini::before, .cloud-mini::after {
+content: "";
+background: white;
+border-radius: 50%;
+position: absolute;
+}
+
+.cloud-mini::before {
+width: 120px;
+height: 100px;
+top: -30px;
+left: 30px;
+}
+
+.cloud-mini::after{
+width: 160px;
+height: 120px;
+top: -40px;
+right: 40px;
+}
+
+.cloud-med{
+background-color: white;
+width: 450px;
+height: 200px;
+border-radius: 200px;
+position: relative;
+z-index: 9;
+box-shadow: 0 5px 20px rgba(153, 153, 255, .4);
+}
+
+.cloud-med::before, .cloud-med::after {
+content: "";
+background: white;
+border-radius: 50%;
+position: absolute;
+}
+
+.cloud-med::before {
+width: 200px;
+height: 100px;
+top: -30px;
+left: 30px;
+}
+
+.cloud-med::after{
+width: 300px;
+height: 200px;
+top: -40px;
+right: 40px;
+}
+
+/*how-to info*/
+.sidebar {
+max-width: 60vw;
+background-color: rgb(255, 230, 255);
+border: 3px dotted hotpink;
+border-radius: 30px;
+margin-top: 50px;
+text-align: center;
+padding: 20px;
+position: relative;
+}
+
+.sidebar ol {
+padding: 20px;
+margin: 0;
+line-height: 1.5;
+}
+
+
+ol li:hover {
+background-color: lightblue;
+}
+
+#ex-screenshot {
+width: 120px;
+}
+
+#cirrus {
+animation-name: float;
+animation-duration: 5s;
+animation-timing-function: ease-in-out;
+animation-delay: -.5s;
+animation-iteration-count: infinite;
+filter: dropShadow (0 5px 10px navy);
+}
+
+#cirrus--box {
+position: absolute;
+right: 10px;
+top: -5px;
+}
+
+#cirrus-shadow {
+background-color: rgba(153, 153, 255, .5);
+height: 15px;
+width: 100px;
+border-radius: 50%;
+box-shadow: 0 0 10px rgb(153, 153, 255);
+animation-name: shadow;
+animation-duration: 5s;
+animation-timing-function: ease-in-out;
+animation-delay: -.5s;
+animation-iteration-count: infinite;
+}
+
+@keyframes shadow {
+0% { transform: scale(.25);}
+50% { transform: scale(.6);}
+100% { transform: scale(.25);}
+}
+
+#cirrus::after {
+content: "";
+position: absolute;
+bottom: -30px;
+width: 100px;
+height: 10px;
+background-color: grey;
+border-radius: 10%;
+box-shadow: 0 0 10px grey;
+}
+
+@keyframes float {
+0% { transform: translateY(0);}
+50% { transform: translateY(-20px);}
+100% { transform: translateY(0);}
+}
+
+#frankie {
+position: absolute;
+bottom: -10px;
+left: -10px;
+transform: rotateZ(-20deg);
+}
+
+#frankie:hover{
+background-color: hotpink;
+}
+
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+
+<div class="main--wrapper">
+<div id="cirrus--box">
+<img id="cirrus" src="https://u.cubeupload.com/audiobuddy/cirrus.png" alt="Cirrus petpet">
+<div id="cirrus-shadow">
+</div>
+</div>
+<div class="brag">
+<p>Animating this shadow in CSS was secretly the most fun part of this page! :)</p>
+</div>
+
+<h1>Icons for the Extra-Lazy</h1>
+<h2>Personalize your quick links with pretty pictures!</h2> 
+<section class="intro">
+<p>To use the icons, right-click and select 'copy link address'. For more detailed explanations, <a href="#howto">jump to the how-to section.</a></p>
+<p>If you have suggestions or requests for additional icons (or alternate images) please <a href="https://neopetsclassic.com/neomessages/sendmessage/?username=audiobuddy">contact me</a>. I'm having fun making these! </p>
+<p>All of these images are transparent!</p>
+</section>
+<br>
+<br>
+<div class="cloud--container">
+<div class="cloud">
+<div class="text">
+<h3>Common Locations</h3>
+<div class="icon--wrapper">
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/stock.png">
+<figcaption>Shop Stock</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/GuildHQ.png">
+<figcaption>Guild Home</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/bottlecap.png">
+<figcaption>Grinder Prizes</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/randomcode.png">
+<figcaption>Lookup Editor</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/warftrophy.png">
+<figcaption>Trophies</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/carnival.png">
+<figcaption>Carnival</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/repair.png">
+<figcaption>Repair shop</figcaption>
+</figure>
+
+</div> <!--*close icon--wrapper-->
+</div> <!--close text-->
+</div> <!--close cloud-->
+</div> <!--close cloud--container-->
+<br>
+<br>
+<div class="cloud--container" style="left: 50%;">
+<div class="cloud-mini">
+<div class="text-mini">
+<h3>Miscellaneous</h3>
+<div class="icon--wrapper">
+<figure>
+<img src="https://neopetsclassic.com/images/avatars/kadoatery.gif">
+<figcaption>Fave NeoBoard!</figcaption>
+</figure>
+</div></div></div>
+</div>
+
+<div class="cloud--container" style="margin-left: 30%;">
+<div class="cloud-med">
+<div class="text-mini">
+<h3>Games</h3>
+<div class="icon--wrapper">
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/NQ.png">
+<figcaption>NeoQuest (Plushie)</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/NQcompass.png">
+<figcaption>NeoQuest (Compass)</figcaption>
+</figure>
+</div></div></div> 
+</div> 
+
+<div class="cloud--container" style="left: 54%;">
+<div class="cloud-mini">
+<div class="text-mini">
+<h3 style="margin-bottom: 0;">Personal Fun</h3>
+<div class="icon--wrapper">
+<figure style="margin-top:4px;">
+<img src="https://u.cubeupload.com/audiobuddy/tamanotchi.png">
+<figcaption style="font-size: .8em;">My lookup code ^^;</figcaption>
+</figure>
+
+</div> <!--*close icon--wrapper-->
+</div> <!--close text-->
+</div> <!--close cloud-->
+</div> <!--close cloud--container-->
+
+</div> <!--*close main--wrapper-->
+
+<aside>
+<div class="sidebar">
+<h2 id="howto">How to Use</h2>
+<p>To customize your sidebar with these icons, follow these steps:</p>
+<div class="sidebyside">
+<div class="side--big">
+<ol>
+<li>Copy the direct URL to an image. <i>(Right-click the image, then 'copy link address'.)</i></li>
+<li>Go to your <a href="https://neopetsclassic.com/activities_manager/">"Customise"</a> page (the link is also at the top of your right-hand sidebar on any normal NPC page.)</li>
+<li>Under "Quick Links," scroll to the bottom to add your own.</li>
+<li>For <b>Icon</b>, select <b>Custom Icon URL.</b></li>
+<li>Paste in the URL you copied.</li>
+<li>Make sure you grab the URL to whatever page on NPC you're trying to link to, too!</li>
+<li>Once you title the link and save, you should see the mini-icon appear under your Quick Links!</li>
+</ol>
+</div>
+<div class="side--small">
+<img id="ex-screenshot" src="https://u.cubeupload.com/audiobuddy/QLexample.png" alt="screenshot of Neopets Classic sidebar Quick Links, including 5 custom icons.">
+<i>Example of the icons in action</i>
+</div>
+</div>
+<br>
+<p class="intro">These icons were all made using remove.bg, then saved on cubeupload. Let me know if you have icon suggestions!</p>
+
+</div>
+</aside>
+
+</div> <!--*close flex--container-->
+
+</body>
+
+</html>

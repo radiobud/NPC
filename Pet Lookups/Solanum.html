@@ -1,0 +1,127 @@
+<style>
+
+:root{
+--light: rgba(255,255,255, 0.6);
+--transp: rgba(0,0,0,0);}
+
+body{background-color: black;}
+
+/*
+.petlookupcontainer{
+background-image: url("https://static.wikia.nocookie.net/outerwilds_gamepedia/images/4/4e/Nomai_Sun_Station_decal.png/revision/latest/scale-to-width-down/1000?cb=20210627222000");
+background-size: contain;
+background-repeat: no-repeat;
+width: 90vw;}
+*/
+
+.petlookupcontainer{
+margin: auto;}
+
+#retroTopBar, .navhover, .hdr, #mb, hr, #hdr, .petlinks, .petBDstats { display:none;}
+
+.petbelongingscontainer{
+background-image: url("https://dl.dropboxusercontent.com/scl/fi/81f3vm2zaci6y9o34gvck/quantum-map.png?rlkey=2ghlau6w37il2vrrn64dze9xt&e=1&st=506xngn7");
+background-size:cover;
+width:600px;
+height: 300px;}
+
+.sidebar-container{
+position: absolute;
+right: 10px;
+top: 30px;
+max-height: .8vh;
+overflow: scroll;
+color: rgba(255,255,255, 0.6);}
+
+.petStatsblock{
+position: absolute;
+top: 30px;
+right: 200px;
+padding: 20px;
+color: black;
+border-radius:50%;
+background: radial-gradient(
+    circle,
+    rgba(0,0,0,0) 0%,
+    rgba(255,255,255,.5) 80%,
+    rgba(0,0,0,.95) 100%
+  );}
+
+.petstatsblock::before{
+content: "";
+position: absolute;
+top:0;
+left:0;
+background:black;
+transition: background 1s ease;
+z-index: 3;}
+
+.petstatsblock::before:hover{
+background:rgba(0,0,0,0);}
+
+.petpetpet{
+border-radius:50%;}
+
+.petpetpet::before{
+background: rgba(0,0,0,1);
+position: relative;
+z-index:2;
+transition: 1s ease;}
+
+.petpetpet::before:hover{
+background: rgba(0,0,0,0);}
+
+/*animating the area*/
+.petimage {
+animation-name: float;
+animation-duration: 5s;
+animation-timing-function: ease-in-out;
+animation-delay: -.5s;
+animation-iteration-count: infinite;
+filter: dropShadow (0 5px 10px rgb(146, 135, 135));
+}
+
+@keyframes float {
+0% { transform: translateY(0);}
+50% { transform: translateY(-20px);}
+100% { transform: translateY(0);}
+}
+
+
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: var(--transp);
+color: var(--light);
+}
+
+.sidebar-container * {color: var(--light);}
+
+#nst_clock{background: black; color:gray;}
+
+.retro_txt_clr{color: black;}
+
+
+p{
+font-family:monospace;
+font-size:.5rem;
+color:green;}
+
+.petimage{
+position:relative;
+top: 200px;
+border-radius:50%;}
+
+.petimage img{
+border-radius:50%;}
+
+</style>
+
+
+<img src="https://static.wikia.nocookie.net/outerwilds_gamepedia/images/4/4e/Nomai_Sun_Station_decal.png/revision/latest/scale-to-width-down/1000?cb=20210627222000" alt="drawing of nomai from Outer Wilds, a goat-like being, holding a scale" width="1000px">
+<audio controls>
+  <source src="https://dl.dropboxusercontent.com/scl/fi/3wshoobe9enhrk2yb6564/16.-Nomai-Ruins.mp3?rlkey=k9srjrfkspecq3t18jds4x005&e=1&st=90bk0kxw" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<p>
+Image of Nomai from Outer Wilds Wiki</p>

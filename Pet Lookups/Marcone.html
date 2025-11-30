@@ -1,0 +1,137 @@
+<style>
+
+:root{
+--light: lavender;
+--purple: rgb(59, 45, 83);
+--ltpurple: rgb(176, 167, 190);}
+
+body{
+background-color: var(--purple);
+overflow:scroll;}
+
+.petimage{
+content:url("https://u.cubeupload.com/audiobuddy/marcone.png");
+position: relative;
+z-index: 3;}
+
+.pettop{
+margin-top: 20vh;
+margin-left: 20vh;
+position: fixed;}
+
+.petstatsblock font{color:black;}
+
+.pettop, .petstatsblock{background-color: transparent;
+color: var(--ltpurple);
+font-family: Garamond;
+font-size: 1.3rem;}
+
+.petstatsblock{font-size:.8rem;}
+
+/*
+.smoke{
+height:240vh;
+width:2000px;
+overflow:hidden;
+background-image: linear-gradient(to bottom, rgba(37, 34, 42, 1), rgba(37, 34, 42, 0));
+position: relative;
+z-index: 6;}
+*/
+
+.cover{
+height:240vh;
+width:2000px;
+overflow: hidden;
+background-image: linear-gradient(to bottom, rgba(59, 45, 83, 1), rgba(59, 45, 83, 0) 80%, rgba(59, 45, 83, 1));
+position: relative;
+z-index: 4;}
+
+/* LIGHT FOG EFFECT
+.cover2{
+height:200vh;
+width:1800px;
+overflow-x: hidden;
+background-image: linear-gradient(to bottom, rgba(176, 167, 190, 0), rgba(176, 167, 190, 1), rgba(176, 167, 190, 0));
+position: relative;
+z-index: 2;}
+*/
+
+.petlinks, .petbdstats { display: none;}
+
+#retroTopBar, .navhover, .hdr, #mb, hr, .sidebar-container, .footertext, .results { display:none;}
+
+/*
+#center {
+position: absolute;
+top: 20px;
+font-size: 2rem;
+z-index: 5;}
+*/
+
+/* BIG BG TEXT
+.petlookupcontainer #center{
+position: fixed;
+top: 50vh;
+left: 20vh;
+font-size: 5rem;
+font-family: Garamond;}
+*/
+
+.petlookupcontainer #center{
+order:1;
+position: relative;
+top: 190vh;
+left: 20vh;
+font-size: 5rem;
+font-family: Garamond;}
+
+.petbelongingscontainer{
+position: absolute;
+z-indez:1;
+left: 200px;
+}
+
+.petbelongingscontainer p, .petbelongingscontainer #text{display:none;}
+
+.petbelongingscontainer img{
+width: 82px;
+border: none;
+content: url("https://u.cubeupload.com/audiobuddy/coinmarcone.png");}
+
+.petbelongingscontainer{order:2;}
+.pettop{order:3;}
+.cover{order:4;}
+
+/*
+.dresden{
+position: relative;
+top: 240vh;
+left: 40vh;
+font-size: 4rem;
+font-family: Garamond;}*/
+
+/*SIDEBAR
+.sidebar-container{
+position: absolute;
+right: 10px;
+top: 30px;
+max-height: .8vh;
+overflow: scroll;
+color: var(--light);}
+*/
+
+/*SIDEBAR transparency
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: var(--transp-bg);
+color: var(--light);
+}
+.sidebar-container * {color: var(--light-color);}
+*/
+
+
+</style>
+
+
+<div class="smoke"></div>
+<div class="cover"></div>

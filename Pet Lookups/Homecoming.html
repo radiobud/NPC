@@ -1,0 +1,78 @@
+<style>
+
+/*#retro_body, #content_td {width:100%;}
+.content{width:100vw;}
+#default_body{width:100%;}*/
+#content_td {min-width:100vw;}
+
+#default_body table:first-of-type{
+width:100%;}
+
+.petLookupContainer {
+border-top: 4px dashed gray;
+border-radius: 20px;
+box-shadow: 0 5px 10px rgba(179, 179, 255, 0.5);
+color: black;
+font-family: Garamond;
+font-size: 1.2rem;
+padding: 50px;
+margin-left:50%;
+min-width: 500px;
+max-width: 1200px;
+z-index: 10;
+position: relative;
+}
+
+.petimage{
+content:url(https://neopetsclassic.com/images/pets/Gnorbu/gnorbu_angel_baby.gif);}
+
+.petstatsblock{background-color: rgba(0,0,0,0);font-size:0.8rem;}
+
+#retroTopBar, .navhover, .hdr, #mb, #hdr, hr { display:none;}
+.petlinks, .petbdstats { display: none;}
+.footertext{position:fixed; bottom:0; transform:scale(0.5);}
+
+img{border:none;}
+
+.sidebar-container{
+position: absolute;
+right: 10px;
+top: 30px;
+color: black;}
+
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: rgba(0,0,0,0);
+color: #476685;
+}
+
+.sidebar-section.st{
+max-height: 200px;
+overflow: scroll;}
+
+.sidebar-container * {color: black;}
+
+.special{font-weight:bold;
+color: #476685;}
+
+/*animating the area*/
+.petimage {
+animation-name: float;
+animation-duration: 5s;
+animation-timing-function: ease-in-out;
+animation-delay: -.5s;
+animation-iteration-count: infinite;
+filter: dropShadow (0 5px 10px rgb(146, 135, 135));
+}
+
+@keyframes float {
+0% { transform: translateY(0);}
+50% { transform: translateY(-20px);}
+100% { transform: translateY(0);}
+}
+
+
+
+</style>
+
+<h1>Welcome <span class="special">home.</span></h1>

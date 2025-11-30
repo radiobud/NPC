@@ -1,0 +1,146 @@
+<style>
+body {box-sizing: border-box;}
+
+.notes {
+display: grid;
+display: none;
+grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr)); 
+gap: 30px;
+padding: 30px;
+margin: 0 10px;
+border: 2px solid red;
+}
+
+.temporary {
+max-width: 300px;
+margin: auto;
+}
+
+article{
+border: 2px dotted navy;
+padding: 20px;
+}
+
+aside {
+border: 1px solid hotpink;
+box-shadow: 0 3px 10px rgba(240, 10, 80, .2);
+border-radius: 5px;
+max-width: min(300px, 80%);
+margin: auto;
+padding: 1rem;
+}
+
+blockquote {
+background-color: rgb(0, 38, 77);
+color: white;
+padding: 1em;
+max-width: 350px;
+}
+
+textarea {
+width: 400px;
+height: 3.5rem;
+}
+
+.pretty, code {
+font-weight: bold;
+color: hotpink;
+}
+
+.brace {color: limegreen;}
+.prop {color: lightblue;}
+.val {color: rgb(230, 115, 0);}
+.el {color: gold;}
+
+
+/*
+@media container (max-width: 800px) 
+section {grid-column: 1 / -1;}
+*/
+
+</style>
+
+
+
+<body>
+<div class="temporary">
+<h1>Styling Tips (DRAFT!!!!)</h1>
+<h2>Hidden in between updates</h2>
+</div>
+
+<div class="notes">
+Page in draft stage.
+Tentative plan: General guide for beginners BY an intermediate/BEGINNER in structuring and styling pet pages and user lookups, working with the flow of NPC.
+<aside>DISCLAIMER: I'm not a web development pro. I'm still learning these things too! I'm making this page because 1) it will give me a place to store things I learn too, and 2) I think it can be valuable to learn alongside each other.
+</aside>
+
+
+<article id="CSS">
+<h2>CSS tips for NPC Styling</h2>
+<ul>
+<li>flex and grid - suggestions for more info!</li>
+<li>Working within NPC code - a work in progress...</li>
+</ul>
+
+<h3>Using selectors to work with site code</h3>
+<p>A user lookup has multiple key objects: the account age/info, the shield, pets, trophies. We can't remove these! But you can, for example, change the background of those areas to your own theme. Or select a specific pet and overlay custom art (that does not mis-represent what it is!).</p>
+<p>Most of the Neo elements use IDs or classes, so you need to select those in your CSS. How to do this?</p>
+<h4>Dev Tools</h4>
+<pre>To add:
+screenshots of inspected elements
+example work-through with my petpage or lookup?
+STILL TO DO:
+positioning? in the tricks section
+
+<p>This is a test of the textarea element.</p>
+<textarea>Style,<test> style.</textarea>
+
+</section>
+
+
+</article>
+
+<article>
+<h2>Debugging - common problems</h2>
+<ul>
+<li>Dev tools and element selector - when in doubt, identify the element</li>
+<li>Font contrast issues: change font, add shape beneath, change bg</li>
+</ul>
+</article>
+
+<article>
+<h2>Fun specifics to try</h2>
+<ul>
+<li>Add an element off in the corner (absolute positioning)</li>
+<li>Pet image overlay</li>
+<li>Style all your links at once</li>
+</ul>
+</article>
+
+<article>
+<h2>Example layouts</h2>
+<p>They'll go here. :) Maybe screenshots, maybe live examples with snippets.</p>
+</article>
+
+<article>
+<h2>"Manifesto"</h2>
+I want this to be a middle ground for people who want to make something of their page, but who don't want to drop in templates - or who can't find templates that work for them.
+When it comes to coding, most people learn by doing - piece by piece, trying out new tools and skills. I (personally!) find it overwhelming to try to review code in one big chunk, unless it's my own. Even then!
+Comments help. Good formatting helps. Frequent checks (debugs) help.
+Dev tools.
+</article>
+
+<article>
+<h2>Thanks and resources for more learning</h2>
+<ul>
+<li>Petrapixel - great neocities site with lots of CSS and JS tutorials</li>
+<li>sadgrl.online - page revamped, but still hosts lots of resources</li>
+<li>daintyduchess - the only premade layout maker I've found on NPC, beautiful pet pages - go there if you don't want to deal with all this.</li>
+<li>Aaron and redrunn - early debug and advice making things work here</li>
+<li>Josh Comeau and Kevin Powell - CSS + passion!</li>
+<li>Josh Comeau - CSS wizard. Here's his <a href="https://www.joshwcomeau.com/css/interactive-guide-to-grid/">interactive guide to CSS grid.</a></li>
+</ul>
+</article>
+
+</div>
+</body>

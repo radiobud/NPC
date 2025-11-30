@@ -1,0 +1,185 @@
+<style>
+body {box-sizing: border-box;}
+
+.notes {
+display: none;
+/*display: grid;*/
+grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr)); 
+gap: 30px;
+padding: 30px;
+margin: 0 10px;
+border: 2px solid red;
+}
+
+
+.temporary {
+max-width: 300px;
+margin: auto;
+}
+
+article{
+border: 2px dotted navy;
+padding: 20px;
+}
+
+aside {
+border: 1px solid hotpink;
+box-shadow: 0 3px 10px rgba(240, 10, 80, .2);
+border-radius: 5px;
+max-width: min(350px, 80%);
+margin: auto;
+padding: 1rem;
+}
+
+
+blockquote {
+background-color: rgb(0, 38, 77);
+color: white;
+padding: 1em;
+max-width: 350px;
+}
+
+textarea {
+width: 400px;
+height: 3.5rem;
+}
+
+.pretty, code {
+font-weight: bold;
+color: hotpink;
+}
+
+.brace {color: limegreen;}
+.prop {color: lightblue;}
+.val {color: rgb(230, 115, 0);}
+.el {color: gold;}
+
+</style>
+<div class="temporary">
+<h1>HTML Basics (DRAFT!!!)</h1>
+<h2>Hidden in between updates</h2>
+</div>
+
+<div class="notes">
+Goal: General guide for beginners BY an intermediate/BEGINNER in structuring and styling pet pages and user lookups, working with the flow of NPC.
+<aside>DISCLAIMER: I'm not a web development pro. I'm still learning these things too! I am making this page because 1) it will give me a place to store things I learn too, and 2) I think it can be valuable to learn alongside each other.
+</aside>
+
+<article>
+<h2>HTML - the body of the page</h2>
+<ul>
+<li>HTML structure basics</li>
+<li>Sitewide HTML rules</li>
+<li>Tutorials</li>
+</ul>
+<section>
+<h3>HTML structure</h3>
+<p>HTML is the structure and content of the page.<p>
+<p>CSS is the decoration and, to some extent, the arrangement of that structure.</p>
+<aside>
+<p>HTML can be semantic or non-semantic.</p>
+<dl>
+<dt><em>semantic</em></dt>
+<dd>tells you what it is: <code>&lt;nav&gt;</code> <code>&lt;header&gt;</code> or <code>&lt;img&gt;</code></dd>
+<dt><em>non-semantic</em></dt>
+<dd>could be anything, and it lets you structure or style the page: <code>&lt;div&gt;</code> <code>&lt;em&gt;</code> or <code>&lt;span&gt;</code></dd>
+</dl>
+<p>There are two important things I'd like to share about semantic HTML: one, that it is helpful for accessibility (screen readers can navigate with it), and two, that it makes your own code easier to read. All those anonymous divs add up!</p>
+</aside>
+<h4>Elements and Tags</h4>
+<p>Any one HTML object is an <em>element</em>. Elements are surrounded (usually) by tags that define them. In the Neoboards, tags use square brackets [like this] but in regular HTML, they use angle brackets &lt;like this&gt;.</p>
+<p>Tags usually surround content to define it - like:</p>
+<blockquote><code>&lt;h1&gt;</code>This is a Header<code>&lt;/h1&gt;</code></blockquote>
+<p>Some elements are <em>empty</em>, meaning they do not require a second closing tag. The most common empty tags are line breaks <code>&lt;br&gt;</code> and images <code>&lt;img src=<q>etc</q>&gt;</code>.
+</p>
+
+<!--NOTE TO SELF: ask mods to check off on rules section before publishing-->
+<h3>Neopets Classic HTML rules</h3>
+<p>Apart from the (hopefully) obvious inappropriate content rule, there are things that NPC requires from all user code: most importantly, what it <em>should not</em> change.</p>
+<dl><dt>From NPC Site Rules #11:</dt>
+<dd>Covering, hiding, or altering any of your user/pet names, stats, colors, or other important information is against the rules. While image overlays are okay, they must leave the things listed above accurately depicted/fully visible to others.</dd>
+</dl>
+<p>I interpret this to mean that styling NPC elements like the sidebar is allowed, as long as you aren't misrepresenting what pet or user someone is looking at, or the details of that page.</p>
+<p>Pet overlays (alternate images replacing your pet's portrait) are popular, and explicitly allowed here, so I interpret the rule to mean that if you use an overlay, you can't change or hide the text that says, for example, <i><b>business boy</b> the <span style="color:gold"><b>yellow</b></span> Gelert</i>. You can make that text look pretty or move it around the page, though.</p>
+<p>I also think it's important to provide the general navigation that someone expects when they open a page, so if I hide the NPC sidebar, I add my own nav that leads to key places on the site. <a href="/petlookup/?pet_name=Guildenstern">Guildenstern's</a> lookup has an example of this alternate nav.</p>
+<h4>What does clean code mean?</h4>
+<p>Clean code in general means properly formatted and ideally readable. But clean code means one more thing to Neopia.</p>
+<p>The box above your page editor announces <q>All HTML and Stylesheets must be recognized as safe by our filter</q>... so what does the filter check for?</p>
+<p>The linked help page gives one overt instruction: elements <code>object</code>, <code>form</code>, and <code>input</code> are banned. If you get an error message, it also mentions that <code>iFrames</code> are banned.</p>
+<dl>
+<dt>iFrames and Object</dt>
+<dd>used to embed things like webpages within webpages</dd>
+<dt>input and form</dt>
+<dd>can be used along with other coding to collect information from users.</dd>
+</dl>
+<p>A note: Can you create a purely decorative button that doesn't send data? Yes - see the one below!</p>
+<button type="button">This does nothing</button>
+<h3>Takeaways: HTML</h3>
+<p><code>&lt;tag&gt;</code> HTML content looks like this. <code>&lt;/tag&gt;</code></p>
+<p>Avoid misrepresenting user info, your pet's stats, or where on the site the page is.</p>
+</section>
+</article>
+
+<article id="CSS">
+<h2>CSS - the style of the page</h2>
+<ul>
+<li>CSS Structure</li>
+<li>Selectors, properties...</li>
+<li>What to do next</li>
+</ul>
+
+<section>
+<h3>CSS Format</h3>
+<p>CSS is placed between HTML <code>style</code> tags, which tell the browser <q><strong>this isn't content, it's layout.</q></strong></p>
+<p>Curly braces surround the actual commands of the CSS. They're like the angle brackets of HTML (to me, anyway). Here is the abstract structure:</p>
+<blockquote><pre>
+<code>&lt;style&gt;</code>
+     <code class="el">element selector</code> <code class="brace">{</code>
+     <code class="prop">property:</code> <code class="val">value;</code>
+     <code class="brace">}</code class="brace">
+<code>&lt;/style&gt;</code></pre>
+</blockquote>
+
+<p>Here is an actual example of CSS:</p>
+<blockquote><pre>
+<code>&lt;style&gt;</code>
+     <code class="el">header</code> <code class="brace">{</code>
+     <code class="prop">background-color:</code> <code class="val">lavender;</code>
+     <code class="brace">}</code>
+<code>&lt;/style&gt;</code></pre>
+</blockquote>
+<p>The <b>element</b> is the HTML being selected for styling, which we'll get to in a second. The <b>property</b> is one quality of the element, like text color or width. Properties do not use spaces. The <b>value</b> is the choice you make about that property (e.g. be blue, or be Verdana font, or fill the screen, etc.) ...The curly braces are usually split that way for readability, but you can keep it all one line.</p>
+<aside>
+<h4>Important!! Semicolons!!</h4>
+<p>A semicolon follows <em>every single line</em> of CSS, including the last one right before the closing brace. If my CSS broke, more than half the time I just dropped a single semicolon somewhere.</p>
+</aside>
+
+<section>
+<h3>Selector Types</h3>
+<p>On any site, you will want to call specific things and tell them to behave differently. On NPC, to re-style existing site elements like the standard sidebar, you need selectors.</p>
+<dl>
+<dt>Element</dt>
+<dd><i>example:</i><b> div {</b>
+<br>Style every element of a generic type, like all divs or all links.
+<br><i>format:</i> Just the type of element, like in the header example above.</dd>
+<dt>Class</dt>
+<dd><i>example:</i><b> .big-news {</b>
+<br>Versatile. You can give HTML elements a class to group them for more efficient styling. I do this most for different types of containers for layout, like sidebars and small blurbs.
+<br><i>format:</i>Start with a period.</dd>
+<dt>ID</dt>
+<dd><i>example:</i><b> #bibliography {</b>
+<br>You can give ONE element its own unique ID and then call ONLY that element to style.
+<br><i>format:</i>Start with a hash symbol (#). Same rules about spaces.</dd>
+</dl>
+<p>One more thing: comments in CSS look like this:</p>
+<pre>/* Here is a comment */</pre>
+The browser ignores comments. You can use comments to remind yourself what a section was for... or, if you're testing code, you can put comment tags around a line to neutralize it without having to cut and re-paste it.</pre>
+<h3>Tutorials</h3>
+<p>If you don't know what tag to use, or something isn't working right, just google the question. Someone else has had the same issue. :)</p>
+<p>W3Schools and mozilla are the main institutions providing references and guides for HTML (and CSS, and many more). I go back to W3Schools all the time when editing.</p>
+<h3>Stacking concepts together</h3>
+<p>BusinessBoy's page has more involved CSS tips, including how to work around NPC code and some common tricks.</p>
+<a href="#CSS">Ready to style it up? :)</a>
+</section>
+</article>
+</div>
