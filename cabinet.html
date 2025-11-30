@@ -1,0 +1,135 @@
+<style>
+    body{
+        box-sizing:border-box;
+        background-color:linen;
+    }
+
+    .cabinet{
+        background-color:rgb(119, 83, 49);
+        display:grid;
+        max-width: 900 px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content:center;
+        gap: 50px;
+        border: 2px solid black;
+        padding: 30px;
+        overflow: scroll;
+    }
+
+    .box{
+        width: 200px;
+        height: 300px;
+        border: 2px solid hotpink;
+        background-color: rgb(172, 122, 73);
+        text-align: center;
+        padding: 10px;
+        position:relative;
+        z-index: 1;
+    }
+
+    .box-door{
+        background-color: rgb(119, 83, 49);
+        width: 200px;
+        height: 300px;
+        position: absolute;
+        padding: none;
+        margin: none;
+    }
+
+    .box-door[open]{
+        background:none;
+        color: rgba(0,0,0,0);
+        /* display:none; */
+        z-index:-1;
+    }
+
+    /* summary{
+        background-color:rgb(172, 122, 73)
+    } */
+
+    summary{
+       list-style-type:none;
+       /* background-color: lavender; */
+    }
+
+    h1{
+        color:goldenrod;
+        font-size:4em;
+        line-height:0%;
+    }
+
+    .lining{
+        border: 4px inset goldenrod;
+        height: 120px;
+        width: 150px;
+        margin:auto;
+    }
+
+    .space{
+        height:30px;
+        text-align:right;
+    }
+
+    .space h1{
+        line-height:0%;
+        margin-top:0;
+    }
+
+    /* .box::before{
+        content:"";
+        background-color: rgb(119, 83, 49);
+        display: block;
+        position: absolute;
+        z-index: 2;
+        width: 200px;
+        height: 300px;
+    }
+
+    .box::before:active{
+        display:none;
+    } */
+</style>
+
+<div class="cabinet">
+    <div class="box">
+        <details class="box-door">
+        <summary>
+            <div class="lining">
+  <!-- <h1>.</h1> -->
+            </div>
+            <div class="space">
+                <h1>.</h1>
+            </div>
+             <div class="lining">
+  <!-- <h1>.</h1> -->
+            </div>
+        </summary>
+    </details>
+        <p>Test test test test.</p>
+    </div>
+        <div class="box">
+            <details class="box-door">
+        <summary>
+            <div class="lining">
+  <!-- <h1>.</h1> -->
+            </div>
+            <div class="space">
+                <h1 style="text-align:left;">.</h1>
+            </div>
+             <div class="lining">
+  <!-- <h1>.</h1> -->
+            </div>
+        </summary>
+    </details>
+        <p>Test test test test.</p>
+    </div>
+        <div class="box">
+        <p>Test test test test.</p>
+    </div>
+        <div class="box">
+        <p>Test test test test.</p>
+    </div>
+        <div class="box">
+        <p>Test test test test.</p>
+    </div>
+</div>

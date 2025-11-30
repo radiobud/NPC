@@ -1,0 +1,147 @@
+<style>
+
+/* If you are ever trying to figure out the name of what element you want to edit, you can open Dev Tools by hitting CTRL+SHIFT+C and then clicking on the part of the page you want to inspect. Then you can search that element in this document.
+For example: hover over the image of your pet and you will see it is called .petImage - so you can search .petImage here and find the code for it. */
+
+   /*CUSTOM VARIABLES.*/
+/*Change the font, background color, border color, etc. */
+
+/*TIP:
+If you want something to be transparent, use this value instead of a color name or Hex Code
+rgba(0,0,0,0);
+*/
+
+:root{
+    --textcolor: hotpink;
+    --special: hotpink;
+    --mainbg: white;
+    --statsbg: white;
+    --font: Garamond, sans-serif;
+    --border: 2px solid hotpink;
+    }
+
+/* Background Image */
+body{
+background-image:
+url('https://www.snimg.co/background/BG_Watermelon.jpg');
+    }
+
+/* ALT CODE
+for full-screen bg: Paste into body code above, inside the curly braces.
+(Do not include the comment slash and asterisk!)
+background-size: cover;
+background-repeat:no-repeat;
+*/
+
+/* CUSTOM pet overlay 
+Change the url inside the parentheses.
+Change width as needed - default is 150px. 
+If you DON'T want an overlay, you can delete this code or put comment slashes and asterisks around it.*/
+.petimage{
+content:url(
+https://neopetsclassic.com/images/pets/Ixi/closeattack/ixi_red_left.gif);
+width: 300px;
+    }
+
+/*TEXT size and color*/
+body, .petlookupcontainer, p, #center{
+color: var(--textcolor);
+font-family: var(--font);
+font-size: 1.2rem;
+    }
+
+#center{
+color: var(--textcolor);
+font-family: Garamond;
+font-size:2em;
+    }
+
+
+/* The main central lookup content. */
+.petlookupContainer{
+width:650px;
+margin: auto;
+padding: 2em 3em;
+border: var(--border);
+background-color: var(--mainbg);
+display:flex;
+flex-direction:column;
+gap: 20px;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+margin-top: 10%;
+}
+
+.pettop{
+display:flex;
+flex-direction:column;
+gap: 10px;
+align-items:center;
+    }
+
+/* Change the variables in root if you want a different bg color/font for your stats. */
+.petstatsblock{
+background: var(--statsbg);
+color: var(--special);
+font-size:0.8rem;
+    }
+
+.petBDstats p{
+margin: 1rem 0;
+font-size: 0.8rem;
+    }
+
+.petbelongingscontainer p:first-of-type{
+text-align:center !important;
+font-size: 2rem;
+    }
+
+
+.petpetpet{font-size:.8rem !important;
+    }
+
+/* General description or links you may want to add */
+.description{
+width: 500px;
+padding: 0 2em;
+text-align:justify;
+}
+
+/* Cleanup/Ignore: The code below removes NPC sidebars and centers the page */
+
+/*do NOT remove unless you want to un-center the lookup*/
+map+table{margin:auto;
+padding-right:100px;}
+#content_td {width: 100%;}
+
+/*HIDES the main NPC sidebars etc*/
+#retroTopBar, .navhover, .hdr, #mb, hr, #hdr, .sidebar-container, .results, .petlinks {display:none;
+    }
+.footertext{display:none;}
+
+/* That is it for the style section! */
+
+</style>
+
+<!-- HTML here! Edit your pet description etc in this section. -->
+
+<div class="description">
+<p>
+Merrily will one day be a celebration or Christmas pet.
+</p>
+<p>
+This little creature was an adoption from the pound, and is now a special part of the family. With more holidays coming up, Merrily might take the spotlight!
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum cursus arcu in sodales. Duis elementum justo ultricies tempus posuere. Mauris neque risus, fermentum in vulputate ac, accumsan non dolor. Morbi rutrum purus felis, ac ullamcorper velit sagittis vitae. Integer auctor est quis felis elementum mollis. Aenean laoreet egestas nisl. Quisque suscipit volutpat tincidunt. Nam at dignissim ante. Sed et tortor purus. Pellentesque lobortis dui nec libero euismod ultricies. 
+</p>
+<p>
+Suspendisse rhoncus dui in nisl tempor, nec aliquam justo vestibulum. Vestibulum luctus erat dictum scelerisque fringilla. Phasellus eros metus, lacinia nec ipsum at, consequat efficitur ante. Donec rutrum sem et dictum pellentesque. Quisque varius tristique facilisis. Fusce vel molestie metus, non molestie erat. Praesent suscipit luctus odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti.
+</p>
+<p>
+Quisque elementum dictum nibh, id fringilla ex maximus iaculis. Cras finibus porttitor mi, sit amet maximus odio euismod et. Ut at nunc maximus, rhoncus ligula in, lacinia neque. In fringilla pellentesque risus ut vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum commodo nisl eget enim tristique tempor. Nulla finibus, nisi vel semper placerat, ipsum enim dictum ex, tincidunt faucibus nulla nibh non lacus. Aenean euismod leo a diam euismod, non imperdiet leo tempor. Quisque auctor ultricies dui, ullamcorper semper erat tincidunt sit amet.
+</p>
+</div>
+
+<!-- Have fun! -->

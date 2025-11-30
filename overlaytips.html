@@ -1,0 +1,190 @@
+<style>
+    body{
+        background:rgb(68, 66, 83);
+        color:rgb(0, 0, 71);
+        font-size:1rem;
+        font-family:Garamond, 'times new roman', serif;
+        box-sizing:border-box;
+    }
+
+    :root{
+        --pink: rgb(255, 108, 208);
+        --blue: rgb(176, 185, 230);
+        --yell: rgb(243, 201, 33);
+        --bgcode: rgb(14, 8, 45);
+        --bg: rgb(68, 66, 83);
+        --bgart: rgb(161, 175, 159);
+    }
+
+    blockquote{
+        color: var(--blue);
+    }
+
+    blockquote b{color:var(--pink);}
+    blockquote i{color: var(--yell);}
+    blockquote em{color: green;}
+
+    blockquote {
+        padding: 20px 40px;
+        margin: 40px auto;
+        margin-top: 20px;
+        background-color:rgb(14, 8, 45);
+        max-width:80%;
+    }
+
+    .flex--container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content:center;
+        margin: auto;
+        padding: 2rem;
+    }
+
+    .flex--container p::first-letter{
+        font-style: italic;
+        font-size: 1.2em;
+    }
+
+    h1, h2, h3, h4, h5{
+        text-align: center;
+    }
+
+    .header--test{
+        width:200px;
+        background-color:goldenrod;
+        font-family:sans-serif;
+    }
+
+    h1{
+    background-color:var(--bgart);
+    max-width: 500px;
+    margin: auto;
+    margin-top:1em;}
+
+    article{
+        background-color: var(--bgart);
+        padding: 20px 2em 40px 2em;
+        margin: 2em auto;
+        width: 500px;
+        height: fit-content;
+    }
+
+    ul{padding-bottom:1em;}
+
+</style>
+
+<h1>Coding Tips with Buddy</h1>
+
+<div class="flex--container">
+    <article>
+    <h2>Overlays</h2>
+    <h3>Replace a pic with <i>your pick</i></h3>
+    <p>Overlays appear to be one of the most popular edits we make to our pages. While "overlay" always implied to me that the image is glued on top of the pre-coded image, what's  happening is that you're replacing a standard pic with one you... picked.</p>
+    <ul>
+        <li>Replace with an image somewhere Neopia</li>
+        <li>Replace with an image you hosted elsewhere</li>
+    </ul>
+    <blockquote><code>
+    Test Test Test
+    <b>Extra test</b> <i>other test</i>
+    </code></blockquote>
+    </article>
+
+    <article>
+    <h2>What Can I Do?</h2>
+    <h3>Options for Overlays <i>In Style</i></h3>
+    <p>Rules - the site states that images cannot be misleading about the actual pet or stats. The line here is what can actually be achieved, and what's just for fun.</p>
+    <p>If you COULD have that image (pet, item, paint job), but you don't, that's a safe bet to avoid it.</p>
+    <p>Examples of Don'ts</p>
+    <ul>
+        <li>You cannot overlay your Slorg petpet with a Meowclops. Users can get a Meowclops, so this is misleading.</li>
+        <li>Overlaying your red pet with a Halloween paint job. (I imagine a worst-case scenario with someone arranging a pet trade with a fake painted pet)</li>
+        <li>Replacing your user shield with a shield that lists a different account age.</li>
+    </ul>
+    <p>Examples of OK</p>
+    <ul>
+        <li>Belongings are apparently ok to play around with.</li>
+        <li>Decorative overlays that aren't imitating another pet that exists (e.g. I have the actual Great A'Tuin from Discworld as the image on GreatATuin's pet lookup. I have seen people with Pokemon name pets using the actual pokemon image.)</li>
+        <li>Similarly, user shields with NO account age seem to be ok.</li>
+    </ul>
+    <p>Takeaway: Just a pretty pic? OK. A pic of something on NPC that you don't actually have there? Not OK.</p>
+    <p>Let's get coding!</p>
+    </article>
+    <article>
+    <h2>How Does It Work?</h2>
+    <h3>Coding Guide and <i>Format</i></h3>
+    <p>This section is about coding basics, especially CSS structure. If you are pretty comfortable with how CSS works in general, you can skip this section.</p>
+    <p>Things you need to know:</p>
+    <ul>
+        <li>HTML Elements</li>
+        <li>CSS selectors</li>
+        <li>CSS properties</li>
+    </ul>
+    <h3>HTML Elements</h3>
+    <!-- Overly basic?
+     <p>HTML is the meat and potatoes of the page: the actual content. CSS just alters the flow and style of that content.</p>-->
+    <p>Each HTML <b>element</b> is a piece of the page content, like a paragraph, or a header, or an image. Sometimes it's a container like a div or a table.</p>
+    <p>You need to be able to <b>select</b> elements to style them.</p>
+    <h3>CSS Selectors</h3>
+    <p>Selectors name the elements on the page you're trying to edit. The selector is named first, and then all your <b>style rules</b> for that element get put inside curly braces.</p>
+    <p>Below I am <b>selecting</b> the <code style="color:green"><i>header</i></code> of the page.</p>
+    <blockquote><code>
+        <em>header</em> {<b>width:</b> <i>200px;</i>}
+    </code></blockquote>
+    <h3>CSS Properties</h3>
+    <p>A <b>property</b> is any characteristic you're trying to change about the element. Common properties include width or font color. In the example above, the width property is in pink. The value is 500px.</p>
+    <p>Multiple properties can be changed within the same curly braces. Each property and value gets followed by a <b>semicolon</b>, including the last one!</p>
+    <p>Below, properties are in pink, and their values are in yellow.</p>
+    <blockquote><code><pre>
+<em>header</em> {<b>width:</b> <i>200px;</i>
+        <b>background-color:</b> <i>goldenrod;</i>
+        <b>font-family:</b> <i>sans-serif;</i>}</pre>
+    </code></blockquote>
+    <p>Result:</p>
+    <h3 class="header--test">This Header!</h3>
+    <p>(Note: it helps make the code readable to put each property on its own line. I indent more when using a code editor which auto-formats some things, but on NPC or in Notepad I skip indents. They do take up some character spac...)</p>
+    <p>So you know about the structure of the CSS to alter the properties of each HTML element you select. Time to actually code some things.</p>
+    </article>
+    <article>
+    <h2>How to Do It!</h2>
+    <h3>Overlays, Tips, and <i>Fun</i></h3>
+    <p>This section is about the code you'll need to make the overlay work. I'll also share some tips about common edits you might want to make.</p>
+    <p>Overlay Examples Below:</p>
+    <ul>
+        <li>Pet Lookup Image</li>
+        <li>User Shield</li>
+        <li>Transparent Belongings</li>
+    </ul>
+    <h3>HTML Elements</h3>
+    <!-- Overly basic?
+     <p>HTML is the meat and potatoes of the page: the actual content. CSS just alters the flow and style of that content.</p>-->
+    <p>Each HTML <b>element</b> is a part of the page content. Usually, that means a paragraph, or a header, or an image. Sometimes it's a container like a div or a table.</p>
+    <p>You need to be able to <b>select</b> elements to style them.</p>
+</article>
+<article>
+<h2>Resources</h2>
+    <h3>Make Life <i>Easier</i></h3>
+    <p>Below are sites and tutorials for commonly used things.</p>
+<p>Included:</p>
+<ul>
+    <li>Make images transparent</li>
+    <li>Coding Help</li>
+    <li>Comment Tips</li>
+</ul>
+<h3>Remove Background</h3>
+<p>Transparent images are the golden child of lookup edits, especially for pets and belongings. Unfortunately, you have to make your own transparent image and host it for every single thing you want to change.</p>
+<p>The good news is that there's an online tool that has been around a while and that I find really consistent in removing backgrounds to make an image transparent: remove.bg.</p>
+<p>Paste an image into remove.bg to erase its background. (This site has been around since well before Midjourney, and has terms I find acceptable in this day and age.)</p>
+<p>You still need to copy and save the now-transparent image, then host it somewhere in order to replace any NPC images with it. You can use the content:url code above to do that, linking your own image.</p>
+<h3>Coding Help</h3>
+<p>Here are some of the sites that helped me a TON when learning CSS (and relearning HTML):</p>
+<ul>
+    <li>petrapixel on Neocities (so many tutorials)</li>
+    <li>W3Schools Tutorials (hands-on in small bites)</li>
+    <li>W3C HTML Color Picker!</li>
+</ul>
+
+</article>
+</div>

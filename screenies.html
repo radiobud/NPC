@@ -1,0 +1,141 @@
+<style>
+:root{
+    --bg: #264d73;
+    --bgpost: #cce0ff;
+    --fcolor: navy;
+    --border: 3px solid goldenrod;
+    --bigtext: 2.5rem;
+    --medtext: 2rem;
+    --normtext: 1rem; 
+    --font: "Tahoma", sans-serif;
+}
+
+body{
+    background-color:var(--bg);
+    color:var(--fcolor);
+    font-size: var(--normtext);
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+
+header{
+font-size: var(--bigtext);
+text-align: center;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+max-width: 800px;
+padding: 10px 30px;
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;}
+
+.main{
+display:flex;
+flex-direction:column;
+margin: 1em auto;
+gap:50px;
+justify-content:center;
+align-items:center;
+max-width: 80vw;
+}
+
+@media viewport and (min-width: 700px){
+.main{
+display: grid;
+grid-template-areas:
+"section section";
+gap: 50px;
+}
+}
+
+
+section{
+border: var(--border);
+display:flex;
+flex-direction:column;
+align-items:center;
+background-color: var(--bgpost);
+border: var(--border);
+border-radius: 30px;}
+
+article{
+    display:flex;
+    flex-direction:column;
+    width: 600px;
+    padding: 30px;
+    align-items:center;
+}
+
+figure img{
+    width: 550px;
+}
+
+h1, h2{font-size: var(--medtext);}
+
+h1{padding:0;}
+
+h3{font-size:var(--medtext);
+font-family: "brush script MT", cursive;}
+
+
+</style>
+
+<header>
+    <h1>Screenshot Gallery</h1>
+</header>
+
+
+<div class="main">
+<section>
+    <h2>Section 1: Avatars</h2>
+    
+    <article>
+<h3>Avatar: Plushie!</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/avatarplushiedance.png">
+    <figcaption>Playing with a plushie with my plushie pet. (Dream pet, too).</figcaption>
+</figure>
+    </article>
+
+    <article>
+<h3>Avatar: Chia!</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/avatarchiayummy.png">
+    <figcaption>A food chia - I did this by accident, making the William Carlos Williams joke chia. Heh heh.</figcaption>
+</figure>
+    </article>
+
+    <article>
+<h3>Avatar: Elephante</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/guilavatarpeanuts.png">
+    <figcaption>Fed Bag of Peanuts. Those were so expensive on retail because of this avatar.</figcaption>
+</figure>
+    </article>
+
+    <article>
+<h3>Avatar: can't read</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/icantreadavatar.png">
+    <figcaption>LMAO at this avatar</figcaption>
+</figure>
+    </article>
+
+</section>
+
+<section>
+<h2>Random Events and Dailies</h2>
+
+    <article>
+<h3>Fruit Machine</h3>
+<figure>
+    <img src="https://u.cubeupload.com/audiobuddy/fruitmachinefirstwin.png">
+    <figcaption>Wahoo!</figcaption>
+</figure>
+    </article>
+</section>
+
+</div>
+
+

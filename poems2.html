@@ -1,0 +1,253 @@
+<style>
+
+body{
+background-color: gray;
+box-sizing: border-box;
+font-family: garamond;
+font-size: 1rem;
+overflow-x: scroll;
+}
+
+.cover{
+border: 2px rgb(12, 66, 12) solid;
+padding: 50px;
+background-color: rgb(23, 114, 23);
+margin: 100px auto;
+min-width: 700px;
+max-width: 900px;
+display:grid;
+grid-template-columns: 1fr 50px 1fr;
+grid-template-areas:
+"cleft cspine cright";
+gap: 0;
+position: relative;
+height: 900px;
+}
+
+.cleft{grid-area:"cleft";}
+.spine{grid-area:"cspine";
+width: 50px;}
+.cright{grid-area:"cright";
+background-color: rgb(4, 65, 4);
+border:1px black solid;}
+
+.pages{
+min-width: 700px;
+max-width: 900px;
+display:grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas:
+"left page";
+gap: 0;
+position: absolute;
+left: 50px;
+top: 50px;
+box-shadow: 2px 1px 5px rgb(4, 41, 4);
+}
+
+.left{
+grid-area: left;
+}
+
+.page{
+border: 1px gray solid;
+background-color: linen;
+padding: 30px;
+font-size: 1.2rem;
+overflow:hidden;
+max-height: 875px;
+}
+
+.poem{
+    padding-top: 1.2rem;
+}
+
+.filler{
+height:900px;
+}
+
+#faerie{
+    /* margin-top: 500px; */
+    margin-bottom: 500px;
+}
+
+ol a{
+    text-decoration:none;
+    color: black;
+}
+
+ol a:hover{
+    font-style:italic;}
+
+/* h2{
+    margin-top: 2rem;
+} */
+
+
+
+</style>
+
+
+<div class="cover">
+<div class="cleft"></div>
+<div class="spine"></div>
+<div class="cright"></div>
+
+
+<div class="pages">
+<div class="page left">
+<h3>Table of Contents</h3>
+<ol>
+    <li><a href="#techo">Doctor, Death (for one Techo)</a></li>
+    <li><a href="#choc">More Than Dessert</a></li>
+    <li><a href="#faerie">Gratitude with Reservations</a></li>
+    <li><a href="#grarrl">a word from us grarrls</a></li>
+    <li><a href="#donny">The Bori Who Fixes</a></li>
+
+</ol>
+</div>
+
+<div class="page">
+
+<div id="techo" class="poem">
+<h2>Doctor, Death (For One Techo)</h2>
+<h6><i>for Techo Day 2025</i></h6>
+<p>
+how brittle it is,
+<br>the way greetings
+<br>morph into goodbyes,
+<br>the way the days languish
+<br>beside another and another
+<br>letting-go.</p>
+<p>
+somehow you still start with a smile.
+<br>(scowling does not stop them all.)</p>
+<p>
+how broken it is,
+<br>being this kind of icon:
+<br>beside you flows joy after joy
+<br>out the door,
+<br>but you are the guide
+<br>to the leaving-behind.</p>
+<p>
+your smile
+<br>is only for the pets.</p>
+<p>
+they have done
+<br>nothing
+<br>wrong.</p>
+</div>
+<div class="filler"></div>
+    
+<div id="choc" class="poem">
+<h2>More Than Dessert</h2>
+<h6><i>for Chocolate Ball 2025</i></h6>
+<p>
+A single offered chocolate
+<br>to a hungry pet</p>
+<p>
+surpasses any sweetness with
+<br>its versatile context.</p>
+<p>
+The rare and darkest chocolates
+<br>pamper as a treat;</p>
+<p>
+whip-topped cocoa in the winter:
+<br>refreshing, welcome heat.</p>
+<p>
+Quick snap of just a bite-size bar
+<br>will fuel them to explore.</p>
+<p>
+Sculpted seashell chocolates?
+<br>Tasteful, tastier decor.</p>
+<p>
+And to intimidate a Chocolate pet,
+<br>put yourself into their shoes.</p>
+<p>
+What "treat" would make you most concerned?
+<br>A chocolate shaped like you.</p>
+</div>
+<div class="filler"></div>
+
+<div id="grarrl" class="poem">
+<h2> a word from us grarrls</h2>
+<h6><i>for Grarrl Day 2025</i></h6>
+<p>
+we grarrl are good
+<br>we do not et
+<br>the food yu had
+<br>in yor pocket</p>
+
+<p>
+<br>we chomp a lot
+<br>we like to munch
+<br>but grarrl not steal
+<br>from othr's lunch</p>
+
+<p>
+<br>we grarrl are kind
+<br>we help yu out,
+<br>feed us a stanp,
+<br>but do not shout</p>
+
+<p>
+<br>we want to chonp
+<br>we hope to chew
+<br>swallow a bok,
+<br>toys ok too</p>
+
+<p>
+<br>we grarrl are good,
+<br>we lisen to yu,
+<br>and eat that snak
+<br>when clik "feed to"</p>
+
+<p>
+<br>we grarrl have big
+<br>humger, is true,
+<br>but we will shar
+<br>our food with yu!</p>
+</div>
+
+<div class="filler"></div>
+
+<div id="faerie" class="poem">
+<h2>Gratitude with Reservations</h2>
+<h6><i>for Faerie Festival 2025</i></h6>
+<p>
+<br>Faeries, air and of garden,
+<br>Dark, fountain and grey,
+<br>I will gladly help find you
+<br>Any item you say.</p>
+
+<p>
+<br>But please, faeries gentle,
+<br>Who beg for plushie fire lizards
+<br>Consider your timing:
+<br>I kinda need the shop wizard.</p>
+</div>
+<div class="filler"></div>
+<div id="donny" class="poem">
+<h2>The Bori Who Fixes</h2>
+<h6><i>for Bori Day 2025</i></h6>
+<p>
+It's like this: start with a fishing pole,
+<br>Broken coins, a ripped-up Fuzzle;
+<br>But Donny's claws are steady 
+<br>With the solving of each puzzle.</p>
+<p>
+Some thread to stitch a little tear,
+<br>Help fix, repair, restore.				
+<br>I watch with awe, and ask him next:
+<br>Can I come back with more?</p>
+<p>
+Go find another broken thing,
+<br>On quests, or fished, one at a time.
+<br>Thank the Bori who connects all 3: the fragments,			
+<br>you, and the first word of each line.</p>
+</div>
+<div class="filler"></div>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,131 @@
+<style>
+body{
+    background-color:gray;
+    font-family: "Garamond", serif;
+    font-size:1.2rem;
+    box-sizing:border-box;
+}
+
+:root{
+    --border: 1px solid rgb(64, 64, 64);
+}
+
+.paper{
+    max-width: 90vw;
+    max-height: 1000px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer footer";
+    gap: 2em;
+    background-color: linen;
+    padding: 10px 2em;
+    margin: 2em auto;
+    border-radius: 0 0 0 20px;
+    box-shadow: 10px 0 rgb(174, 163, 151);
+}
+
+.filler{height:1500px;}
+.scroll{overflow-y:scroll;scrollbar-width:none;}
+
+article{
+    padding:0 1.2rem;
+}
+
+a{text-decoration:none;color:black;}
+a:hover{font-style:italic;font-weight:bold;}
+
+p{text-indent: .5rem;text-align:justify;}
+p::first-letter{font-size:120%;}
+
+.head, .main, .side, .foot{
+    border: var(--border);
+    padding: 1rem;
+}
+
+h1{font-size:3em;margin:0;}
+h2{text-align:center;}
+
+.head{grid-area: header; text-align: center;}
+.main{grid-area: main;
+    max-width:750px;
+    margin-bottom:20px;
+    max-height: 900px;
+    overflow: hidden;}
+.side{grid-area: sidebar;}
+.foot{grid-area: footer;}
+
+</style>
+
+<div class="paper">
+    <div class="head">
+        <h1>The Neopian Chronicle</h1>
+        <p style="text-align:right;">Date and Year perhaps?</p>
+    </div>
+    <div class="main">
+    <div id="frontpage" class="scroll">
+        <article>
+        <h2>Big News Today</h2>
+        <h4>Info below, read it</h4>
+        <p>Today in news, things and stuff happened. How odd! Some other folks are claiming that stuff did not happen, that it never happened, and in fact that it cannot happen because the way that the history of the world works precludes any stuff. But those folks would not elaborate on this claim.</p>
+        <p>Other news and possibly even updates on page 5.</p>
+        </article>
+        <article>
+        <h2>Did You Know?</h2>
+        <h4>Things can happen</h4>
+        <p>Interviewed in his shop, Neopian Donny said "Things can happen on any given day." Donny is the repair shop operator and a Bori who has seen things happen on, he says, most days.</p>
+        <p>Neopians are reeling with this revelation. More to come just as soon as we figure it out.</p>
+        </article>
+    </div>
+    <div class="filler"></div>
+    <div id="comics" class="scroll">
+        <h2>Insert Comics Here</h2>
+    </div>
+    <div class="filler"></div>
+    <div id="tips" class="scroll">
+         <article>
+        <h2>Coding Tips of the Week</h2>
+        <h4>Overlays for Anything</h4>
+        <p>Today's tip is about how to place an overlay for whatever you want. The basic code is below:</p>
+    <code><pre>.someThing img {
+    content: url("overlayURLhere");
+    }</pre></code>
+        <p>What does this code mean? It is saying that for the "someThing" class, any <b>image</b> will have the content you give it. And the content you give is in the URL in parentheses. You could make every pet on your lookup have the image of a Slorg. (Except I think you are not supposed to use misleading overlays for key things like pet species).</p>
+        </article>
+        <article>
+        <h2>Troubleshooting Tuesday</h2>
+        <h4>Check your Code</h4>
+        <p>Most of the time when code does not work, it's either a mis-used property or it's a plain old typo. Guess which one is easier to troubleshoot?</p>
+        <p>A misplaced bracket or a missing semicolon will completely break a lot of code. If things become bad fast, check for punctuation.</p>
+        <p>Remember to put a semicolon after every property in CSS.</p>
+        </article>
+    </div>
+    <div class="filler"></div>
+    </div>
+    <div class="side">
+        <h4>Some Facts</h4>
+        We have to present these facts.
+        <ul>
+            <li>Fact One: Shops sell things.
+            </li>
+            <li>Fact Two: Another fact.
+            </li>
+            <li>Fact Three: Already out of facts.
+            </li>
+        </ul>
+        <h4>Contents of the Paper</h4>
+        Navigate the paper here.
+        <ul>
+            <li><a href="#frontpage">Page One:</a> Big News
+            </li>
+            <li><a href="comics">Page Two:</a> Art, Comics, and Humor
+            </li>
+            <li><a href="#tips">Page Three:</a> Recipes and Coding Tips
+            </li>
+        </ul>
+    </div>
+
+
+</div>

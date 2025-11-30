@@ -1,0 +1,258 @@
+<style>
+:root{
+    --bg: rgb(47, 48, 48);
+    --txtcolor: linen;
+    --txtsize: 1rem;
+    --bigborder: 10px outset rgb(78, 77, 91);
+    --smborder: 3px outset rgb(78, 77, 91);
+    --radius: 0;
+    --artbg: rgb(129, 126, 116);
+    --maxw: 650px;
+}
+
+body{
+    background-color: var(--bg);
+    color: --txtcolor;
+    box-sizing: border-box;
+}
+
+.left{
+    grid-area: left;
+}
+
+.right{
+    grid-area: right;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    /* background-image: url("\Krz_MarquezFarmhouse.jpg");
+    background-size: cover; */
+    color: linen;
+}
+
+.trueheader{
+    background-image: url("\Krz_MarquezFarmhouse.jpg");
+    background-size: cover;
+    padding: 30px;
+    margin: auto;
+    max-width: var(--maxw);
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+}
+
+.grid-container{
+    max-width: var(--maxw);
+    border: var(--bigborder);
+    border-radius: var(--radius);
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "left right"
+        "left right"
+        "footer footer";
+    gap: 20px;
+    background-color: var(--bg);
+    margin: 3em auto;
+    padding: 2em;
+    color: var(--txtcolor);
+}
+
+.even{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+
+}
+
+article{
+    background-color: var(--artbg);
+    border: var(--smborder);
+    padding: 1em;
+    margin: 1em auto;
+    color: var(--bg);
+}
+
+.mini-header{
+    min-height: 4em;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: linen;
+}
+
+@media (max-width:650px){
+    .grid-container{
+            grid-template-areas:
+        "header"
+        "left"
+        "right"
+        "footer";
+        margin: 5px;
+    }
+}
+
+</style>
+
+<body>
+<header class="trueheader">
+    <h1>True Header</h1>
+</header>
+<div class="grid-container">
+<header class="header">
+    <h1>This is a test.</h1>
+</header>
+
+<div class="left">
+    <h2>This is the left side.</h2>
+    <article>
+        <h3>Title here</h3>
+        <p>Here is some text. There are a lot of words here. It is just nice to type sometimes, since this keyboard feels sort of soft. The keyboard is new!</p>
+    </article>
+    <article>
+        <h3>Title again</h3>
+        <p>Here is some text. There are a lot of words here. It is just nice to type sometimes, since this keyboard feels sort of soft. The keyboard is new!</p>
+    </article>
+</div>
+
+
+<div class="right">
+    <h2>This is the right side.</h2>
+    <article>
+        <h3>Another Title</h3>
+        <p>Here is some text. This is different text, though - you can tell because it's not the same as the left-side text. I do not have faith that this layout will work first-try. Grid is still so awkward for me.</p>
+    </article>
+</div>
+
+<footer class="footer">
+    <p>Credits, and maybe some links, go here.</p>
+</footer>
+</div>
+
+<div class="grid-container">
+<header class="header">
+    <h1>Grid with more normal text</h1>
+</header>
+
+<div class="left">
+    <h2>Lookups</h2>
+    <p>The codes below can be edited as much as you want.</p>
+    <article>
+        <h3>User Lookup</h3>
+        <p>You can use these codes for user lookups. They have comments in them to note sections and how you can edit the main code.</p>
+    </article>
+    <article>
+        <h3>Pet Lookup</h3>
+        <p>These will work for pet lookups.</p>
+    </article>
+</div>
+
+
+<div class="right">
+    <h2>Pages</h2>
+    <article>
+        <h3>Single Column Layouts</h3>
+        <p>These pages will work best as a single column, like a long newspaper article or a series of sections.</p>
+    </article>
+    <article>
+        <h3>Multi-Column Layouts</h3>
+        <p>These pages are designed to be a grid or multiple sections. It might take more work to adjust the layout of sections.</p>
+    </article>
+</div>
+
+<footer class="footer">
+    <p>Credits, and maybe some links, go here.</p>
+</footer>
+</div>
+
+<!--TEST ANOTHER GRID HERE-->
+<div class="grid-container even">
+<header class="header">
+    <h1>Larger/More busy grid</h1>
+</header>
+
+<div class="left">
+    <h2>Lookups</h2>
+    <p>The codes below can be edited as much as you want. There is a separate section for either removing the sidebars or editing them to blend into your background color.</p>
+    <article>
+        <h3>User Lookup</h3>
+        <p>You can use these codes for user lookups. They have comments in them to note sections and how you can edit the main code.</p>
+    </article>
+    <article>
+        <h3>Pet Lookup</h3>
+        <p>These will work for pet lookups.</p>
+    </article>
+    <article>
+        <h3>Sidebar Changes</h3>
+        <p>Two options below: removing the sidebars or editing them to blend into your background color.</p>
+    </article>
+</div>
+
+
+<div class="right">
+    <h2>Pages</h2>
+    <article>
+        <h3>Single Column Layouts</h3>
+        <p>These pages will work best as a single column, like a long newspaper article or a series of sections.</p>
+    </article>
+    <article>
+        <h3>Multi-Column Layouts</h3>
+        <p>These pages are designed to be a grid or multiple sections. It might take more work to adjust the layout of sections.</p>
+    </article>
+</div>
+
+<footer class="footer">
+    <p>Credits, and maybe some links, go here.</p>
+</footer>
+</div>
+
+<!--TEST ANOTHER GRID HERE-->
+<div class="grid-container even">
+<header class="header">
+    <h1>Squared Articles Grid (to do)</h1>
+</header>
+
+<div class="left">
+    <div class="mini-header"><h2>Lookups</h2>
+    <p>The codes below can be edited as much as you want.</p>
+    </div>
+    <article>
+        <h3>User Lookup</h3>
+        <p>You can use these codes for user lookups. They have comments in them to explain code.</p>
+    </article>
+    <article>
+        <h3>Pet Lookup</h3>
+        <p>These will work for pet lookups.</p>
+    </article>
+    <article>
+        <h3>Sidebar Changes</h3>
+        <p>Two options below: removing the sidebars or editing them to blend into your background color.</p>
+    </article>
+</div>
+
+
+<div class="right">
+    <h2>Pages</h2>
+    <article>
+        <h3>Single Column Layouts</h3>
+        <p>These pages will work best as a single column, like a long newspaper article or a series of sections.</p>
+    </article>
+    <article>
+        <h3>Multi-Column Layouts</h3>
+        <p>These pages are designed to be a grid or multiple sections. It might take more work to adjust the layout of sections.</p>
+    </article>
+</div>
+
+<footer class="footer">
+    <p>Credits, and maybe some links, go here.</p>
+</footer>
+</div>
+
+</body>
