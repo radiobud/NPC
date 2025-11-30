@@ -1,0 +1,254 @@
+<style>
+:root{
+--light-color: #a2c3a2;}
+
+body {
+background-color: black;
+/*background-image: url(https://radiobud.neocities.org/assets/pics/notebook%20paper.png);
+background-repeat:repeat-y;
+background-size:cover;*/
+interpolate-size: allow-keywords;
+}
+
+.pettop, .petbelongingscontainer {
+background-color: #030;
+font-family:monospace;
+}
+
+.petlinks, .petbdstats { display: none;}
+
+.pettop {
+position: relative;
+}
+
+/*
+#center.petpetpet {
+position: absolute;
+left: 40px;
+top: 300px;
+}
+*/
+.petLookupContainer {
+border-top: 4px dashed maroon;
+border-radius: 20px;
+box-shadow: 0 5px 10px rgba(179, 179, 255, 0.5);
+color: maroon;
+background-color: #a2c3a2;
+padding: 50px;
+margin: 0 200px 0 50px;
+min-width: 700px;
+max-width: 1200px;
+z-index: 10;
+}
+
+/*
+#retroTopBar, .navhover, .hdr, .sidebar-container, #mb { display:none;}*/
+
+#retroTopBar, .navhover, .hdr, #mb { display:none;}
+
+.sidebar-container{
+position: fixed;
+right: 10px;
+top: 30px;
+max-height: .8vh;
+overflow: scroll;
+color: maroon;}
+
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: var(--transp-bg);
+color: var(--light-color);
+}
+
+.sidebar-container * {color: var(--light-color);}
+
+/*
+.sidebar-section.sm-filler {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarmd.png);
+background-size: 229px auto;}
+
+.sidebar-section.st {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebartop.png);
+background-size: 229px auto;}
+
+.sidebar-section.se {
+background-image: url(https://u.cubeupload.com/audiobuddy/sidebarbtmfix.png);
+background-size: 229px auto;}
+*/
+
+.petLookupContainer img {
+border-radius: 20px;
+}
+
+.petStatsBlock {
+background-color: var(--light-color);
+}
+
+/*
+.petImage {
+content: url(https://i0.wp.com/terrypratchett.com/management/wp-content/uploads/2022/03/Great-ATuin-II.jpg?resize=1536%2C1225&ssl=1);
+width: 400px;}
+*/
+
+
+/*
+.petImage::after {
+content: "*Disc and Elephants not included*";
+display: block;
+margin-top: 5px;
+position: absolute;
+bottom: -10px;
+left: 50%;
+}*/
+
+
+a {
+text-decoration: none;
+font-family: monospace;
+color: navy;
+}
+
+a:hover {
+background-color: rgba(255, 230, 255, .2);
+}
+
+p {
+color: navy;
+}
+
+.thanks{
+font-size:.5rem;
+color: rgb(0, 51, 51);
+}
+
+.bubble {
+color: maroon;
+border: 2px dotted maroon;
+border-radius: 20px;
+box-shadow: 5px 5px 20px maroon;
+margin: auto;
+padding: 20px;
+text-align: left;
+font-family: monospace;
+font-size: 1.5rem;
+width: 500px;
+position: relative;
+}
+
+p.text {
+color: maroon;
+font-family: monospace;
+font-size: 1rem;
+}
+
+q {
+font-weight: lighter;
+font-family: monospace;
+text-align: right;
+}
+
+.petpage:hover {
+display:inline;
+}
+
+.sidebyside {
+display: flex;
+justify-items: center;
+}
+
+.side--small{
+flex-grow: 1;
+max-width: 20%;
+}
+
+.side--big{
+flex-grow: 4;
+max-width: 50%;
+font-size: 1.5em;
+padding-top: .5em;
+}
+
+nav {
+position: fixed;
+left: 20px;
+top: 5%;
+background-color: rgba(230, 242, 255, .8);
+padding: 20px;
+border-radius: 30px;
+border: 2px dotted navy;
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav ul a {
+display: block;
+padding: 10px 0;
+margin-left: 0;
+}
+
+details::details-content {
+transition: height 1s;
+}
+
+details[open]::details-content {
+height: 220px;}
+
+#happy {
+position: absolute;
+top: -30px;
+right: -40px;
+width: 120px;
+border-radius: 20px;
+box-shadow: 0 5px 10px rgba(179, 179, 255, 0.5);
+}
+
+#happypose {
+width: 80px;
+}
+
+</style>
+
+<main>
+
+<div class="bubble">
+<h3>Grendel's Mother</h3>
+<p class="text"></p>
+<ul style="text-align: left; list-style-type: none; font-size: .8rem;">
+<li>You can stand up</li>
+<li>or you can run</li>
+<li>You and I both know what you've done</li>
+<li>And I will</li>
+<li>carry you home</li>
+<li>in my teeth</li>
+</ul>
+<p class="text"><i>song by The Mountain Goats</i></p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Stories_of_Beowulf_water_witch_trying_to_stab_beowulf.jpg/500px-Stories_of_Beowulf_water_witch_trying_to_stab_beowulf.jpg" alt="from Wikipedia: illustration of Grendel's mother by J. R. Skelton described as a 'water-witch' trying to stab Beowulf">
+<p class="text">Illustration of Grendel's mother by J. R. Skelton, from wikimedia</p>
+
+<!--
+<img id="happy" src="https://neopetsclassic.com/images/pets/Shoyru/shoyru_maraquan_baby.gif">
+-->
+
+
+<p class="thanks"></p>
+</div>
+<nav>
+<details>
+<summary>Back to Neopia</summary>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</details>
+</nav>
+<div class="contacts">
+</div>
+</main>
