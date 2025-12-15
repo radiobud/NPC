@@ -1,0 +1,376 @@
+<style>
+
+:root{
+--light: rgba(230, 242, 255, .8);
+--med: rgba(204, 235, 255, .5);
+--dark: rgba(54, 77, 99, .8);
+--olive: rgb(201, 232, 201, .3);
+--shad: 3px 3px 10px rgba(54, 77, 99, .4);
+}
+
+
+body {
+background-color: #b3ccbf;
+background-image: url(https://u.cubeupload.com/audiobuddy/audiobg.jpg);
+background-size: cover;
+/*background-repeat: no-repeat;*/
+background-attachment: fixed;
+color: navy;
+box-sizing: border-box;
+interpolate-size: allow-keywords;
+height:100%;
+margin:0;
+}
+
+/* TESTING for BRILVAEDO
+#bgbody{
+position:fixed;
+width:100vw;
+height:100vh;
+background-image:url(https://u.cubeupload.com/audiobuddy/audiobg.jpg);
+background-size: cover;
+background-attachment:fixed;
+z-index:-1;}
+
+.kadtest{
+position:absolute;
+top:200px;
+right:100px;}
+
+#userheader{position:absolute;
+transform:scale(0.5);}
+*/
+
+
+.kadtest{
+box-shadow: inset 0 0 0 var(--olive);}
+
+h2, h3 { text-align: center;}
+
+#retroTopBar, .navhover, .hdr, #mb, hr { display:none;}
+
+#hdr{background-image:none;}
+
+.sidebar-container {
+max-height: 290px;
+overflow: scroll;
+margin-left: 50px;
+margin-top: 50px;
+padding: 0;
+border: 2px dotted rgba(54, 77, 99, .8);
+border-radius: 10px;
+box-shadow: var(--shad);
+}
+
+.userlookuppet br ~* {
+display:none;}
+
+.sidebar-section {padding: 0;}
+
+.sidebar-section.sm-filler, .sidebar-section.st, .sidebar-section.se {
+background-image: none;
+background-color: var(--olive);
+}
+
+.wrapper {
+/*background-color: rgba(204, 235, 255, .5);*/
+background-color: var(--olive);
+font-family: monospace;
+font-size: 1rem;
+color: navy;
+border: 3px solid rgba(54, 77, 99, .8);
+border-radius: 20px;
+box-shadow: var(--shad);
+padding: 40px 20px;
+width: 545px;
+text-align: left;
+margin-left: 50px;
+position: relative;
+}
+
+#frankie {
+position: absolute;
+top: -10px;
+right: -10px;
+transform: rotateZ(20deg);
+text-align: center;
+}
+
+#frankie:hover {
+font-weight:bold;
+transform: rotateZ(30deg);
+}
+
+.wrapper p {
+  font-family: monospace;
+  color: navy;
+}
+
+.alert {
+max-width: 300px;
+background-color:lightblue;
+border: 3px solid hotpink;
+border-radius: 20px;
+text-align: center;
+padding: 20px;
+margin: auto;
+}
+
+/*Normal Neo stuff*/
+#userinfo, #usershield, .userlookuppets, .userlookuplinks, #sitetrophies, #gametrophies, #siteCharms, #contactlinks, #userinfocontainer {
+/*background-color: rgba(224, 235, 235, 0);*/
+background-color: var(--olive);
+border: 2px dotted rgba(54, 77, 99, .8);
+/*border-right: 2px dotted hotpink;*/
+border-radius: 20px;
+box-shadow: var(--shad);
+margin-left: 50px;
+margin-top: 10px;
+width: 595px;
+font-family: monospace;
+font-size: 1rem;
+color: navy;
+}
+
+.userlookuppets p{font-family: monospace;
+font-size: 1rem;
+color: navy;
+}
+
+.userlookuppets img,
+.userlookuplinks img,
+#sitetrophies img,
+#gametrophies img,
+#contactlinks img,
+#usershield img,
+#siteCharms img {
+border: 1px solid goldenrod;
+border-radius: 20px;
+box-shadow: var(--shad);
+opacity: 0.8;
+}
+
+.userlookuppets img:hover,
+.userlookuplinks img:hover,
+#sitetrophies img:hover,
+#gametrophies img:hover,
+#contactlinks img:hover,
+#usershield img:hover,
+#siteCharms img:hover {
+opacity:1;
+}
+
+
+/* can use to replace images
+img[src="https://neopetsclassic.com/images/pets/Shoyru/80by80/shoyru_maraquan_happy.gif"]{
+content:url(NEW);
+width: 82px; }
+*/
+
+
+
+
+/* Display was set to table-cell!
+.userlookuppets{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+max-width: 150px;
+width: 125px;}*/
+
+#usershield { width: 150px;}
+
+
+
+#userinfo a, .userlookuppet a {
+text-decoration: none;
+color: hotpink;
+font-family: Garamond serif;
+font-size:1.4rem;
+}
+
+.userlookuplinks{
+display: flex;
+flex-wrap: wrap;
+column-gap: 70px;
+justify-content: center;
+}
+
+
+ul {
+list-style-type: none;
+}
+
+.wrapper li:hover {
+background-color: lightblue;
+}
+
+.wrapper p:hover {
+background-color: rgba(179, 218, 255, 0.5);
+}
+
+.coollink {
+text-decoration:none;
+color:hotpink;
+}
+
+.pretty {
+color: hotpink;
+font-family: Georgia serif;
+}
+
+nav {
+position: absolute;
+right: -200px;
+top: 300px;
+padding: 20px;
+background-color: var(--olive);
+border-radius: 30px;
+border: 2px dotted rgba(54, 77, 99, .8);
+box-shadow: var(--shad);
+}
+
+/*.nav--list {
+position: absolute;
+left: 100%;
+top: -20px;
+}*/
+
+nav ul {
+list-style-type: none;
+padding: 0;
+width: 100px;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: left;
+gap: 5px;
+}
+
+nav ul a {
+display: block;
+text-decoration: none;
+background-color: var(--olive);
+padding: 10px;
+margin: 0;
+}
+
+details::details-content {
+transition: height 1s;
+}
+
+details[open]::details-content {
+height: 300px;}
+
+.icons {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+align-items: center;
+justify-content: center;
+text-align: center;}
+
+figure {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 120px;
+height: 120px;
+margin: 10px;
+border: 2px solid gold;
+border-radius: 20px;
+background-color: linen;
+padding: 5px;}
+
+figure img{height: 50px;}
+
+</style>
+
+<body>
+
+<!--TEST
+<div id="bgbody">
+<img class="kadtest" src="https://neopetsclassic.com/images/games/kadoatery/rainbow_happy.gif"></div>
+-->
+
+<div class="wrapper">
+<div id="frankie" class="pretty">
+<a href="https://tamanotchi.world/25974c"><img src="https://tamanotchi.world/i2/25974" alt="It's tamaNOTchi! Click to feed!"></a><br><i>Feed Frankie?</i>
+</div>
+
+<nav>
+<details>
+<summary>Navigate</summary>
+<div class="nav--list">
+<ul>
+<li><a class="coollink" href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a class="coollink" href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a class="coollink" href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a class="coollink" href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a class="coollink" href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a class="coollink" href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</div>
+</details>
+</nav>
+<h2>Hello! I'm <span class="pretty">Buddy.</span></h2>
+<br>
+<h3>Interests</h3>
+<div class="icons">
+<figure>
+<img src="https://f4.bcbits.com/img/a3365013137_10.jpg">
+<figcaption>The Mountain Goats!!</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/redhood.png">
+<figcaption>Immersive Theatre</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/randomcode.png">
+<figcaption>Learning to Code (JS, CSS)</figcaption>
+</figure>
+<figure>
+<img height="40" src="https://u.cubeupload.com/audiobuddy/dicepouch.png">
+<figcaption>RPGs like Monster of the Week</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/pencil.png">
+<figcaption>Drawing</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/yarnblue.png">
+<figcaption>Fiber Arts</figcaption>
+</figure>
+</div>
+<br>
+<h3>Neo Goals</h3>
+<div class="icons">
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/solanumow.png">
+<figcaption>Zap Solanum Alien</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/pancakes.png">
+<figcaption>Breakfast Gallery</figcaption>
+</figure>
+<figure>
+<img src="https://u.cubeupload.com/audiobuddy/kadpink.png">
+<figcaption>Take a Kad Home :)</figcaption>
+</figure>
+<br>
+<h3>Plus...</h3>
+<ul style="text-align:left;">
+<li><b>Pages:</b> Working on lookups for BusinessBoy and Iphi (coding-related)</li>
+<li><b>Art:</b> Make art for Guil's pet lookup</li>
+<li><b>More Pet Goals:</b> Paint Solanum Alien somehow. Another Pterry Ptribute, maybe. More author pets.</li>
+<li><b>Restocking:</b> Currently hanging out in Petpet shops.</li>
+</ul>
+<h3>Guild: </h3>
+<a href="https://neopetsclassic.com/guilds/guild/?id=33"><img src="http://i.imgur.com/5TrSI4n.gif" border="0"></a>
+</div>
+<h3>Let's Go!</h3>
+<h3>-Your Audio Buddy</h3>
+</div>
+</body>

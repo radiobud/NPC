@@ -1,0 +1,123 @@
+<style>
+
+   /*CUSTOM VARIABLES.*/
+/*Change these to change the font, bg, border color, etc. */
+
+:root{
+    --textcolor: #009999;
+    --special: #602060;
+    --mainbg: white;
+    --statsbg: white;
+    --font: Garamond, sans-serif;
+    --border: 2px solid red;
+    }
+
+body, .petlookupcontainer, p, #center{
+color: var(--textcolor);
+font-family: var(--font);
+font-size: 1.2rem;
+    }
+
+#center{
+color: var(--textcolor);
+font-family: Garamond;
+font-size:2em;
+    }
+
+body{
+background-image:
+url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Quilt');
+background-size: cover;
+background-repeat:no-repeat;
+}
+
+.petimage{
+content:url('https://neopetsclassic.com/images/pets/Yurble/yurble_candy_baby.gif');
+width:200px;}
+
+
+
+.petlookupContainer{
+/*width:600px;*/
+height: 80vh;
+overflow: scroll;
+margin: auto;
+padding: 2em 3em;
+border: 30px inset;
+border-image: url("https://file.garden/aSuzW6Q8vUmjy3BN/NPC/quilt-square.png") 30 round;
+background-color: var(--mainbg);
+display:flex;
+flex-direction: row;
+/*
+flex-direction:column;
+*/
+gap: 10px;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+margin-top: 10%;
+box-shadow: inset 0 0 10px var(--special);
+}
+
+
+.pettop{
+display:flex;
+flex-direction:column;
+gap: 10px;
+align-items:center;
+    }
+
+.petstatsblock{
+background: var(--statsbg);
+color: var(--textcolor);
+font-size:0.8rem;
+height: 20px;
+overflow:scroll;
+    }
+
+.petBDstats {display:none;}
+
+.petbelongingsontainer{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+max-height: 800px;
+width:fit-content;}
+
+
+.petbelongingscontainer p:first-of-type{
+text-align:center !important;
+font-size: 2rem;
+    }
+
+.petpetpet{font-size:.8rem !important;
+    }
+
+.description{
+width: 500px;
+font-size: 1.4rem;
+padding: 0 2em;
+text-align:justify;
+}
+
+
+/*do NOT remove unless you want to un-center the lookup*/
+map+table{margin:auto;
+padding-right:100px;}
+#content_td {width: 100%;}
+
+/*HIDES the main NPC sidebars etc*/
+#retroTopBar, .navhover, .hdr, #mb, hr, #hdr, .sidebar-container, .results, .petlinks {display:none;
+    }
+.footertext{display:none;}
+
+</style>
+<div class="description">
+
+<p>
+Every single Neopet is Granny's grandchild, in her opinion. And she loves them all.
+</p>
+<p>
+She is making sure to dress all her grandbabies warmly and set aside a toy or a treat that they will love!
+</p>
+</div>

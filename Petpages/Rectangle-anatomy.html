@@ -1,0 +1,210 @@
+<link rel="stylesheet" href="\Petpages\style-anatomy.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<header><h1>
+    Style Guide
+</h1>
+<h2>Overlays, Page Layouts, and More
+</h2>
+<h3>Make your page look exactly the way you want.</h3>
+</header>
+<div class="navigate">
+    <article class="left">
+        <h3>Recognizing Elements</h3>
+        <p>Identify the part of the page you are trying to edit.</p>
+        <p>I will point out the most common pieces of the page to edit, but will also show you how you can find almost any piece of code.</p>
+    </article>
+    <article class="mid">
+        <h3>Using CSS to Style</h3>
+        <p>CSS is not magic - it's just giving orders.</p>
+        <p>I'll break down the anatomy of a single piece of CSS code, so you know the why - and you don't have to blindly copy-paste.</p>
+    </article>
+    <article class="right">
+        <h3>Get it Done</h3>
+        <p>What do you want to do?</p>
+        <p>Common page edits and how to do those popular moves like hide the sidebar on a pet lookup.</p>
+    </article>
+</div>
+
+<div class="anatomy">
+    <h1>1.<br>Recognize Elements</h1>
+    <article><p>CSS is made of rules for your page.</p>
+   
+<h3>Here's a CSS Example:</h3>
+<p>This snippet is taking the <b>header</b> of the page and saying "Your background color will be: <b>lavender</b>."</p>
+<img src="\Images\code-snippet-spec.png" width="300px;">
+<br>
+<h3>Here's that structure generally:</h3>
+<img src="\Images\code-snippet-gen2.png" width="300px;">
+<p>Let's break down each color-coded part of the structure:</p>
+ <ul>
+        <li><span class="pink">Style tags:</span> These are actually HTML and tell the browser to <strong>read what's in between them as CSS</strong>. Think of the inside of the style tags like "The CSS section."
+        </li>
+        <li><span class="yellow">Selector:</span> The tag that identifies which content your rule affects.
+        </li>
+        <li><span class="green">Brackets:</span> The curly braces that surround each selector's ruleset.
+        </li>
+        <li><span class="ltblue">Property:</span> One characteristic, like "color" or "width"
+        </li>
+        <li><span class="orange">Value:</span> The decision you made about the property, like "red" or "500px"
+        </li>
+        <li><span class="orange">Semicolon:</span> Ends each property rule, including the last one before the curly brace.
+        </li>
+    </ul>
+<h3>Here is a longer snippet of CSS:
+</h3>
+<p>(This is from my code editor, which adds extras - don't worry about the red, black, and pink boxes)</p>
+<img src="\Images\code-longer.png" width="250px;">
+<p>Does that seem overwhelming? Don't let it be!</p>
+<p>This snippet is inside one <span class="pink">style section.</span> It is telling the page:</p>
+<p>For all <span class="yellow">images</span>, <span class="green">{</span>give them a width of 250pixels; give them a solid red border that is 2 pixels thick;<span class="green">}</span></p>
+<p>For all <span class="yellow">headers</span>, <span class="green">{</span>give them the font of Garamond; make the font 24 pixels; center it;<span class="green">}</span></p>
+<p>For anything with the class <span class="yellow">"gothParagraph"</span>, <span class="green">{</span>give it a black background; give it hotpink text;<span class="green">}</span></p>
+<p>And that's it!</p>
+<p>For the record, that will end up something like this:</p>
+<header style="font-family: Garamond;font-size: 24px;text-align: center;">Goth Cat Says</header>
+<img src="\Images\fatcat by eepyamy.png" style="width:150px;border:2px solid red;">
+<p class="gothParagraph" style="background-color:black;color: hotpink;">You have no idea how Goth I am</p>
+<p>Note that the pink text is NOT Garamond, because that property was only given for the header. The image has a red border, but the header does not, for the same reason.</p>
+<p style="text-align:right;">FYI: The cat art is by eepyamy!</p>
+</article>
+
+
+<article>
+    <h2>Takeaways</h2>
+<p>If I can give you one thing from this section, it's this:</p>
+<p>Learn the structure of the CSS. If you are comfortable reading the structure, you will know what to look for when you want to customize someone's premade code, or how to troubleshoot. You can always look up properties and specifics, like "how to center a div" and "how to add border shadow" but you'll work more confidently with the basic foundation.</p>
+<p>If you want a playground to try coding and not struggle with all the NPC header stuff, use a petpage. They are a blank slate, so you can see the results of your work much more accurately.</p>
+</article>
+<article>
+    <h2>NPC and CSS</h2>
+<p>On NPC, you are probably looking to do one of two things: </p>
+    <ol>
+        <li>Make something disappear, or </li>
+        <li>Make something look different </li>
+</ol>
+<p>To do either of those things, you need to know the NPC <b>selectors</b> for each page element, so that you can customize it.</p>
+<p>Welcome to Section 2...</p>
+</article>
+
+</div>
+
+<div class="anatomy">
+    <h1>2.<br>Common NPC Elements</h1>
+
+<article>
+    <h2>Selector Types</h2>
+<p>Without getting into fancy stuff, there are three main types of selectors: elements, classes, and IDs. In increasing specificity.</p>
+<dl>
+<dt>Element</dt>
+<dd><i>example:</i><b> div, header</b>
+<br>Generic - like all divs or all links.</dd>
+<br>
+<dt>Class</dt>
+<dd><i>example:</i><b> .navbar, .gothParagraph</b>
+<br>Versatile. Classes create categories for more efficient styling.</dd>
+<br>
+<dt>ID</dt>
+<dd><i>example:</i><b> #bibliography</b>
+<br>Give ONE element its own unique ID and then call ONLY that element to style.</dd>
+</dl>
+<h3>You can also combine selectors.</h3>
+<p>I don't want to get too complicated with this, but it's important to know for some common page styling - you can get more specific by using multiple selectors, or referring to elements with a specific relationship.</p>
+<h3>Examples</h3>
+<p>To select all image elements inside the Belongings, you can use:</p>
+    <pre>.petBelongingscontainer img {etc}</pre>
+<p>You can get WAY more nuanced with selectors. Search W3Schools for more guidance.</p>
+</article>
+
+<article class="big">
+<h2>Here are the NPC basics.</h2>
+<p>Some of these are really specific.</p>
+    <img class="anat" src="/Images\anatomy-npc-elements.png">
+</article>
+
+<article class="big">
+<h2>Let's take a look at the elements on a pet lookup.</h2>
+<p>The majority are classes such as .petImage (your pet's pic) and .petLinks (your Neomail and Petpage links).</p>
+    <img class="anat" src="/Images\anatomy-petpage-cleaner.png">
+</article>
+
+</div>
+<div class="anatomy">
+    <h1>3.<br>Putting it Together</h1>
+<article>
+<h2>Let's use some very common NPC styles now, for real!</h2>
+<p>Each card will contain code for a specific job or related jobs.</p>
+<p>NOTE: A comment in CSS is written inside /*these*/ and it will not affect the code. I've sprinkled comments here to explain things.</p>
+</article>
+<article>
+    <h2>Goal: Hide Banners + Sidebar</h2>
+<h3>CSS Property: display</h3>
+<textarea>
+    /*Hide the top banners*/
+.hdr, #hdr {display: none;}
+
+    /*Hide the left sidebar*/
+.navhover, #mb {display: none;}
+
+    /*Hide the right sidebar*/
+.sidebar-container {display: none;}
+</textarea>
+<p>From here, I bet you can figure out what to use to hide the footer!</p>
+<p>Note: I separated these out to categorize, but you can list all these selectors in one go - you can even remove horizontal lines with hr:</p>
+<textarea>
+        /*Hide it all!*/
+.hdr, #hdr, .navhover, #mb, .sidebar-container, hr {display: none;}
+</textarea>
+</article>
+
+<article>
+    <h2>Goal: Change Basic Elements</h2>
+    <br>
+<h3>CSS Properties: font-family, font-size, color (not font-color!)</h3>
+<textarea>.petTop{
+    font-family: Garamond, serif; 
+    font-size: 1rem;
+    color: navy;
+}</textarea>
+<p>Note: 1 rem = 16px by default; rem is more scalable for accessibility than pixels.</p>
+<h3>Remove image borders<br>CSS Property: border</h3>
+<textarea>img {border:none;}</textarea>
+
+<p>Get more specific if you need to:</p>
+<textarea>.petBelongingscontainer img {border:none;}
+</textarea>
+<br>
+<h3>Background color/image<br>CSS Properties: background-color, background-image</h3>
+<textarea>
+/*color:*/
+.petStatsBlock{background-color:lavender;}
+
+/*image:*/
+.userLookupContainer{background-image:url('LINK');}</textarea>
+<p>Note: formatting a background image involves more options. Images repeat by default, but you can also stretch them to cover the entire space, and more. Look up CSS background images for guidance.</p>
+</article>
+
+<article>
+    <h2>Goal: Overlays!</h2>
+<h3>CSS Property: content</h3>
+<textarea>    /*Replace pic on a petpage*/
+.petImage {content:url('LINK');}
+
+    /*Replace Shield on a userlookup*/
+#userShield img {content:url('LINK');}
+
+    /*Replace pet pics on userlookup*/
+img[src="CURRENT"] {content:url('NEW'); }
+</textarea>
+<p>Note 1: The last code only works if it is the only thing on your lookup with that exact image! This code is from Revel, and it replaces one image with another. It can also work for belongings (replacing a regular item with a fandom image etc).</p>
+<p>Note 2: You will likely need to set an image size to make sure overlays display right:</p>
+<h3>CSS Property: Width</h3>
+<textarea>        /*Pet image*/
+.petImage {
+    content:url('LINK');
+    width: 150px;}
+</textarea>
+</article>
+</div>

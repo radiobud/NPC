@@ -1,0 +1,101 @@
+    body{background-color:#ff9e7a;
+    color: white;
+font-family:Arsenal, 'Lucida Sans', sans-serif;}
+
+    .anatomy{
+        max-width:95vw;
+        min-width: 400px;
+        border:hotpink solid 2px;
+        overflow-x:scroll;
+    }
+
+    .anat{
+        width:500px;
+        display:block;
+        margin:auto;
+    }
+
+    header h1{
+        color:black;
+        /* font-size:1.5em; */
+        font-family:"Playwrite US Trad Guides", 'Franklin Gothic', 'Times New Roman', serif;
+    }
+
+    header{
+        color:black;
+        font-family: 'Franklin Gothic', 'Times New Roman', serif;
+    }
+
+    h1{font-size:4em;
+    font-family: Arsenal, system-ui, sans-serif;}
+
+    h1,h2,h3{
+        text-align:center;
+        margin-top:0;
+        margin-bottom:0;
+    }
+
+    .navigate{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:10px;
+        margin-bottom: 10px;
+    }
+
+    article{
+        background-color:#345c72;
+        padding: 1em;
+        margin: 10px auto;
+        width: 300px;
+        min-height: 200px;
+        box-shadow: 5px 5px #f46530;
+    }
+
+    .big{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin: 10px auto;
+        width:900px;
+        overflow:visible;}
+
+    pre{
+        max-width:500px;
+        padding: 20px;
+        white-space: pre-wrap;
+        overflow-wrap:break-word;
+    }
+
+    .anatomy article{
+        width:500px;
+    }
+
+    .left{
+        box-shadow: 5px 5px #f46530;
+    }
+
+    .mid{
+        box-shadow: 0 5px #f46530;
+    }
+
+    .right{
+        box-shadow: -5px 5px #f46530;
+    }
+
+img{display:block;margin:auto;}
+
+.pink{color:hotpink;font-weight:bold;}
+.orange{color:orange;font-weight:bold;}
+.ltblue{color:rgb(80, 226, 255);font-weight:bold;}
+.yellow{color:rgb(255, 240, 80);font-weight:bold;}
+.green{color:rgb(80, 255, 106);font-weight:bold;}
+
+textarea{
+    display:block;
+    field-sizing:content;
+    width:450px;
+    background:rgb(4, 14, 66);
+    color:white;
+    margin:auto;
+}
