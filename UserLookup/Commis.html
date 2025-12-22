@@ -1,30 +1,204 @@
-<link rel="stylesheet" href="\Petpages\style-anatomy.css">
+<!--last update: 12pm Dec 22-->
+
+<!--This is for Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
 
 <style>
-    :root{
+:root{
     --darkgray: #323232;
     --tan: #e6d2b0;
-    --bluegray: #827fb6;
+    --bluegray: #837fb6;
     --yellowgray: #c6b23d;
+    --rust: #664947;
 }
 
 body{
-    box-sizing:border-box;
+    box-sizing: border-box;
+    margin: 0;
     background-color: var(--darkgray);
-    margin:0;
 }
 
-.wallpaper{
-    height:50vh;
-    width:120vw;
-    position:fixed;
-    background:url('https://www.lejlart.com/cliques/darkfleurs.jpg');
-    background-repeat:repeat-x;
+*, p, a, #userinfo {
+font-family: Quintessential, sans-serif;}
+
+
+map+table{margin-top: 200px !important;}
+
+/*Below is the main box for your user lookup*/
+#content_td{
+    width: 600px;
+    height: 600px;
+overflow: scroll;
+scrollbar-width: none;
+    background-color: white;
+    margin: 200px auto;
+margin-top: 0 !important; 
+    border: 8px ridge var(--tan);
+box-shadow: 10px 10px 55px inset var(--darkgray);
+display:block;
 }
+
+.content{
+max-height:600px;
+overflow:scroll;}
+
+/* CENTER */
+map + table{margin:auto;}
+/* IF NEEDED */
+#content_td{margin:auto;}
+
+#hdr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
+
+/* UPDATE image hosting for wallpaper before final version */
+.wallpaper{
+    height:70vh;
+    width: 2000vw;
+    background: url('https://www.lejlart.com/cliques/darkfleurs.jpg');
+    background-repeat: repeat;
+    position: fixed;
+    top:0;
+left: -1000px;
+    z-index: -2;;
+}
+
+/* .test{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    margin: 200px auto;
+    border: 8px solid var(--tan);
+} */
+
+.nakahara{
+    position: absolute;
+    top:100px;
+    transform:translateX(-300px);
+    z-index: -1;
+}
+
+/*TEXT HEADER NAKAHARA*/
+.banner{
+    font-family: Quintessential, sans-serif;
+    font-size: 9rem;
+    color: var(--bluegray);
+    position: absolute;
+    top: -0.5px; /*??????*/
+    transform: translateX(-48px) translateY(3px) rotateZ(-9deg);
+    z-index: 1;
+}
+
+.yellow{
+    color: var(--rust);
+    z-index: 1;
+    transform: translateX(-45px) translateY(4px) rotateZ(-9deg);
+}
+
+.brown{
+    color: var(--darkgray);
+    z-index: 3;
+    transform: translateX(-40.5px) rotateZ(-9deg);
+}
+
+/* ICONS */
+
+/*Icons in order - skip if you don't have that icon*/
+/*
+1 - Avatar
+2 - Trades
+3 - Auctions
+4 - Scores
+5 - Stamps
+6 - Collections
+7 - Wishlist
+*/
+
+.userlookuplink:nth-child(1) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon1-explorer.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(2) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon2-doctor.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(3) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon3-dancer.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(4) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon4-antiq.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(5) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon5-clown.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(6) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon7-pair.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(7) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon8-clover.png');
+width: 50px;
+height: 50px;
+}
+
+/* BOTTOM LINKS - may need to use image replace code */
+/*Bottom Icons in order - skip if you don't have that icon*/
+/*
+1 - Neomail
+2 - Make Neofriend
+3 - Block User
+*/
+
+img[src="https://neopetsclassic.com/images/userlookup/neomail.gif"]{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon11-mail.png');
+    width: 50px;
+}
+
+img[src="https://neopetsclassic.com/images/userlookup/neofriend.gif"]{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon13-wolf.png');
+    width: 50px;
+}
+
+img[src="https://neopetsclassic.com/images/userlookup/block.gif"]{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/icon10-totem.png');
+    width: 50px;
+}
+
+/*SHIELD image */
+#userShield img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/shield2-prosprun.png');
+    width:100px;
+    height:100px;
+}
+
 
 </style>
 
 <div class="wallpaper"></div>
+
+    <header class="banner blue">NAKAHARA</header>
+    <header class="banner yellow">NAKAHARA</header>
+    <header class="banner brown">NAKAHARA</header>
+    
+    Lookup stuff goes here
+    <div class="nakahara"><img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/Nakahara-wiki-transp.png"></div>
+
+</div>
+
+
+
