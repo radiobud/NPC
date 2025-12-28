@@ -112,6 +112,12 @@
 </dl>
 <h3>You can also combine selectors.</h3>
 <p>I don't want to get too complicated with this, but it's important to know for some common page styling - you can get more specific by using multiple selectors, or referring to elements with a specific relationship.</p>
+<p>Some of our code won't work on everything. There are a few elements which have really specific selectors that we need to override.</p>
+<pre><span class="yellow"><i>Note:</i> In CSS, the more specific rule wins.
+    ID > class > element-type
+    #bigdiv > .bigdiv > div
+
+    In a tie, the later rule in the code document wins.</span></pre>
 <h3>Examples</h3>
 <p>To select all image elements inside the Belongings, you can use:</p>
     <pre>.petBelongingscontainer img {etc}</pre>

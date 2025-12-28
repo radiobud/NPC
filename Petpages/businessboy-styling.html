@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="\Petpages\style-anatomy.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
 <style>
 body {box-sizing: border-box;}
 
@@ -17,7 +22,6 @@ margin: auto;
 }
 
 article{
-border: 2px dotted navy;
 padding: 20px;
 }
 
@@ -77,23 +81,26 @@ Tentative plan: General guide for beginners BY an intermediate/BEGINNER in struc
 
 <article id="CSS">
 <h2>CSS tips for NPC Styling</h2>
-<ul>
-<li>flex and grid - suggestions for more info!</li>
-<li>Working within NPC code - a work in progress...</li>
-</ul>
-
 <h3>Using selectors to work with site code</h3>
-<p>A user lookup has multiple key objects: the account age/info, the shield, pets, trophies. We can't remove these! But you can, for example, change the background of those areas to your own theme. Or select a specific pet and overlay custom art (that does not mis-represent what it is!).</p>
 <p>Most of the Neo elements use IDs or classes, so you need to select those in your CSS. How to do this?</p>
 <h4>Dev Tools</h4>
-<pre>To add:
-screenshots of inspected elements
-example work-through with my petpage or lookup?
-STILL TO DO:
-positioning? in the tricks section
-
-<p>This is a test of the textarea element.</p>
-<textarea>Style,<test> style.</textarea>
+<p>When you are trying to identify an element to style, Developer Tools (Dev Tools) are your friend.</p>
+<p>You can access them with F12, or - my favorite way - hit CTRL+SHIFT+C on a PC. This will let you hover around the page and highlight a specific element to select.</p>
+<h4>Here's an example in action</h4>
+<img src="\Images\ex-devtools-element.png" width="300px">
+<p>You can see the name, class, or ID of the element, which is useful for trying to style it. This element is called .petStatsBlock !</p>
+<p>The inspector also opens Dev Tools, which looks like this - notice the stat block is highlighted.</p>
+<img src="\Images\ex-devtools-code.png" width="300px">
+<p>If you click the element, it stays in focus, and you can edit the CSS within the Dev Tools and see live what it does.</p>
+<h4>Try it out?</h4>
+<p>Go to one of your own petpages, and open the Element Inspector by pressing CTRL+SHIFT+C (or CMD+OPT+C on mac). Then click on the stats block.</p>
+<p>The Styles window should show up in your dev tools. Try adding a new background-color to the block!</p>
+<img src="\Images\dev-css.png" width="250px">
+<p>I'm changing Watercolour's to lavender.</p>
+<img src="\Images\dev-css-edited.png" 
+width="250px">
+<p>Here it is in action!</p>
+<img src="\Images\dev-lavender.png" width="250px">
 
 </section>
 
@@ -124,20 +131,17 @@ positioning? in the tricks section
 
 <article>
 <h2>"Manifesto"</h2>
-I want this to be a middle ground for people who want to make something of their page, but who don't want to drop in templates - or who can't find templates that work for them.
-When it comes to coding, most people learn by doing - piece by piece, trying out new tools and skills. I (personally!) find it overwhelming to try to review code in one big chunk, unless it's my own. Even then!
-Comments help. Good formatting helps. Frequent checks (debugs) help.
-Dev tools.
+I want this to be a middle ground for people who want to be hands-on with their code, either involved edits of a premade or making your own layouts.
+When it comes to coding, most people learn by doing - piece by piece, trying out new tools and skills.<br>
+Comments help. <br>Good formatting helps. <br>Frequent checks (debugs) help.<br>And asking for help - helps!
 </article>
 
 <article>
 <h2>Thanks and resources for more learning</h2>
 <ul>
-<li>Petrapixel - great neocities site with lots of CSS and JS tutorials</li>
-<li>sadgrl.online - page revamped, but still hosts lots of resources</li>
+<li><a href="https://petrapixel.neocities.org/coding/how-to-make-a-website">Petrapixel on Neocities</a> - great neocities site with lots of CSS and JS tutorials</li>
+<li><a href="https://sadgrl.online/guides/">sadgrl.online</a> - page revamped, but still hosts lots of resources</li>
 <li>daintyduchess - the only premade layout maker I've found on NPC, beautiful pet pages - go there if you don't want to deal with all this.</li>
-<li>Aaron and redrunn - early debug and advice making things work here</li>
-<li>Josh Comeau and Kevin Powell - CSS + passion!</li>
 <li>Josh Comeau - CSS wizard. Here's his <a href="https://www.joshwcomeau.com/css/interactive-guide-to-grid/">interactive guide to CSS grid.</a></li>
 </ul>
 </article>

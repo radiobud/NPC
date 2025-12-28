@@ -99,3 +99,15 @@ textarea{
     color:white;
     margin:auto;
 }
+
+a {
+    text-decoration:none;
+    color: #ff9e7a;
+    font-weight:bolder;
+}
+
+a:hover{
+    text-shadow:2px 2px 10px #742102;
+}
+
+article ul {list-style-type: none;}
