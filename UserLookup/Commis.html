@@ -6,12 +6,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
 
 <style>
+
+/* Below are variables.
+You can change colors and font HERE, and it should change it all for you in the rest of the page. */
 :root{
     --darkgray: #323232;
     --tan: #e6d2b0;
     --bluegray: #837fb6;
     --yellowgray: #c6b23d;
     --rust: #664947;
+    --mainfont: Quintessential, sans-serif;
 }
 
 body{
@@ -20,10 +24,12 @@ body{
     background-color: var(--darkgray);
 }
 
+/*font style*/
 *, p, a, #userinfo {
-font-family: Quintessential, sans-serif;}
+font-family: var(--mainfont);}
 
 
+/* Centers the userlookup, do not remove */
 map+table{margin-top: 200px !important;}
 
 /*Below is the main box for your user lookup*/
@@ -49,29 +55,23 @@ map + table{margin:auto;}
 /* IF NEEDED */
 #content_td{margin:auto;}
 
+/*removes main NPC elements*/
 #hdr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
 
-/* UPDATE image hosting for wallpaper before final version */
+/* Leave credit up for this wallpaper artist, please. */
 .wallpaper{
     height:70vh;
     width: 2000vw;
-    background: url('https://www.lejlart.com/cliques/darkfleurs.jpg');
+    background: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/naka-icons/wallpaper-byappledust.jpg');
     background-repeat: repeat;
     position: fixed;
     top:0;
-left: -1000px;
+    left: -1000px;
     z-index: -2;;
 }
 
-/* .test{
-    width: 400px;
-    height: 300px;
-    background-color: white;
-    margin: 200px auto;
-    border: 8px solid var(--tan);
-} */
-
-.nakahara{
+/*Positioning for IMAGE of Nakahara*/
+.hero{
     position: absolute;
     top:100px;
     transform:translateX(-300px);
@@ -80,7 +80,7 @@ left: -1000px;
 
 /*TEXT HEADER NAKAHARA*/
 .banner{
-    font-family: Quintessential, sans-serif;
+    font-family: var(--mainfont);
     font-size: 9rem;
     color: var(--bluegray);
     position: absolute;
@@ -101,7 +101,7 @@ left: -1000px;
     transform: translateX(-40.5px) rotateZ(-9deg);
 }
 
-/* ICONS */
+/* ICONS for PAGE LINKS */
 
 /*Icons in order - skip if you don't have that icon*/
 /*
@@ -156,8 +156,8 @@ width: 50px;
 height: 50px;
 }
 
-/* BOTTOM LINKS - may need to use image replace code */
-/*Bottom Icons in order - skip if you don't have that icon*/
+/* BOTTOM LINKS in order*/
+
 /*
 1 - Neomail
 2 - Make Neofriend
@@ -186,19 +186,51 @@ img[src="https://neopetsclassic.com/images/userlookup/block.gif"]{
     height:100px;
 }
 
+.credit p{
+position: fixed;
+    bottom: 0;
+    right: 1rem;
+    font-size: .7rem;
+    z-index: -1;
+    color: var(--rust);
+}
+
+.credit a{
+    text-decoration:none;
+    color: var(--rust);
+    font-size:.7rem;
+}
 
 </style>
 
 <div class="wallpaper"></div>
 
+<!--these 3 headers are the big NAKAHARA text at the top. Feel free to change the word!-->
     <header class="banner blue">NAKAHARA</header>
     <header class="banner yellow">NAKAHARA</header>
     <header class="banner brown">NAKAHARA</header>
     
-    This lookup is currently a code test for a commission.
-    <div class="nakahara"><img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/Nakahara-wiki-transp.png"></div>
+<!--START CONTENT-->    
+
+Put any text for your page here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur est qui labore sed perferendis, dolorem in laborum. Ducimus voluptatum assumenda in porro, non provident eum aperiam delectus optio! Animi, eligendi.
+
+<!--
+You can also add images with this tag
+(just remove the <! which is for html comments)-->
+<!--
+<img src="URL" width="300">
+-->
+
+
+<!--END CONTENT-->
+
+<!--MAIN HERO IMAGE
+this is the actual image of Nakahara - if you decide you want a diff character/image, change it with the link below. But if you change the class name, make sure you change it in the CSS at the top too.-->
+    <div class="hero"><img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/Commis%20-%20Nakahara/Nakahara-wiki-transp.png"></div>
 
 </div>
+
+<div class="credit"><p>Wallpaper by <a href="https://www.lejlart.com/apple.html">Appledust</a>. Layout by <a href="https://neopetsclassic.com/userlookup/?user=buddy">Buddy.</a></p></div>
 
 
 

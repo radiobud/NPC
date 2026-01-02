@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="\Petpages\style-anatomy.css">
+<link rel="stylesheet" href="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/style-anatomy.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
@@ -6,8 +6,8 @@
 <style>
 
 pre{
-    background-color: black;
-    color: hotpink;
+    background-color: #1E1E1E;
+    color: goldenrod;
     margin: 10px 2em;
 }
 
@@ -51,17 +51,15 @@ img{
 &lt;/style&gt;
 </pre>
 <p>Then put ALL your CSS inside them. Keep any other content (adoptables, description of your pet, etc) outside and after those style tags.</p>
-<img src="\Images\code-style-vs-htm.png">
-<h3>Take a look at the CSS Intro page for refresh of CSS basics.</h3>
 </article>
     <article>
         <h2 id="1">1. Remove NPC Extras</h2>
         <p>To make the page look simple, we'll remove the headers, sidebar, and footer. I think it's a good idea to leave some sort of navigation, but we'll save that for the bonus section.</p>
 <h2>Here are the NPC basics.</h2>
-    <img class="anat" src="/Images\anatomy-NPC-basics.png">
+    <img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/anatomy-NPC-basics.png">
 <h3>The property you want is<br>display: none;</h3>
 
-<img class="anat" src="/Images\snippet-display-none.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/snippet-display-none.png">
 
 <p>You can also remove the horizontal line, which is an HTML element called <b>hr</b>.</p>
     </article>
@@ -89,9 +87,9 @@ img{
 <p>The <b>selector</b> for all these properties is not obvious. I'll put them on the #sfp_body element for now, which is a pretty high-level container for most content on the petpage.</p>
 <p>The code below might start to look more complicated, but look - it's just the list from above, placed in between the curly braces.</p>
 <h3>color + font styles</h3>
-<img class="anat" src="/Images\snippet-step-2.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/snippet-step-2.png">
 <p>By now your petpage should look something like this (I'm leaving my pet links and BD stats so there's more to look at). The color and font-family properties didn't do anything yet; that's because the main text has more specific selectors we need to deal with later.</p>
-<img src="\Images\walkthrough\step1-2.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/step1-2.png">
 <p>Not a fan of that empty space and alignment? Let's style the placement next.</p>
     </article>
 
@@ -105,7 +103,7 @@ img{
     A + B <br>
 Which means: Select the B after any A. (The <i>last</i> thing listed in the selector is what is being altered.)</p>
 <h3>map + table</h3>
-<img class="anat" src="/Images\snippet-step-3.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/snippet-step-3.png">
 <h2>Try it on your own pet lookup! You should have a nice, centered container now.</h2>
     </article>
 
@@ -137,7 +135,7 @@ Which means: Select the B after any A. (The <i>last</i> thing listed in the sele
 <pre>.petlookupcontainer{
     background: lightblue;}
 </pre>
-<img src="\Images\walkthrough\step4.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/step4.png">
 <h2>Pause and put in your own div with words!</h2>
 </article>
 
@@ -146,13 +144,8 @@ Which means: Select the B after any A. (The <i>last</i> thing listed in the sele
 <p>Time to take control of those page elements!</p>
 <h2>Let's take a look at the elements on a pet lookup.</h2>
 <p>The majority are classes such as .petImage (your pet's pic) and .petLinks (your Neomail and Petpage links).</p>
-    <img class="anat" src="/Images\anatomy-petpage-cleaner.png">
-<p>First, we are going to style:</p>
-<ul>
-<li>Pet Stats</li>
-<li>Header Font</li>
-<li>Background Images</li>
-</ul>
+    <img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/anatomy-petpage-cleaner.png">
+
 <h3>Pet stats</h3>
 <p>Let's change the color and font of the stats. Remember, we need to be specific. Also, I'm using some other color values here, rgb and hex - those are more flexible than just the named colors.</p>
 <pre>/*Step 5*/
@@ -163,7 +156,7 @@ Which means: Select the B after any A. (The <i>last</i> thing listed in the sele
     font-family: Garamond, serif;
     }
 </pre>
-<img src="\Images\walkthrough\step5.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/step5.png">
 <p>The header font is another weird one. It's best selected with <b>#center</b>, although that also applies to some petpet font, so you have to finagle if you also have a petpet.</p>
 <pre>/*Step 5.1*/
 
@@ -173,7 +166,7 @@ Which means: Select the B after any A. (The <i>last</i> thing listed in the sele
     font-size: 2rem;
     }
 </pre>
-<img src="\Images\walkthrough\step5.5.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/step5.5.png">
 <p>Finally, we'll change the background image of the lookup. If your image is small, you may want to change the repeat or the size of the image. I suggest a CSS tutorial like <a href="https://www.w3schools.com/cssref/pr_background-image.php">W3Schools'</a> for that!</p>
 <pre>/*Step 5.2*/
 
@@ -181,13 +174,13 @@ Which means: Select the B after any A. (The <i>last</i> thing listed in the sele
     background-image: url(https://images.unsplash.com/vector-1759878845510-e9ed73b7c9e0?q=80&w=1652&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     }
 </pre>
-<img src="\Images\walkthrough\step5.6.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/step5.6.png">
 </article>
 
 <article>
 <h2 id="6">6.  Overlays</h2>
 <p>The piece de resistance.</p>
-<h3>content: url</h3>
+<h3>The property you want is<br>content: url(LINK);</h3>
 <pre>
     .petImage{
         content: url(LINK);
@@ -201,17 +194,17 @@ Which means: Select the B after any A. (The <i>last</i> thing listed in the sele
 https://neopetsclassic.com/images/events/firevsice/gourmetneutral.gif);
     }
 </pre>
-<img src="\Images\walkthrough\step6.png">
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/walkthrough/step6.png">
 <h2><br>...lol. anyway...</h2>
 <br>
-<p>Sometimes you have a lot of images that are hard to select, and it's easier to do a sort of find-and-replace for the image source. You need to know the current image url, and replace it with your chosen art url.</p>
+<p>Sometimes it's easier to do a sort of find-and-replace instead. You need to know the <b>current image url</b>, and replace it with <b>the url for your new art</b>.</p>
 <h2>Picky Overlays</h2>
 <pre>   /*Replace an exact image*/
 img[src="CURRENT"] {content:url('NEW'); }
 </pre>
-<p>Note 1: The code only works if it is the only thing on your page with that exact image! It can also work for belongings (replacing a regular item with a fandom image etc). This code is from Revel.</p>
+<p>Note 1: The picky code only works if it is the <b>only thing on your page</b> using that exact source image! It is very helpful for things like userlookup pet images. I first got this code from Revel.</p>
 <p>Note 2: You will likely need to set an image size to make sure overlays display right:</p>
-<h3>Change Width</h3>
+<h3>With Width Specification</h3>
 <pre>    /*Pet image example*/
 .petImage {
     content:url('LINK');
@@ -219,14 +212,8 @@ img[src="CURRENT"] {content:url('NEW'); }
 </pre>
 
 </article>
-
+<article>
+<h2 id="7">7.  Bonus</h2>
+<p>I'm... out of room for more content, so the bonus section will be on another petpage. TBD!</p>
+</article>
 </section>
-
-
-<!-- <ul>The elements you may want to remove:</ul>
-    <li><b>.hdr:</b> The image header</li>
-    <li><b>#hdr:</b> The retro header</li>
-    <li><b>.navhover, #mb:</b> The left-hand menu</li>
-    <li><b>.sidebar-container:</b> The right-hand sidebar</li>
-    <li><b>.footertext:</b> The copyright info blurb</li>
-    <li><b>.results:</b> The text on petpages that says "Search Results - click for help"</li> -->
