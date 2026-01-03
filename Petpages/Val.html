@@ -1,0 +1,259 @@
+<!-- Overhaul of Rectangle-Anatomy page, edited 1-2-26. -->
+<link rel="stylesheet" href="\Petpages\style-anatomy.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+    img{width:400px;}
+
+    .anatomy{
+        scrollbar-width:none;
+        min-width:fit-content;
+    }
+
+    pre{
+        /* background-color:#1F1F1F; */
+        background-color: #00264D;
+        max-width:400px;
+        margin:auto;
+    }
+
+    .anatomy h1{
+        color:#345c72;
+        /* font-family:"Lekton" */
+        position: relative;
+        margin-top:2rem;
+    }
+
+    #one::before{
+content: "1.";
+position: absolute;
+left:45%;
+top:0;
+color:white;
+font-family:Lekton;
+z-index:-1;
+transform:scale(200%);
+    }
+
+    #two::before{
+content: "2.";
+position: absolute;
+left:45%;
+top:0;
+color:white;
+font-family:Lekton;
+z-index:-1;
+transform:scale(200%);
+    }
+
+    #three::before{
+content: "3.";
+position: absolute;
+left:45%;
+top:0;
+color:white;
+font-family:Lekton;
+z-index:-1;
+transform:scale(200%);
+    }
+</style>
+
+<header><h1>
+    Style Guide
+</h1>
+<h2>Demystify the Basics of CSS.
+</h2>
+<h3>Make your page look exactly the way you want.</h3>
+</header>
+<div class="navigate">
+    <article id="left">
+        <a href="#one"><h2>Read CSS</h2></a>
+        <p>Know what you are looking at.</p>
+    </article>
+    <article id="mid">
+        <a href="#two"><h2>Use HTML + CSS</h2></a>
+        <p>Set up your HTML for easier CSS.</p>
+    </article>
+    <article id="right">
+        <a href="#three"><h2>Put it Together</h2></a>
+        <p>What do you want to do?</p>
+        <p>Let's write code using HTML and CSS.
+        </p>
+    </article>
+</div>
+
+<div class="anatomy">
+    <h1 id="one">How to Read CSS</h1>
+    <article>
+
+<h3>Why CSS?</h3>
+<p>CSS (Cascading Style Sheets) is a collection of rules for your page.</p>
+<p>HTML is the content of the page.<br> CSS is the style of the page.</p>
+<p>CSS is not magic - it's just giving orders.</p>
+<h3>The nice thing about CSS, in my opinion:<br>it is very readable.</h3>
+<p>The rules are structured the same way every time.
+</p>
+<p>Below, I pick the <b>header</b> of the page and say "Your background color will be: <b>lavender</b>."</p>
+<img src="\Images\css-basics\structure-1nostyle.png">
+<br>
+<br>
+<h3>But we can get WAY more simple.<br>The CSS above is saying:</h3>
+<img src="\Images\css-basics\structure-2nostyle.png">
+<br>
+<p>You pick one element of the page, and you put all the rules for that element inside {curly braces}. You separate each rule with a semicolon.</p>
+<p>You can list many rules for one element all inside the same set of curly braces. Make sure that all rules, even the LAST one, end in a semicolon.</p>
+<img src="\Images\css-basics\structure-3nostyle.png"><br><br>
+<h3>In CSS terminology, each of those parts is:</h3>
+<img src="\Images\css-basics\structure-general-nostyle.png">
+<p>Let's break down each color-coded part of the structure:</p>
+ <ul>
+        <li><span class="yellow">Selector:</span> Tag that identifies which content your rule affects.
+        </li>
+        <li><span class="green">Brackets:</span> The curly braces that surround each selector's ruleset.
+        </li>
+        <li><span class="ltblue">Property:</span> One characteristic, like "color" or "width"
+        </li>
+        <li><span class="orange">Value:</span> The decision you made about the property, like "red" or "500px"
+        </li>
+        <li><span class="orange">Semicolon:</span> Ends each property rule, including the last one before the curly brace.
+        </li>
+    </ul>
+</article>
+
+
+<article>
+    <h2>Takeaways</h2>
+<p>If I can give you one thing from this section, it's this:</p>
+<p>Learn the structure of the CSS. If you are comfortable reading the structure, you will know what to look for when you want to customize someone's premade code, or how to troubleshoot. You can always look up properties and specifics, like "how to center a div" and "how to add border shadow" but you'll work more confidently with the basic foundation.</p>
+<p>If you want a playground to try coding and not struggle with all the NPC header stuff, use a petpage (not a lookup). They are a blank slate, so you can see the results of your work much more accurately.</p>
+</article>
+</div>
+
+<div class="anatomy">
+    <h1 id="two">HTML + CSS</h1>
+
+<article>
+    <h2>Selectors are in the HTML.</h2>
+<p>Without getting into fancy stuff, there are three common types of selectors: elements, classes, and IDs. In increasing specificity.</p>
+<br>Element - General HTML bit. <i>example:</i><b> div, header</b>
+<br>Class - Category you make. <i>example:</i><b> .navbar, .gothParagraph</b>
+<br>ID - SINGLE element you name. example:</i><b> #bibliography</b>
+
+<p>These can also be combined. You can select all the p elements within a div, for example, like this:</p>
+<pre>div p {color: red;}</pre>
+<p>You can list multiple selectors for one ruleset. Like this:</p>
+<pre>.hdr, .navhover, .footertext {display:none;}</pre>
+</article>
+<article>
+<h3>How to Use HTML to Your Advantage</h3>
+<p>The selectors above - plain element, or class/id names - are grabbing something that is IN the HTML. Classes and IDs are named when the HTML is written. If this is NPC code, you've got to figure out what those names are. If it's your code, then you get to name classes or IDs whatever you want. Here is an example code:</p>
+<pre>
+    &lt;section&gt;
+
+       &lt;div>
+        &lt;p>Hello World&lt;/p>
+        &lt;p>Wow!&lt;p>
+       &lt;/div> 
+
+       &lt;div>
+        &lt;p>Goodnight moon&lt;/p>
+        &lt;p>Zzzz&lt;p>
+       &lt;/div>
+
+    &lt;/section>
+</pre>
+<p>When there are multiple elements that you want to style the same way, it can be nice to give them a class.</p>
+<pre>
+    &lt;section&gt;
+
+       &lt;div class="greeting">
+        &lt;p>Hello World&lt;/p>
+        &lt;p>Wow!&lt;p>
+       &lt;/div> 
+
+       &lt;div class="greeting">
+        &lt;p>Goodnight moon&lt;/p>
+        &lt;p>Zzzz&lt;p>
+       &lt;/div>
+       
+    &lt;/section>
+</pre>
+
+<p>What if we have more unique elements that we're doing fun things with? Then ID is appropriate.</p>
+<pre>
+    &lt;section&gt;
+
+       &lt;div class="greeting">
+        &lt;p>Hello World&lt;/p>
+        &lt;p id="red">Wow!&lt;p>
+       &lt;/div> 
+
+       &lt;div class="greeting">
+        &lt;p>Goodnight moon&lt;/p>
+        &lt;p id="blue">Zzzz&lt;p>
+       &lt;/div>
+       
+    &lt;/section>
+</pre>
+
+<p>You can get WAY more nuanced with selectors. I recommend the browser game <a href="https://flukeout.github.io/">CSS Diner</a> for practice. It helps you get comfortable with all types of selectors, plus gives you a greater understanding of how CSS works with HTML.</p>
+</article>
+
+<article>
+    <h2>Heads up: Style Tags</h2>
+<p>All the coding you will do on NPC is in an HTML document. The browser reads it all as HTML, and your CSS will not work unless you tell the browser, "HEY! This part is CSS."</p>
+<p>There is an HTML tag for "hey it's CSS!" - the style element.</p>
+<p>Everthing inside the style tag will be read as CSS.</p>
+<p>In general, your &lt;style&gt; section should all be together at the top of the document.</p>
+<img src="\Images\css-basics\structure-1.png">
+</article>
+
+
+</div>
+
+    <div class="anatomy">
+    <h1 id="three">Putting it Together</h1>
+        <article>
+<h2>Let's write some code.</h2>
+<p>Plan first.</p>
+<p>Here's the content I want (HTML):</p>
+<ul>
+    <li>Pic of a cat</li>
+    <li>Header that says "Goth Cat says"
+    </li>
+    <li>Text under the cat that says "You have no idea how goth I am"</li>
+</ul>
+<p>And here's the design (CSS):</p>
+<ul>
+    <li>Center everything</li>
+    <li>Pic not too big</li>
+    <li>Dotted border around the cat</li>
+    <li>For text, black background and pink font</li>
+    <li>Fancy header font</li>
+</ul>
+<h3>Time to make it.</h3>
+<p>We'll start with the HTML, since it's the main content.</p>
+<p>(These screenshots are from my code editing program, VSCode, which does nice things like auto-color codes the CSS. I'm sorry it's not text you can copy-paste; I'll run out of character space on this petpage!)</p>
+<img src="\Images\css-basics\ex-html-noclass.png">
+
+<p>Now, we want a background on all the text, meaning the header and p element. Let's give them the same class, then.</p>
+<p>I'll call the text class "goth." And I'm also going to give the container div a class of "demo" - mainly because there are usually LOTS of other divs on a page, and I don't want to format ALL of them with this.</p>
+<h3>Add class names</h3>
+<img src="\Images\css-basics\ex-html-wclass.png">
+<p>Finally our HTML is ready to be styled. That means it's...</p>
+</article>
+<article>
+<h2>CSS Time, Bay-BEE!</h2>
+<p>Finally, we style all that HTML we prepared.</p>
+<img src="\Images\css-basics\ex-css.png">
+<p>Let's look at what that is saying. In CSS, you can comment with slash and asterisk around your text. A comment in code will not take effect or be visible on the page, but it helps you remind yourself what you were doing with the code, or break it down into sections.</p>
+<img src="\Images\css-basics\ex-css-breakdown.png">
+<p>And that's it!</p>
+<p>For the record, if you put this on a pet lookup, it will end up something like this:</p>
+<img src="\Images\css-basics\ex-gothcentered.png">
+<p style="text-align:right;">FYI: The cat art is by eepyamy!</p>
+</article>
+</div>
+

@@ -3,6 +3,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
 
+<style>
+    img{width:400px;}
+</style>
+
 <header><h1>
     Style Guide
 </h1>
@@ -12,9 +16,10 @@
 </header>
 <div class="navigate">
     <article class="left">
-        <h3>Recognizing Elements</h3>
-        <p>Identify the part of the page you are trying to edit.</p>
-        <p>I will point out the most common pieces of the page to edit, but will also show you how you can find almost any piece of code.</p>
+        <h3>Reading CSS</h3>
+        <p>Make CSS readable.</p>
+        <p>Know what you are looking at.</p>
+        <p>I will break down the structure of CSS coding so you can write it or edit it with confidence.</p>
     </article>
     <article class="mid">
         <h3>Using CSS to Style</h3>
@@ -29,20 +34,31 @@
 </div>
 
 <div class="anatomy">
-    <h1>1.<br>Recognize Elements</h1>
-    <article><p>CSS is made of rules for your page.</p>
-   
-<h3>Here's a CSS Example:</h3>
-<p>This snippet is taking the <b>header</b> of the page and saying "Your background color will be: <b>lavender</b>."</p>
-<img src="\Images\code-snippet-spec.png" width="300px;">
+    <h1>1.<br>How to Read CSS</h1>
+    <article>
+
+<h3>Why CSS?</h3>
+<p>CSS (Cascading Style Sheets) is a collection of rules for your page.</p>
+<p>HTML is the content of the page.<br> CSS is the style of the page.</p>
+<p>The rules are structured the same way every time.
+</p>
+<p>Below, I pick the <b>header</b> of the page and say "Your background color will be: <b>lavender</b>."</p>
+<img src="\Images\css-basics\structure-1nostyle.png">
 <br>
-<h3>Here's that structure generally:</h3>
-<img src="\Images\code-snippet-gen2.png" width="300px;">
+<br>
+<h3>But we can get WAY more simple with this.<br>The CSS above is saying:</h3>
+<img src="\Images\css-basics\structure-2nostyle.png">
+<br>
+<p>You pick one element of the page, and you put all the rules for that element inside {curly braces}. You separate each rule with a semicolon.</p>
+<p>Because the curly braces collect all the rules, you can list many rules for one element all inside them. Make sure that all rules, even the LAST one, end in a semicolon.</p>
+<img src="\Images\css-basics\structure-3nostyle.png"><br><br>
+<h3>In CSS terminology, each of those parts is:</h3>
+<img src="\Images\css-basics\structure-general-nostyle.png">
 <p>Let's break down each color-coded part of the structure:</p>
  <ul>
-        <li><span class="pink">Style tags:</span> These are actually HTML and tell the browser to <strong>read what's in between them as CSS</strong>. Think of the inside of the style tags like "The CSS section."
-        </li>
-        <li><span class="yellow">Selector:</span> The tag that identifies which content your rule affects.
+        <!-- <li><span class="pink">Style tags:</span> These are actually HTML and tell the browser to <strong>read what's in between them as CSS</strong>. Think of the inside of the style tags like "The CSS section."
+        </li> -->
+        <li><span class="yellow">Selector:</span> Tag that identifies which content your rule affects.
         </li>
         <li><span class="green">Brackets:</span> The curly braces that surround each selector's ruleset.
         </li>
@@ -214,3 +230,32 @@ img[src="CURRENT"] {content:url('NEW'); }
 </textarea>
 </article>
 </div>
+
+
+<!-- placeholder zone -->
+
+
+<style>
+    .demo{ /*This is selecting the div with class "demo"*/
+        text-align:center; /*This centers its contents*/
+        max-width:300px;
+        margin:auto; /*this centers it*/
+    }
+
+    header{ /*This is selecting the HTML element called "header"*/
+        font-family: Garamond;
+        font-size: 24px;
+    }
+
+    .demo img{ /*This is selecting any images INSIDE of "demo" */
+        width: 150px;
+        border: 2px dashed black; 
+        /*Some values have shorthand so you can list many of them in one spot. The border has: width (2 pixels), style (dashed), and color (black)*/
+    }
+
+    .goth{ /*Two types of elements have class "goth" in our HTML!*/
+        color:hotpink;
+        background-color:black;
+    }
+</style>
+

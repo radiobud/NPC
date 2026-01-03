@@ -134,20 +134,46 @@ Goal: General guide for beginners BY an intermediate/BEGINNER in structuring and
 <p>Curly braces surround the actual commands of the CSS. They're like the angle brackets of HTML (to me, anyway). Here is the abstract structure:</p>
 <blockquote><pre>
 <code>&lt;style&gt;</code>
+
      <code class="el">selector</code> <code class="brace">{</code>
      <code class="prop">property:</code> <code class="val">value;</code>
      <code class="brace">}</code class="brace">
+
 <code>&lt;/style&gt;</code></pre>
 </blockquote>
 
 <p>Here is an actual example of CSS:</p>
 <blockquote><pre>
 <code>&lt;style&gt;</code>
+
      <code class="el">header</code> <code class="brace">{</code>
      <code class="prop">background-color:</code> <code class="val">lavender;</code>
-     <code class="brace">}</code>
+     <code class="brace">}
+</code>
 <code>&lt;/style&gt;</code></pre>
 </blockquote>
+<blockquote><pre>
+<code>&lt;style&gt;</code>
+
+     <code class="el">hey thing</code> <code class="brace">{</code>
+     <code class="prop">look like:</code> <code class="val">this;</code>
+     <code class="brace">}
+     </code>
+<code>&lt;/style&gt;</code></pre>
+</blockquote>
+
+<blockquote><pre>
+<code>&lt;style&gt;</code>
+
+     <code class="el">hey thing</code> <code class="brace">{</code>
+     <code class="prop">have font like:</code> <code class="val">this;</code>
+     <code class="prop">have a background like:</code> <code class="val">this;</code>
+     <code class="prop">be shaped like:</code> <code class="val">this;</code>
+     <code class="brace">}
+     </code>
+<code>&lt;/style&gt;</code></pre>
+</blockquote>
+
 <p>The <b>element</b> is the HTML being selected for styling, which we'll get to in a second. The <b>property</b> is one quality of the element, like text color or width. Properties do not use spaces. The <b>value</b> is the choice you make about that property (e.g. be blue, or be Verdana font, or fill the screen, etc.) ...The curly braces are usually split that way for readability, but you can keep it all one line.</p>
 <aside>
 <h4>Important!! Semicolons!!</h4>
