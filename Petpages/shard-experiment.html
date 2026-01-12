@@ -1,0 +1,60 @@
+<style>
+body{
+background-color: black;
+box-sizing: border-box;
+}
+
+.wrapper{
+display:grid;
+margin: 50px 100px;
+max-width: 80vw;}
+
+.glass{
+display: flex;
+justify-content:center;
+align-items:center;
+background-color: rgba(204, 255, 255, 0);
+transition: background-color 0.5s ease-in;
+min-height: 300px;
+min-width: 200px;
+color: black;
+font-family: monospace;}
+
+
+.glass:hover{
+background-color: rgba(204, 255, 255, 1);}
+
+.glass h1{color: purple;font-weight:bold;}
+
+.triangle h1{color: purple;font-weight:bold;}
+
+#shard1{
+width: 0;
+height: 0;
+border-left: 100px solid transparent;
+border-right: 100px solid transparent;
+border-bottom: 200px solid rgba(204, 255, 255, 1);}
+
+.triangle {
+  width: 180px;
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% 100%,100% 0,0 0);
+  background: linear-gradient(45deg,#FA6900,#C02942);
+}
+
+
+
+
+</style>
+
+<div class="wrapper">
+<div class="glass" id="shard1">
+<h1>I.</h1>
+This is a story about disguise.
+</div>
+
+<div class="triangle">
+<h1>II.</h1>
+This is a story about smoke.
+</div>
+</div>

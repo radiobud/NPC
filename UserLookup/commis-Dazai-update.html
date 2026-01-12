@@ -1,0 +1,225 @@
+<!--last update: 10pm on Jan 11-->
+
+<!--This is for Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+/* Below are variables.
+You can change colors and font HERE, and it should change it all for you in the rest of the page. */
+:root{
+    --darkgray: #323232;
+    --tan: #e6d2b0;
+    --bluegray: #837fb6;
+    --yellowgray: #c6b23d;
+    --rust: #664947;
+    --mainfont: Quintessential, sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--darkgray);
+}
+
+/*font style*/
+*, p, a, #userinfo {
+font-family: var(--mainfont);}
+
+/* Centers the userlookup, do not remove */
+map + table{margin:auto;
+margin-top: 100px !important;}
+/* IF NEEDED */
+#content_td{margin:auto;}
+
+/*Below is the main box for your user lookup*/
+#content_td{
+    width: 600px;
+    height: 600px;
+overflow: scroll;
+scrollbar-width: none;
+    background-color: white;
+    margin: 0 auto;
+margin-top: 0 !important; 
+    border: 8px ridge var(--tan);
+box-shadow: 10px 10px 55px inset var(--darkgray);
+display:block;
+}
+
+.content{
+max-height:600px;
+overflow:scroll;}
+
+/*removes main NPC elements*/
+#hdr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
+
+
+/*This creates a wallpaper bg*/
+body{
+background-color: #323232;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cg fill='%23aca392' fill-opacity='0.45'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' opacity='.5'%3E%3C/path%3E%3Cpath d='M15 15h50l-5 5H20v40l-5 5V15zm0 50h50V15L80 0v80H0l15-15zm32.07-32.07l3.54-3.54A15 15 0 0 1 29.4 50.6l3.53-3.53a10 10 0 1 0 14.14-14.14zM32.93 47.07a10 10 0 1 1 14.14-14.14L32.93 47.07z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
+/*Positioning for BIG IMAGE*/
+#hero{
+    position: absolute;
+    top:100px;
+    transform:translateX(-600px);
+    z-index: -1;
+    height: clamp(500px, 90vh, 1000px);
+}
+
+/*TEXT HEADER*/
+.banner{
+    font-family: var(--mainfont);
+    font-size: 4rem;
+    position: absolute;
+    top: -0.5px;
+    transform: translateY(32px);
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.yellow{
+    color: var(--tan);
+    z-index: 1;
+    transform: translateX(2px) translateY(32px);
+}
+
+.brown{
+    color: var(--darkgray);
+    z-index: 3;
+}
+
+/* ICONS for PAGE LINKS */
+
+/*Icons in order - skip if you don't have that icon*/
+/*
+1 - Avatar
+2 - Trades
+3 - Auctions
+4 - Scores
+5 - Stamps
+6 - Collections
+7 - Wishlist
+*/
+
+.userlookuplink:nth-child(1) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon1-welldone.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(2) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon2-rope.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(3) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon7-lantern.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(4) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon4-bat.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(5) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon5-moon.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(6) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon3-pipe.png');
+width: 50px;
+height: 50px;
+}
+
+.userlookuplink:nth-child(7) a img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon6-detect.png');
+width: 50px;
+height: 50px;
+}
+
+/* BOTTOM LINKS in order*/
+
+/*
+1 - Neomail
+2 - Make Neofriend
+3 - Block User
+*/
+
+img[src="https://neopetsclassic.com/images/userlookup/neomail.gif"]{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon-air.png');
+    width: 50px;
+}
+
+img[src="https://neopetsclassic.com/images/userlookup/neofriend.gif"]{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon-fight.png');
+    width: 50px;
+}
+
+img[src="https://neopetsclassic.com/images/userlookup/block.gif"]{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/icons/icon-fire.png');
+    width: 50px;
+}
+
+/*SHIELD image */
+#userShield img{
+    content: url('https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/badge-invest.png');
+    width:100px;
+    height:100px;
+}
+
+.credit p{
+position: fixed;
+    bottom: 0;
+    right: 1rem;
+    font-size: .7rem;
+    z-index: -1;
+    color: var(--tan);
+background-color: var(--rust);
+}
+
+.credit a{
+    text-decoration:none;
+    color: var(--tan);
+    font-size:.7rem;
+}
+
+</style>
+
+
+<!--these 3 headers are the big DAZAI text at the top. Feel free to change the word!-->
+    <header class="banner blue">anything worth wanting</header>
+    <header class="banner yellow">anything worth wanting</header>
+    <header class="banner brown">anything worth wanting</header>
+    
+<!--START CONTENT-->    
+
+Put any text for your page here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur est qui labore sed perferendis, dolorem in laborum. Ducimus voluptatum assumenda in porro, non provident eum aperiam delectus optio! Animi, eligendi.
+
+<!--
+You can also add images with this tag
+(just remove the <! which is for html comments)-->
+<!--
+<img src="URL" width="300">
+-->
+
+
+<!--END CONTENT-->
+
+<!--MAIN HERO IMAGE
+this is the big banner image - if you decide you want a diff character/image, change it with the link below.--> 
+<div class="hero"><img id="hero" src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/commis/dazai/dazai-hero.png"></div>
+
+<div class="credit"><p>Wallpaper from <a href="https://www.heropatterns.com">Hero Patterns</a>. Layout by <a href="https://neopetsclassic.com/userlookup/?user=buddy">Buddy.</a></p></div>
+
+

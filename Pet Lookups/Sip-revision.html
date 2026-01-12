@@ -1,0 +1,340 @@
+<meta name="viewport" content="width=device-width">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+*{box-sizing:border-box;}
+
+:root{
+--mainbg:lavenderblush;
+--special:lightpink;
+--lightbg:lavender;
+--bg-one: lightpink;
+--bg-two: lavender;
+--bg-three: lightblue;
+--bg-four: aquamarine;
+--blue-bg: rgba(106, 90, 205, .5);
+--text-dark: slateblue;
+--text-light: white;
+--text-basic: Arsenal, Jost, sans-serif;
+--text-fancy: "Grenze Gotisch", Quintessential, Garamond, serif;
+}
+
+/*CENTER*/
+map+table{
+margin: auto;
+padding-right: 100px;
+}
+
+#content_td{
+width: 100%;
+padding-right: 200px;
+}
+
+table:has(.footertext){
+width:100% !important;}
+
+/*REMOVE NPC*/
+.hdr, #hdr, .navhover, #mb, .sidebar-container, .footertext, .results, hr{
+display:none;
+}
+
+body{
+background-color: var(--mainbg);}
+
+/*GENERAL FONT styles*/
+body, p, 
+.petimage, 
+.petstatsblock,
+.petbelongingscontainer,
+#center:first-of-type{
+font-family: var(--text-basic);
+font-size: 1.2rem;
+color: var(--text-light);
+}
+
+#center:first-of-type{
+font-size:3rem;
+}
+
+.desc p,
+.petpetpet p{
+color: var(--text-dark);
+}
+
+/*WHOLE grid*/
+.petlookupcontainer{
+display:grid;
+grid-template-columns: 1fr 2fr 1fr;
+gap: 1em;
+grid-template-areas:
+    "title title title"
+    "pet desc BD"
+    "petpet desc links"
+    "belong belong belong";
+justify-content: center;
+align-items:center;
+width: clamp(400px, 900px, 80vw);
+height:fit-content;
+margin-top: 10%;
+}
+
+/*Grid-areas*/
+#center:first-of-type{grid-area: title;}
+.petTop{grid-area: pet;}
+.petLinks{grid-area: links;}
+.petBDstats{grid-area: BD;}
+.petpetpet{grid-area: petpet;}
+.petbelongingscontainer{grid-area: belong;}
+.desc{grid-area: desc;}
+.petTrophies{display: none;}
+
+/*.sidebar-container{grid-area: bar;}*/
+
+/*Each area formatting*/
+
+
+/*TITLE*/
+#center:first-of-type{
+background-color: var(--bg-one);
+box-shadow: 2px 2px var(--bg-two);
+}
+
+/*BELONG*/
+.petBelongingscontainer{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: baseline;
+padding: 2rem;
+background-color: var(--bg-three);
+box-shadow: 2px 2px var(--blue-bg);
+}
+
+/*Hide belonging title*/
+.petbelongingscontainer b:first-of-type{display: none;}
+
+/*PET*/
+.petTop{
+display:flex;
+flex-direction: column;
+background-color: var(--bg-four);
+height: 100%;
+box-shadow: 2px 2px var(--blue-bg);
+}
+
+.petImage{margin-top: 40%;}
+
+.petImage img{
+position: relative;
+z-index: 2;
+}
+
+/*PET BIG TEXT*/
+.petimage b:first-of-type{
+font-family: 'Grenze Gotisch';
+    font-size: 10rem;
+    position: absolute;
+    z-index: 3;
+    transform: rotate(-20deg) translate(-2rem, -350px);
+color: lightpink;
+text-shadow: -5px 3px lightblue;
+}
+
+/* Old Way
+.petImage::before{
+content: "Sip";
+font-family: var(--text-fancy);
+color: var(--bg-one);
+text-shadow: -5px 3px var(--bg-three);
+font-size: 200px;
+position: absolute;
+z-index: 3;
+transform: rotate(-20deg) translate(-2rem, -15rem);
+}
+*/
+
+/*Make Stats small and scroll*/
+.petStatsblock{
+background:none;
+height: 6rem;
+padding-top: 6rem;
+overflow: scroll;
+}
+
+/*BD*/
+.petBDstats{
+background-color: var(--bg-three);
+width: 100% !important;
+max-height: 100%;
+overflow: scroll;
+padding-top: 2rem;
+box-shadow: 2px 2px var(--blue-bg);
+}
+
+.petBD stats p, .petBDstats b{
+font-size: .8rem;
+line-height: 100%;
+}
+
+/*PETPET*/
+.petpetpet{
+background-color: lavender;
+padding: 2rem;
+box-shadow: 2px 2px lightpink;}
+
+/*LINKS*/
+.petlinks{
+background-color: var(--bg-four);
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 1em;
+padding: 3em;
+height: 100%;
+box-shadow: 2px 2px var(--blue-bg);
+position: relative;}
+
+/*LINK replacements*/
+img[src="https://neopetsclassic.com/images/mail_owner.gif"]{
+content: url('https://neopetsclassic.com/images/items/cof_kougra_latte.gif');}
+
+.petlinks img:first-of-type:hover{
+box-shadow: 0 0 10px lightpink;}
+
+img[src="https://neopetsclassic.com/images/visit_petpage.gif"]{
+Display:none;}
+
+/*Does not work
+img[src="PETPAGE"] {
+content: "Mail Buddy?"
+}
+*/
+
+.petLinks::before{
+content: "Mail Buddy?";
+font-family: var(--text-fancy);
+color: var(--text-dark);
+text-shadow: -5px 3px var(--bg-three);
+font-size: 2rem;
+position: absolute;
+left: 1rem;
+bottom: 1rem;
+}
+
+/*DESC*/
+
+.desc{
+background-color: var(--bg-two);
+font-family: Garamond;
+font-size: 2rem;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-shadow: 2px 2px var(--bg-one);
+padding: 0 1em;
+text-align: left;
+}
+
+.desc h1{
+font-family: var(--text-fancy);
+font-size: 2rem;
+color: white;
+background-color: var(--bg-three);
+padding: 1rem;
+text-align: center;}
+
+/*Nav Bar*/
+
+nav{
+gap: 20px;
+position: absolute;
+top: 5px;
+margin: auto;
+width: clamp(400px, 900px, 80vw);
+z-index: 4;
+}
+
+/*I think the Clamp width is not needed on both of these*/
+
+nav ul{
+list-style-type: none;
+padding: 0;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+justify-content:center;
+gap: 20px;
+width: clamp (400px, 900px, 80vw);
+}
+
+nav li a{
+text-decoration: none;
+color: var(--text-dark);
+font-family: var(--text-basic);
+font-size: 1.2rem;
+display: block;
+padding: 5px 10px;
+background-color: var(--lightbg);
+border: 1px solid var(--special);
+width: fit-content;
+}
+
+nav li a:hover{
+background-color: var(--special);
+}
+
+/*TO DO: Fix*/
+@media screen and (max-width:700px){
+.petlookupcontainer{
+grid-template-columns: 1fr 2fr;
+grid-template-areas:
+        "title title"
+        "pet desc"
+        "petpet desc"
+        "belong belong"
+        "links BD";
+width: 100%;
+padding:2em;
+transition: all 0.5s ease;}
+
+map+table{
+padding-right:0;
+Padding-left:5%;
+transition: all 0.5s ease;}
+
+#content_td {padding-right:0;
+transition: all 0.5s ease;}
+
+Nav{transform: scale(0.8);
+transition: all 0.5s ease;}
+}
+
+@media screen and (max-width:500px){
+.petlookupcontainer{
+grid-template-rows: 1fr;
+grid-template-areas:
+        "title"
+        "pet"
+        "desc"
+        "petpet"
+        "belong"
+        "links"
+        "BD";
+width: 100%;
+padding:2em;
+transition: all 0.5s ease;}
+}
+</style>
+
+<div class="desc">
+<p>
+Zapping, for now. Would like to make them a Chocolate Lutari!</p>
+<p>This layout is my experiment with using CSS grid in a much more involved way.</p>
+<p>You can read Sip's stats by scrolling the space under their image.</p>
+</div>

@@ -27,7 +27,7 @@ font-family:Arsenal, 'Lucida Sans', sans-serif;}
         font-family: 'Franklin Gothic', 'Times New Roman', serif;
     }
 
-    h1{font-size:4em;
+    h1{font-size: clamp(4vw, 4em, 12vw);
     font-family: Arsenal, system-ui, sans-serif;}
 
     h1,h2,h3{
@@ -42,6 +42,7 @@ font-family:Arsenal, 'Lucida Sans', sans-serif;}
         flex-wrap:wrap;
         gap:10px;
         margin-bottom: 10px;
+        width:100%;
     }
 
     article{
@@ -68,7 +69,7 @@ font-family:Arsenal, 'Lucida Sans', sans-serif;}
     }
 
     .anatomy article{
-        width:500px;
+        width: clamp(500px, 600px, 85vw);
         height: fit-content;
     }
 
@@ -116,3 +117,57 @@ a:hover{
 }
 
 article ul {list-style-type: none;}
+
+    .anatomy h1{
+        color:#345c72;
+        /* font-family:"Lekton" */
+        position: relative;
+        margin-top:2rem;
+    }
+
+    #one::before{
+content: "1.";
+position: absolute;
+left:45%;
+top:0;
+color:white;
+font-family:Lekton;
+z-index:-1;
+transform:scale(200%);
+    }
+
+    #two::before{
+content: "2.";
+position: absolute;
+left:45%;
+top:0;
+color:white;
+font-family:Lekton;
+z-index:-1;
+transform:scale(200%);
+    }
+
+    #three::before{
+content: "3.";
+position: absolute;
+left:45%;
+top:0;
+color:white;
+font-family:Lekton;
+z-index:-1;
+transform:scale(200%);
+    }
+
+@media (max-width:550px){
+body{
+    width:100%;
+}
+
+.anatomy{
+    width:100vw !important;
+}
+
+.anatomy article{
+    width: 90% !important;
+}
+}
