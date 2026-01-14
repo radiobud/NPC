@@ -1,0 +1,444 @@
+<meta name="viewport" content="width=device-width">
+
+<!--these are my go-to Google fonts. You can create your own list and update the third link element below, if you want to add to it!-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+*{box-sizing:border-box;}
+
+/* Below are the variables for bg color, text color, and font-style used in this code.
+I found it useful to number the bg-colors and then re-use those #s for other things.
+If you want to change the color palette, you only need to change the variables here. */
+/* FYI, for the fullscreen grid layout, the current color setup is:
+one   one   one
+four  two   three
+three two   four
+three three three
+*/
+:root{
+--bg-one: #ffd6ff;
+--bg-two: #c8b6ff;
+--bg-three: #bbd0ff;
+--bg-four: #b8c0ff;
+--bg-five:#e7c6ff;
+--dark-bg: rgba(106, 90, 205, .5);
+--text-dark: slateblue;
+--text-light: white;
+--text-basic: Arsenal, Jost, sans-serif;
+--text-fancy: "Grenze Gotisch", Quintessential, Garamond, serif;
+}
+
+/* BEGIN FORMAT SECTION */
+
+/*CENTER PAGE*/
+map+table{margin: auto; padding-right: 100px;}
+
+#content_td{width: 100%; padding-right: 200px;}
+
+table:has(.footertext){width:100% !important;}
+
+/*REMOVE NPC*/
+.hdr, #hdr, .navhover, #mb, .sidebar-container, .footertext, .results, hr{
+display:none;
+}
+
+/* BEGIN DESIGN SECTION */
+
+body{background-color: var(--bg-five);}
+
+/*GENERAL FONT styles*/
+body, p, 
+.petimage, 
+.petstatsblock,
+.petbelongingscontainer,
+#center:first-of-type{
+font-family: var(--text-basic);
+font-size: 1.2rem;
+color: var(--text-light);
+}
+
+/* Pet header - e.g. XYZ the Pink Ixi */
+#center:first-of-type{
+font-size:3rem;
+}
+
+.desc p,
+.petpetpet p, .petpetpet{
+color: var(--text-dark);
+}
+
+/* BEGIN PICKY DESIGN SECTION */
+
+/*TITLE*/
+#center:first-of-type{
+background-color: var(--bg-one);
+box-shadow: 2px 2px var(--bg-two);
+}
+
+/*BELONG*/
+.petBelongingscontainer{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: baseline;
+padding: 2rem;
+background-color: var(--bg-three);
+box-shadow: 2px 2px var(--dark-bg);
+}
+
+/*Hide belonging title*/
+.petbelongingscontainer b:first-of-type{display: none;}
+
+/*PET*/
+.petTop{
+display:flex;
+flex-direction: column;
+background-color: var(--bg-four);
+height: 100%;
+box-shadow: 2px 2px var(--dark-bg);
+}
+
+.petImage{margin-top: 40%; 
+    /*just balances the pet area vertically*/}
+
+/* This next code makes the PET BIG NAME work.
+It is not needed otherwise. */
+.petImage img{position: relative; z-index: 2;
+}
+
+/*PET BIG NAME
+ALL for making pet name BIG and angled.
+You can cut this whole code and pet name will be normal.
+OR you can leave the color and shadow code and remove size, position and transform*/
+.petimage b:first-of-type{
+font-family: 'Grenze Gotisch';
+    font-size: 4rem; /*May need adjusting depending on length of pet name */
+    position: absolute;
+    z-index: 3;
+    transform: rotate(-20deg) translate(-2rem, -250px); /*this transform gives it an angle and moves it off the pet pic*/
+color: var(--bg-one);
+text-shadow: -5px 3px var(--bg-three);
+}
+
+
+/*Make Stats small and scroll
+Pet stats will be readable, but are hidden by top padding until visitor scrolls.*/
+.petStatsblock{
+background:none;
+height: 6rem;
+padding-top: 6rem; /*remove just this line if you want the pet stats visible immediately*/
+overflow: scroll;
+width: clamp(150px, 200px, 300px);
+color: var(--text-dark);
+font-size: 1rem;
+margin:auto;
+}
+
+/*BD*/
+.petBDstats{
+background-color: var(--bg-three);
+width: 100% !important;
+height: 100%;
+overflow: scroll;
+padding: 2rem 1rem;
+box-shadow: 2px 2px var(--dark-bg);
+}
+
+.petBDstats div:nth-of-type(2){
+height: 7rem !important;
+overflow:scroll;}
+
+.petBDstats img{height: clamp(80px, 150px, 150px);}
+
+.petBD stats p, .petBDstats b{
+font-size: .8rem;
+line-height: 100%;
+}
+
+/*PETPET*/
+.petpetpet{
+background-color: var(--bg-three);
+padding: 2rem;
+box-shadow: 2px 2px var(--bg-one);}
+
+/*LINKS - Neomail and Petpage*/
+.petlinks{
+background-color: var(--bg-four);
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 1em;
+padding: 3em;
+height: 100%;
+box-shadow: 2px 2px var(--dark-bg);
+position: relative;}
+
+/*LINK replacements
+If you want to put a custom image in place of the NM icon:
+Change the second url (the one in parentheses)*/
+img[src="https://neopetsclassic.com/images/mail_owner.gif"]{
+content: url('https://neopetsclassic.com/images//items/jel_asparagus.gif');}
+
+
+img[src="https://neopetsclassic.com/images/visit_petpage.gif"]{
+content: url(https://neopetsclassic.com/images//items/bak_cookie_orchid.gif);}
+
+/*gives the link images a glow when hovered over*/
+.petlinks img:hover{
+box-shadow: 0 0 10px var(--bg-one);}
+
+/*DESC*/
+/*Your content/description for your pet.
+You can include images here, goals, etc*/
+
+.desc{
+background-color: var(--bg-two);
+font-family: Garamond;
+font-size: 2rem;
+height: 100%;
+min-width:350px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-shadow: 2px 2px var(--bg-one);
+padding: clamp(1em, 2em, 30%) 1em;
+text-align: left;
+anchor-name: --desc;
+}
+
+.desc h1{
+font-family: var(--text-fancy);
+    font-size: clamp(2rem, 4rem, 6rem);
+    color: var(--text-dark);
+    text-shadow: -2px 2px var(--bg-one);
+padding: 1rem;
+margin: 0;
+text-align: center;}
+
+/*Not UFA banner
+Puts it at bottom of description*/
+.petlookupcontainer table:first-of-type{
+background: none;
+position: absolute;
+    position-anchor: --desc;
+    position-area: bottom center;
+    transform: translateY(-3rem);
+}
+
+/*Nav Bar*/
+
+nav{
+gap: 20px;
+position: absolute;
+top: 5px;
+margin: auto;
+width: clamp(400px, 900px, 80vw);
+z-index: 4;
+}
+
+nav ul{
+list-style-type: none;
+padding: 0;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+justify-content:center;
+gap: 20px;
+}
+
+nav li a{
+text-decoration: none;
+color: var(--text-dark);
+font-family: var(--text-basic);
+font-size: 1.2rem;
+display: block;
+padding: 5px 10px;
+background-color: var(--bg-two);
+border: 1px solid var(--bg-three);
+width: fit-content;
+}
+
+nav li a:hover{
+background-color: var(--bg-three);
+}
+
+/*END picky design section*/
+
+/* BEGIN GRID LAYOUT SECTION
+NOTE:
+the fullscreen layout is 3 columns.
+I gave each section a nickname.
+Alt layouts below*/
+
+/*WHOLE grid*/
+.petlookupcontainer{
+display:grid;
+grid-template-columns: 1fr 2fr 1fr; /*makes middle column 2x as wide as L and R columns*/
+gap: 1em;
+grid-template-areas:
+/*change grid layout here*/
+    "title title title"
+    "pet desc BD"
+    "petpet desc links"
+    "belong belong belong";
+justify-content: center;
+align-items:center;
+width: clamp(400px, 900px, 80vw);
+height:fit-content;
+margin-top: 10%;
+}
+
+/*Grid-areas -
+don't edit these unless you also edit in the grid-template-areas above.
+If you remove a section entirely,
+add display: none; to hide it.
+You can keep the grid-area name if you put display:none; last.*/
+#center:first-of-type{grid-area: title;}
+.petTop{grid-area: pet;}
+.petLinks{grid-area: links;}
+.petBDstats{grid-area: BD;}
+.petpetpet{grid-area: petpet;}
+.petbelongingscontainer{grid-area: belong;}
+.desc{grid-area: desc;}
+
+/*red-headed stepchild: Trophies*/
+.petTrophies{display: none;}
+/*NOTE: if you want to display Trophies,
+change display:none; to grid-area:trophy;
+and use Alt 4 below instead of default.
+*/
+
+/*ALT LAYOUTS!*/
+/*IMPORTANT: if you remove any named area from the grid,
+you must also add display:none; to its code in the next section.
+Otherwise it may float creepily out of place.
+*/
+
+/*ALT 1
+Belongings on right-side
+
+grid-template-areas:
+    "title title title"
+    "pet desc belong"
+    "petpet desc belong"
+    "BD links belong";
+
+If you want to hide BD and links,
+just cut the entire 4th line of the above!
+ */
+
+
+/*ALT 2
+Hide BD and Links, keep belongings on bottom
+Solution:
+Flank description with pet and petpet
+
+grid-template-areas:
+    "title title title"
+    "pet desc petpet"
+    "belong belong belong";
+ */
+
+/*ALT 3
+No petpet?
+
+grid-template-areas:
+    "title title title"
+    "pet desc belong"
+    "BD desc belong";
+ */
+
+ /*ALT 4
+ Got trophies?
+
+grid-template-areas:
+    "title title title"
+    "pet desc trophy"
+    "petpet desc BD"
+    "belong belong links";
+*/
+
+/**/
+
+/*if any of that needs more explanation let me know! - Buddy */
+
+/**/
+
+/*Media Queries*/
+/*Should work ok, but they are more clunky than a pro would make.
+Switches to 2-column between 500-850px, and to single-column for below 500px.
+They change a couple other things that get wonky with mini screens.
+You can always tinker with them!*/
+
+/*Medium Screen: 2-column*/
+@media screen and (max-width:850px){
+.petlookupcontainer{
+grid-template-columns: 1fr 2fr;
+grid-template-areas:
+        "title title"
+        "pet desc"
+        "petpet desc"
+        "belong belong"
+        "links BD";
+width: 100%;
+padding:2em;
+transition: all 0.5s ease;}
+
+map+table{
+padding-right:0;
+Padding-left:5%;
+transition: all 0.5s ease;}
+
+#content_td {padding-right:0;
+transition: all 0.5s ease;}
+
+Nav{transform: scale(0.8);
+transition: all 0.5s ease;}
+}
+
+/*Mobile/Small screen: 1 column*/
+@media screen and (max-width:500px){
+.petlookupcontainer{
+grid-template-rows: 1fr;
+grid-template-areas:
+        "title"
+        "pet"
+        "desc"
+        "petpet"
+        "belong"
+        "links"
+        "BD";
+width: 100%;
+padding:2em;
+transition: all 0.5s ease;}
+}
+
+</style>
+
+<!--The rest is HTML!!-->
+
+<div class="desc">
+<h1>Header.</h1>
+<p>Put your pet descriptions here!</p>
+<p>Have fun!</p>
+</div>
+
+<!--below is navbar code. You shouldn't need to change it if you like the bar there. If you don't want a navbar, you can cut this whole last section.-->
+<nav>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</nav>
+
+<!--This code is long with comments. If you add a lot in the description, you may want to remove my explain-y comments.-->
+<!--anything in these can be cut for HTML-->
+<!--and CSS comments look like /*this*/-->
