@@ -1,0 +1,117 @@
+<meta name="viewport" content="width=device-width">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+*{box-sizing:border-box;}
+
+:root{
+--bg-one: #ffd6ff;
+--bg-two: #c8b6ff;
+--bg-three: #bbd0ff;
+--bg-four: #b8c0ff;
+--bg-five:#e7c6ff;
+--dark-bg: rgba(106, 90, 205, .5);
+--text-dark: slateblue;
+--text-light: white;
+--text-basic: Arsenal, Jost, sans-serif;
+--text-fancy: "Grenze Gotisch", Quintessential, Garamond, serif;
+}
+
+/*CENTER*/
+map+table{
+margin: auto;
+padding-right: 100px;
+}
+
+#content_td{
+width: 100%;
+padding-right: 200px;
+}
+
+table:has(.footertext){
+width:100% !important;}
+
+/*REMOVE NPC*/
+.hdr, #hdr, .navhover, #mb, .sidebar-container, .footertext, .results, hr{
+display:none;
+}
+
+body{
+background-color: var(--dark-bg);}
+
+/*GENERAL FONT styles*/
+body, p, 
+.petimage, 
+.petstatsblock,
+.petbelongingscontainer,
+#center:first-of-type{
+font-family: var(--text-basic);
+font-size: 1.2rem;
+color: var(--text-light);
+}
+
+#center:first-of-type{
+font-size:3rem;
+}
+
+.desc p,
+.petpetpet p, .petpetpet{
+color: var(--text-dark);
+}
+
+/*WHOLE grid*/
+.content{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 1em;
+grid-template-areas:
+    "head head head"
+    "desc desc desc"
+    "user user links"
+    "pet pet trophies"
+    "charms site contact";
+justify-content: center;
+align-items:center;
+width: clamp(400px, 900px, 80vw);
+height:fit-content;
+margin-top: 10%;
+}
+
+/*Grid-areas*/
+#userheader{grid-area:head;}
+#userinfocontainer{grid-area:user;}
+.userlookuplinks{grid-area:links;}
+.userlookuppets{grid-area:pet;}
+#siteCharms{grid-area:charms;}
+#siteTrophies{grid-area:site;}
+#gameTrophies{grid-area:trophies;}
+#contactLinks{grid-area:contact;}
+#center{grid-area:desc;}
+
+/*Design*/
+#userheader{background: var(--bg-one);}
+
+#userinfocontainer{background: var(--bg-two);
+width:100%;}
+
+.userlookuplinks{background: var(--bg-three);}
+
+.userlookuppets{background: var(--bg-five);}
+
+#siteCharms{background: var(--bg-four);}
+
+#siteTrophies{background: var(--bg-two);}
+
+#gameTrophies{background: var(--bg-four);}
+
+#contactLinks{background: var(--bg-one);}
+
+</style>
+<div class="desc">
+
+<p>Experiments in progress! :)<p/>
+</div>
