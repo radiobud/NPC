@@ -1,0 +1,136 @@
+<!-- updated 2-5-2026 revisions -->
+<!-- commission test for escarglow -->
+
+<meta name="viewport" content="width=device-width">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --border: 20px solid transparent;
+    --border-pic: url(https://solaria.neocities.org/guides/borderimage/whitelace.png) 34 round;
+    --page-bg: hotpink;
+    --container-bg: lightpink;
+    --grid-bg: white;
+    --text-color-main: hotpink;
+    --text-color-title: goldenrod;
+    --font-main: "Pirata One", Garamond, serif;
+    --font-title: Quintessential, serif;
+}
+
+body{
+    box-sizing:border-box;
+    background-color: var(--page-bg);
+}
+
+.petlookupcontainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border: var(--border);
+    border-image: var(--border-pic);
+    border-image-outset: 17px;
+    background: var(--container-bg);
+    grid-template-areas:
+    "header header"
+    "pet stats"
+    "petpet petpet"
+    "belong belong"
+"content content"
+    "BD links";
+justify-content: center;
+align-items: center;
+anchor-name: --main;
+}
+
+/* .petlookupcontainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: var(--border);
+    border-image: var(--border-pic);
+    border-image-outset: 17px;
+    background: var(--container-bg);
+    grid-template-areas:
+    "header header lore"
+    "pet stats lore"
+    "petpet petpet lore"
+    "belong belong lore"
+"content content lore"
+    "BD links lore";
+justify-content: center;
+align-items: center;
+} */
+
+.petlookupcontainer > * {
+margin: 0;}
+
+.my-content + p {display:none;}
+
+.petstatsblock{background-color: var(--container-bg);}
+
+.petBDstats{width:100% !important;}
+
+
+
+
+/* Grid section names */
+.petimage{grid-area:pet;}
+.petpetpet{grid-area:petpet;}
+.petBDstats{grid-area:BD;}
+.petstatsblock{grid-area:stats;}
+.petlinks{grid-area:links;}
+.pettrophy{grid-area:trophy;}
+.petbelongingscontainer{grid-area:belong;}
+.my-content{grid-area:content;}
+/*nav{grid-area:nav;}*/
+#center:first-of-type{grid-area:header;}
+/* the header above is the pet name e.g. Joe the Red Uni */
+
+.lore{
+    position:absolute;
+    position-anchor: --main;
+    position-area: right;
+    border: var(--border);
+    border-image: var(--border-pic);
+    border-image-outset: 17px;
+    background: var(--container-bg);
+    width: clamp(300px, fit-content, 500px);
+    padding: 3em;
+}
+
+
+/* centers the lookup */
+map+table{margin:auto;}
+#content_td{width:100% !important;
+    min-width: 100%;
+    max-width: none !important;}
+.content{max-width:none !important;}
+td:has(.content){width:100%;}
+
+/* allows the pet stats to be separated from the pet image */
+.pettop{display:contents;}
+
+/* NPC Cleanup */
+hr, .hdr, #hdr, .sidebar-container, #mb, .footertext, .results, .navhover{
+    display:none;}
+
+/* Hides pet name from under image - optional */
+.petimage b{display:none;}
+
+/* fix for pet trophy space */
+/* if you have trophies you can delete the below */
+#pettrophies, #pettrophies p{display:none;}
+#pettrophies + p{display:none;}
+
+
+</style>
+
+<div class="my-content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
+</div>
+
+<div class="lore">
+    <h1>Lore</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
+</div>

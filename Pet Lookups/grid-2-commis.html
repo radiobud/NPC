@@ -1,0 +1,272 @@
+<!-- saved 2-5-2026 -->
+
+<meta name="viewport" content="width=device-width">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --border: 3px ridge #3EA6A6;
+    --grid-bg: rgb(229 222 255);
+    --page-bg: lightblue;
+    --text-main: black;
+    --text-bright: goldenrod;
+    --text-link: hotpink;
+--font-main: Lekton, Monospace, sans-serif;
+--font-title: Quintessential, Garamond, serif;
+--gradient-bg: radial-gradient(hotpink, lightblue);
+}
+
+.petimage img{
+content: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/icons/vemon.png);
+width: 150px;
+}
+
+body{
+    box-sizing:border-box;
+background: var(--gradient-bg);
+}
+
+map+table{margin: auto;}
+#content_td{width:100% !important;
+min-width:100%;
+overflow-x:hidden;
+max-width:none !important;}
+
+.content{max-width:none !important;}
+
+.hdr, #hdr, .sidebar-container, #mb, .footertext, .results, .navhover, hr{
+    display: none;
+}
+
+td:has(.content){width:100%;}
+
+
+
+.petlookupcontainer{
+width: clamp(600px, 900px, 1000px);
+    display:grid;
+    gap:10px;
+    grid-template-columns: repeat(8, 1fr);
+/*    grid-template-rows: 100px 300px 250px 250px 200px;   */
+    grid-template-areas:
+    "header header header header header header header header"
+    "pet pet pet content content content content content"
+    "petpet petpet petpet content content content content content"
+    "belong belong belong belong belong belong belong belong"
+    "BD BD BD BD stats stats stats links"
+"nav nav nav nav nav nav nav nav";
+    padding: 2em;
+    margin: auto;
+margin-top: 3em;
+background-color: var(--grid-bg);
+border-radius: 3em;
+}
+
+/* Grid section names */
+.pettop{display:contents;}
+
+.petimage{grid-area:pet;}
+.petpetpet{grid-area:petpet;}
+.petBDstats{grid-area:BD;}
+.petstatsblock{grid-area:stats;}
+.petlinks{grid-area:links;}
+.pettrophy{grid-area:trophy;}
+.petbelongingscontainer{grid-area:belong;}
+.my-content{grid-area:content;}
+nav{grid-area:nav;}
+#center:first-of-type{grid-area:header;}
+/* the header above is the pet name e.g. Joe the Red Uni */
+
+.petimage, .petpetpet, .petBDstats, .petstatsblock, .petlinks, .pettrophy, .petbelongingscontainer, .my-content, #center:first-of-type{
+    width: auto !important;
+    height: auto !important;
+}
+
+/* 
+idea - set clamp width to all classes above to control flow in flex layout 
+*/
+
+/*
+.petimage{background:blue;}
+.petpetpet{background:yellow;}
+.petBDstats{background:hotpink;}
+.petlinks{background:lavender;}
+.pettrophy{background:green;}
+.petbelongingscontainer{background:goldenrod;}
+.my-content{background:purple;}
+#center:first-of-type{background:lightcoral;}
+*/
+
+.petimage, .petpetpet, .petBDstats, .petlinks, .petstatsblock, .petbelongingscontainer, .my-content{border:var(--border); border-radius:3px;}
+
+.petstatsblock{background:none;}
+
+.petlookupcontainer > *{
+    height:50px;
+    padding:1em;
+    text-align:center;
+}
+
+/* font section */
+
+p, b, .petstatsblock, .petimage, .petpetpet, .petlinks, .petbelongingscontainer, .petBDstats, .pettrophy, .my-content{
+    font-family:var(--font-main);
+    color:var(--text-main);
+    font-size: 1rem;
+}
+
+#center:first-of-type b, h1{
+font-family: var(--font-title);
+color: var(--text-main);
+font-size:2rem;
+}
+
+.petpetpet b, .petimage b, h2, h3{
+font-family: var(--font-title);
+color: var(--text-main);
+font-size:1.5rem;
+}
+
+.petimage b{display:none;}
+
+.pet_belonging{font-size:0.8rem;}
+
+.petbelongingscontainer p:first-of-type{text-align:center !important;}
+
+h1, h2, h3, h4{text-align:center;}
+
+.petstatsblock, .petstatsblock p, .petstatsblock b{
+font-size:0.8rem;
+line-height:1.2rem;
+}
+
+#center:first-of-type{
+    align-self: end;
+}
+
+.my-content{
+    height:auto;
+    padding:3rem;
+    text-align:justify;
+}
+
+#center:first-of-type{
+    max-height:fit-content;
+}
+
+.petimage{height:clamp(170px, 200px, 300px);
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+margin:0;
+padding: 2em;
+border-bottom: 0px;
+    margin-bottom: -20px;}
+
+.petpetpet{height:auto;
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+line-height:1.5rem;
+padding:2em;
+border-top: 0px;
+    margin-top: -20px;}
+
+
+.petlinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.petBDstats{margin:0 !important;
+    line-height: 1rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+gap: 3em;
+}
+
+.petbelongingscontainer{
+    height:1fr;
+    align-self:center;
+}
+
+.pettrophy{
+    align-self:center;
+    height:1fr;
+}
+
+/* optional: hide BD stats or pet link buttons */
+/* .petBDstats{display: none;}
+.petlinks{display: none;} */
+
+/* optional: hide pet trophies */
+#pettrophies{display: none;}
+
+nav ul{
+list-style-type: none;
+padding: 0;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+justify-content:center;
+gap: 20px;
+width: clamp (400px, 900px, 80vw);
+}
+
+nav li a{
+text-decoration: none;
+color: var(--text-main);
+font-family: var(--font-title);
+font-size: 1.2rem;
+display: block;
+padding: 5px 10px;
+background-color: var(--grid-bg);
+border: var(--border);
+width: fit-content;
+}
+
+nav li a:hover{
+background-color: var(--gradient-bg);
+}
+
+
+@media screen and (max-width:800px){
+.petlookupcontainer{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    width: clamp(300px, 500px, 600px);
+    padding:2em;
+    overflow-x:auto;
+    overflow-y:visible;
+    gap:2em;
+}
+}
+
+</style>
+
+<div class="my-content">
+<h1>Vemon's Story</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+</div>
+
+<nav>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</nav>

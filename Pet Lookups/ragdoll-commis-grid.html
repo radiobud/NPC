@@ -1,0 +1,388 @@
+<!-- updated 2-7-2026 7pm by buddy for ragdoll -->
+
+<meta name="viewport" content="width=device-width">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+/* CODE TABLE OF CONTENTS
+1. Variables - edit your fonts, colors, backgrounds
+2. Overlay codes - if using
+3. Font section - centering, sizes, etc
+3. NPC cleanup/format
+4. Main grid format codes
+6. Media queries - for mobile responsiveness */
+
+
+:root{
+
+    /* VARIABLES
+    sections go from general to specific */
+
+    /* entire webpage background color */
+    --page-bg: radial-gradient(hotpink, #96e5ce);
+    
+    /* lookup container border and color */
+    --container-border: none;
+    --container-bg: #ecbfc3;
+
+    /*each grid item border and color */
+    --grid-border: 3px ridge #3EA6A6;
+    --grid-bg: #f9d6e4;
+
+    /* text colors and font choices
+    Some Google fonts are pre-loaded above.
+    you can use any font name in quotes */
+    --text-color-main: black;
+    --text-color-accent: green;
+    --text-color-links: green;
+    --font-main: Arsenal, sans-serif;
+    --font-title: Quintessential, serif;
+}
+
+/* overlay code */
+/* if using an overlay:
+remove the comment (slashes and asterisks) around code below */
+
+    /*
+    .petimage img{
+    content:url(LINK);
+    width:150px;
+    height:150px;
+    }
+    */
+
+/* BD overlay code */
+/* if using, remove the comment around code below */
+
+    /* 
+    .petBDstats img{
+    content:url(LINK);
+    width:150px;
+    height:150px;
+    }
+    */
+
+/* This is a fix for pet trophy space */
+/* if you have trophies you can delete both codes below */
+#pettrophies, #pettrophies p{display:none;}
+#pettrophies + p{display:none;}
+
+/* Hides pet name from under image - optional */
+.petimage b{display:none;}
+
+/* FONT section */
+
+p, b, .petstatsblock, .petimage, .petpetpet, .petlinks, .petbelongingscontainer, .petBDstats, .pettrophy, .my-content{
+    font-family:var(--font-main);
+    color:var(--text-color-main);
+    font-size: 1rem;
+}
+
+#center:first-of-type b, h1{
+font-family: var(--font-title);
+color: var(--text-color-main);
+font-size:2rem;
+}
+
+.petpetpet b, .petimage b, h2, h3{
+font-family: var(--font-title);
+color: var(--text-color-main);
+font-size:1.5rem;
+}
+
+.pet_belonging{font-size:0.8rem;}
+
+.petbelongingscontainer{
+    anchor-name: --belong;
+    padding-top: 2rem;
+}
+
+.petbelongingscontainer p:first-of-type{
+    text-align:center !important;
+    position: absolute;
+    position-anchor: --belong;
+    position-area: top center;
+    margin-bottom: -2rem;}
+
+h1, h2, h3, h4{text-align:center;}
+
+.petstatsblock, .petstatsblock p, .petstatsblock b{
+font-size:0.8rem;
+line-height:1.2rem;
+}
+
+/* end of FONT section */
+
+/* Cleanup and Backbone */
+
+body{
+    box-sizing: border-box;
+    background: var(--page-bg);
+}
+
+/* NPC Cleanup */
+hr, .hdr, #hdr, .sidebar-container, #mb, .footertext, .results, .navhover{
+    display:none;}
+
+/* centers the lookup */
+    map+table{margin:auto;}
+    #content_td{width:100% !important;
+        min-width: 100%;
+        max-width: none !important;}
+    .content{max-width:none !important;}
+    td:has(.content){width:100%;}
+
+/* allows the pet stats to be separated from the pet image */
+.pettop{display:contents;}
+
+
+/* Main Grid Codes */
+
+.petlookupcontainer{
+    width:clamp(600px, 900px, 1000px);
+    display:grid;
+    gap:10px;
+    grid-template-columns:repeat(8,1fr);
+    grid-template-areas:
+
+    /* note: you can rearrange the grid using these words.
+    make sure there are 8 columns in each line */
+
+    "header header header header header header header header"
+    "pet pet pet content content content content content"
+    "petpet petpet petpet content content content content content"
+    "belong belong belong belong belong belong belong belong"
+    "BD BD BD BD stats stats stats links"
+    "nav nav nav nav nav nav nav nav";
+
+    padding: 2em;
+    margin: auto;
+    margin-top: 3em;
+    margin-left: 2%; /*this is a slight mobile fix */
+    background-color: var(--container-bg);
+    border: var(--container-border);
+    border-radius: 3em;
+    anchor-name: --lookup;
+}
+
+/* Grid section names */
+/* You can rearrange the grid template areas using these names */
+.petimage{grid-area:pet;}
+.petpetpet{grid-area:petpet;}
+.petBDstats{grid-area:BD;}
+.petstatsblock{grid-area:stats;}
+.petlinks{grid-area:links;}
+.pettrophy{grid-area:trophy;}
+.petbelongingscontainer{grid-area:belong;}
+.my-content{grid-area:content;}
+nav{grid-area:nav;}
+#center:first-of-type{grid-area:header;}
+/* that last one is the pet name e.g. Joe the Red Uni */
+
+.petimage, .petpetpet, .petBDstats, .petstatsblock, .petlinks, .pettrophy, .petbelongingscontainer, .my-content, #center:first-of-type{
+    width: auto !important;
+    height: auto !important;
+}
+
+.petimage, .petpetpet, .petBDstats, .petlinks, .petstatsblock, .petbelongingscontainer, .my-content, .petstatsblock{
+    border:var(--grid-border);
+    border-radius:3px;
+    background-color: var(--grid-bg);
+}
+
+
+/* Your lore/content grid section */
+.my-content{
+    height:auto;
+    padding:3rem;
+    text-align:justify;
+max-height: 450px;
+overflow-y: scroll;
+}
+
+/* Sizing and individual grid cleanup */
+
+#center:first-of-type{
+    align-self: end;
+    max-height:fit-content;
+    margin:auto;
+}
+
+.petimage{
+    height:clamp(170px, 200px, 300px);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 2em;
+    border-bottom: 0px;
+    margin-bottom: -20px;
+}
+
+.petpetpet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5rem;
+    padding: 2em;
+    border-top: 0px;
+    margin-top: -20px;
+}
+
+.petlinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.petBDstats{
+    margin: 0 !important;
+    line-height: 1rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.petbelongingscontainer, #pettrophies{
+    height: 1fr;
+    align-self: center;
+}
+
+.petbelongingscontainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+p:empty{display:none;}
+
+nav{position: absolute;
+position-anchor: --lookup;
+position-area: bottom;
+margin-top:-70px;}
+
+nav ul{
+list-style-type: none;
+padding: 0;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+justify-content:center;
+gap: 20px;
+width: clamp(400px, 900px, 80vw);
+}
+
+nav li a{
+text-decoration: none;
+color: var(--text-color-main);
+font-family: var(--font-title);
+font-size: 1.2rem;
+display: block;
+padding: 5px 10px;
+background-color: var(--grid-bg);
+border: var(--grid-border);
+border-radius: 100vw;
+width: fit-content;
+}
+
+nav li a:hover{
+background-color: var(--container-bg);
+color: var(--text-color-links)
+}
+
+/* Media query section
+Grid adapts for small screens
+Default code is for fullsize screen.
+First media query below is for smaller/tablet screen
+Second media query below is mobile. */
+
+@media screen and (max-width: 1000px){
+
+    .petlookupcontainer{
+        width:600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "pet petpet"
+        "content content"
+        "belong belong"
+        "BD stats"
+        "links stats";
+    }
+
+    .petlinks{flex-direction: row;}
+
+    .petimage{
+        border-bottom: var(--grid-border);
+        margin-bottom: 0;}
+
+    .petpetpet{
+        border-top: var(--grid-border);
+        margin-top: 0;}
+
+    nav{
+        position: absolute;
+        position-area: top center;
+        margin-top: 0.5rem;}
+
+}
+
+
+@media screen and (max-width: 600px){
+    .petlookupcontainer{
+    display: grid;
+    max-width:590px;
+    grid-template-areas:
+    "header"
+    "pet petpet"
+    "content"
+    "belong"
+    "BD"
+    "stats"
+    "links";
+    }
+}
+
+</style>
+
+<!-- end of CSS section finally whew -->
+
+<div class="my-content">
+
+<!-- your text and images go inside here   -->
+
+<h1>Cook with Chef!</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni perferendis natus, cupiditate sequi quia possimus vel deleniti eveniet fugiat nesciunt. Rerum totam soluta in repudiandae error voluptas repellendus. Animi.</p>
+</div>
+
+
+<!-- end of content section -->
+
+<!-- below are the links for the nav bar. -->
+
+<nav>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</nav>

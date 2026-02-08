@@ -14,6 +14,8 @@ pre{
     margin: 10px 2em;
 }
 
+.anatomy{margin:0 auto;}
+
 pre b{color:white;}
 
 article{
@@ -30,9 +32,20 @@ img{
 h1{
     position:relative;}
 
+#examples::before{
+    content:"1.";
+position: absolute;
+left:45%;
+top:0;
+color:white;
+font-family:Lekton;
+z-index:-1;
+transform:scale(200%);
+    }
+
 
 #expect::before{
-    content:"1.";
+    content:"3.";
 position: absolute;
 left:45%;
 top:0;
@@ -56,9 +69,11 @@ transform:scale(200%);
 section{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    align-content:flex-start;
+    transition: all ease-out 0.5s;
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:1000px){
    section{
     display:flex;
     flex-direction:column;
@@ -71,9 +86,11 @@ section{
 </style>
 
 <header>
-<h1>Coding Commissions<br>in progress</h1></header>
-<section>
-<div class="grid-one">
+<h1>Coding Commissions
+    <!-- <br>in progress -->
+    
+</h1>
+</header>
     <!-- <article>
         <h2>Layout Commissions for NPC</h2>
         <p>Hey, I'm buddy. I learned CSS in summer 2025, made a Neocities site, and have been spending my free time on NPC playing around with coding and styling.</p>
@@ -84,6 +101,116 @@ section{
         <li><a href="#pricing">Pricing</a></li>
         </ol>
     </article> -->
+<section>
+<div class="grid-one">
+    <div class="anatomy">
+        <h1 id="examples">Examples</h1>
+
+    <article>
+<h2>My user lookup</h2>
+    <img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/examples/my-lookup-jan-2025.png"><br>
+    <h3>Things I made for my lookup:</h3>
+    <ul>
+        <li>Fixed background</li>
+        <li>Matching color scheme</li>
+        <li>Custom nav dropdown</li>
+        <li>Mini sidebar (scrollable)</li>
+        <li>Positioned extras like the corner art</li>
+        <li>System for displaying goals/images</li>
+    </ul>
+    </article>
+    <article>
+<h2>Pet Lookup: Clean Centered</h2>
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/examples/stagemanager-lookup.png"><br>
+<h3>This is the pet lookup bread and butter.<br> Customizable background, font, color scheme.</h3>
+<p>I've got a navbar skeleton that I'll include in this kind of lookup (unless you do not want it).</p>
+    </article>
+<article>
+    <h2>Pet Lookup: Single Special Element</h2>
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/examples/businessboy-lookup.png"><br>
+<h3>This is my memorial pet lookup.<br>It's really standard, but I added one special detail - a gif of my dog, positioned next to the Neopet image.</h3>
+<p>If you want one positioned image, or something extra like embedded music that you can change for each pet, that's a small change.</p>
+</article>
+<article>
+    <h2>Pet Lookup: Special Unusual Design</h2>
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/examples/leguin-special.png"><br>
+<h3>LeGuin's lookup is totally custom in its layout.</h3>
+<p>The pet image, stats, and nav bar are positioned carefully around the background image.</p>
+<p>This layout is also fragile, since changes in content - like a new pet trophy - can throw the whole thing out of balance.</p>
+</article>
+<article>
+    <h2>Pet Lookup: Super-Special Unusual Design</h2>
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/examples/tallah-special.png"><br>
+<h3>Tallahassee was a passion project.</h3>
+<p>I wanted to create a page that looks like a view through a window. The background is actually a slowly color-changing gradient. (The gradient is not my code - it's edited from a free codepen!)</p>
+<p>I shaped the lookup into an arch, gave it an offset border, and made it scrollable so it wouldn't be too tall. I also made a circular color bg for the pet image, so Tallahassee would look centered in the sun.</p>
+<p>If a peacock and the name Tallahassee mean anything to you, neomail me for a present, because I may love you.</p>
+</article>
+    </div>
+</div>
+
+<div class="anatomy">
+<h1 id="pricing">Pricing</h1>
+    <article>
+<h2>Code your hopes and dreams.</h2>
+    </article>
+
+
+<div class="navigate">
+    <article id="left">
+        <h2>Pet Lookup</h2>
+        <p>Basic Lookup: 1.5mil NP
+        </p>
+        <ul>
+            <li>Custom colors, bg, fonts
+            </li>
+            <li>Centered/clean look</li>
+            <li>Comments for customizability</li>
+            <li>Hide/shrink BD, links, as desired (and as allowed by NPC)</li>
+            <li>Custom pet image overlay code (you provide the image)</li>
+        </ul>
+        <p>Daring/Challenging Additions: Negotiable</p>
+        <ul>
+            <li>Custom positioning/shapes
+            </li>
+            <li>Extra graphic placements</li>
+            <li>CSS Animation</li>
+            <li>Grid layout</li>
+            <li>Extra overlay code (for BD, pet links, etc)</li>
+        </ul>
+    <h2><a href="https://neopetsclassic.com/neomessages/sendmessage/?username=buddy">Neomail me about a pet lookup</a></h2>
+    </article>
+
+    <article id="mid">
+        <h2>User Lookup</h2>
+        <p>Basic Lookup: 2mil NP</p>
+        <ul>
+            <li>Custom colors, bg, fonts
+            </li>
+            <li>Centered/clean look</li>
+            <li>Comments for customizability</li>
+            <li>Shield overlay image, if desired</li>
+            <li>Structure for description/goals sections</li>
+        </ul>
+        <p>Unique/Challenging Lookup: Negotiable</p>
+        <ul>
+            <li>Custom icons</li>
+            <li>Custom header/hero images</li>
+            <li>CSS Animation</li>
+            <li>Other requests, up to discussion</li>
+        </ul>
+        <h2><a href="https://neopetsclassic.com/neomessages/sendmessage/?username=buddy">Neomail me about a user lookup</a></h2>
+    </article>
+    <article id="right">
+        <h2>Shop Layout/Other</h2>
+        <p>If you want to do something different with your shop or other page, I'd love to help!
+        </p>
+        <p>Neomail or DM me on discord to discuss!</p>
+        <h2><a href="https://neopetsclassic.com/neomessages/sendmessage/?username=buddy">Neomail me about a shop lookup</a></h2>
+    </article>
+    </div>
+
+    <div class="grid-one">
 <div class="anatomy">
         <h1 id="expect">What to expect</h1>
 <article>
@@ -112,6 +239,10 @@ comment it out like below: */</b>
 /* Missing punctuation or un-closed comments
 can mess with your CSS, so be careful. */ </b>
 </pre>
+<h3>Here is an example of my comments in commission code.</h3>
+<br>
+<img src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/examples/comments-example.png">
+<p>The var(--font-fancy) code refers to variables at the top of the code. These can be changed in one place, and will take effect all over, so you don't have to hunt down each color and change it in 5 places.</p>
 <h3>Take a look at the <a href="https://neopetsclassic.com/~Val/">Val's CSS Intro page</a> for refresh of CSS basics.</h3>
 </article>
 <article>
@@ -121,63 +252,8 @@ can mess with your CSS, so be careful. */ </b>
     <p>That said, if you have an aesthetic or a character/fandom look in mind, I'm happy to find existing images or use your chosen images in the layout.</p>
     <p>You do the dreaming and I'll make the structure and style for it!</p>
 </article>
-
 </div>
-    </div>
-<div class="anatomy">
-<h1 id="pricing">Pricing</h1>
-    <article>
-<h2>Code your hopes and dreams.</h2>
-    </article>
-
-<div class="navigate">
-    <article id="left">
-        <h2>Pet Lookup</h2>
-        <p>Basic Lookup: 1.5mil NP
-        </p>
-        <ul>
-            <li>Custom colors, bg, fonts
-            </li>
-            <li>Centered/clean look</li>
-            <li>Comments for customizability</li>
-        </ul>
-        <p>Daring/Challenging Additions: Negotiable</p>
-        <ul>
-            <li>Grid layout</li>
-            <li>Custom positioning
-            </li>
-            <li>Extra graphics</li>
-            <li>CSS Animation</li>
-        </ul>
-    <h2><a href="https://neopetsclassic.com/neomessages/sendmessage/?username=buddy">Neomail me for a pet lookup</a></h2>
-    </article>
-
-    <article id="mid">
-        <h2>User Lookup</h2>
-        <p>Basic Lookup: 1.5mil NP</p>
-        <ul>
-            <li>Custom colors, bg, fonts
-            </li>
-            <li>Centered/clean look</li>
-            <li>Comments for customizability</li>
-        </ul>
-        <p>Unique/Challenging Lookup: Negotiable</p>
-        <ul>
-            <li>Custom icons</li>
-            <li>Custom header/hero images</li>
-            <li>CSS Animation</li>
-            <li>Other requests, up to discussion</li>
-        </ul>
-        <h2><a href="https://neopetsclassic.com/neomessages/sendmessage/?username=buddy">Neomail me for a user lookup</a></h2>
-    </article>
-    <article id="right">
-        <h2>Shop Layout/Other</h2>
-        <p>If you want to do something different with your shop or other page, I'd love to help!
-        </p>
-        <p>Neomail or DM me on discord to discuss!</p>
-        <h2><a href="https://neopetsclassic.com/neomessages/sendmessage/?username=buddy">Neomail me for a shop lookup</a></h2>
-    </article>
-    </div>
+</div>
     </div>
 
     </section>
