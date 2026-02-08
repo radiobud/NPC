@@ -1,0 +1,300 @@
+<!-- updated 2-7-2026 10pm -->
+<!-- commission test for escarglow by buddy -->
+
+<meta name="viewport" content="width=device-width">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --border: 20px solid transparent;
+    --border-pic: url(https://solaria.neocities.org/guides/borderimage/whitelace.png) 34 round;
+    --page-bg: url(https://images.unsplash.com/photo-1770287691979-6b8ec41f5331?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    --container-bg: lightpink;
+    --grid-bg: white;
+    --text-color-main: #8e0023;
+    --text-color-title: rgb(255, 200, 61);
+    --font-main: "Pirata One", Garamond, serif;
+    --font-title: "Quintessential", serif;
+}
+
+/* .petimage img{height:200px;}
+
+.petimage{
+    margin: 0;
+    justify-self: right;
+    transform: translateX(20px);
+} */
+
+body{
+    box-sizing:border-box;
+    background: var(--page-bg);
+}
+
+img{
+    border: 2px solid maroon;
+}
+
+.petlookupcontainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    border: var(--border);
+    border-image: var(--border-pic);
+    border-image-outset: 17px;
+    background: var(--container-bg);
+    grid-template-areas:
+    "header header"
+    "pet stats"
+    "petpet petpet"
+    "belong belong";
+/* "content content" */
+    /* "BD links" */
+justify-content: center;
+align-items: center;
+anchor-name: --main;
+margin:3em;
+/* width: 500px; */
+    /* margin-left: clamp(3em, 30%, 40%); */
+    /* margin experiments */
+    /* margin-right: min(20rem);
+    margin-left: clamp(3em, 25rem, 20%); */
+    /* margin-right: clamp(25rem, 20%, 30%); */
+}
+
+/* .petlookupcontainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: var(--border);
+    border-image: var(--border-pic);
+    border-image-outset: 17px;
+    background: var(--container-bg);
+    grid-template-areas:
+    "header header lore"
+    "pet stats lore"
+    "petpet petpet lore"
+    "belong belong lore"
+"content content lore"
+    "BD links lore";
+justify-content: center;
+align-items: center;
+} */
+
+.petlookupcontainer > * {
+margin: 0;}
+
+.my-content + p {display:none;}
+
+.petstatsblock{background-color: var(--container-bg);}
+
+/* balances pet image with stats */
+.petimage{margin-left:auto;}
+
+
+/* balances BD stats */
+.petBDstats{
+    /* width:100% !important; */
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items:end;
+    width: 120% !important;
+}
+
+.petBDstats p{margin-top:0;}
+
+/* lines up links vertically */
+.petlinks{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
+
+.petstatsblock{overflow-y:scroll;max-height: 170px;}
+
+
+
+/* Grid section names */
+.petimage{grid-area:pet;}
+.petpetpet{grid-area:petpet;}
+.petBDstats{grid-area:BD;}
+.petstatsblock{grid-area:stats;}
+.petlinks{grid-area:links;}
+.pettrophy{grid-area:trophy;}
+.petbelongingscontainer{grid-area:belong;}
+/* .my-content{grid-area:content;} */
+/*nav{grid-area:nav;}*/
+#center:first-of-type{grid-area:header;}
+/* the header above is the pet name e.g. Joe the Red Uni */
+
+.lore{
+    position:absolute;
+    position-anchor: --main;
+    position-area: right;
+    border: var(--border);
+    border-image: var(--border-pic);
+    border-image-outset: 17px;
+    background: var(--container-bg);
+    width: 20rem;
+    padding: 2em 3em;
+    transform: translateX(8vw);
+}
+
+.lore img{
+    display:block;
+    margin:auto;
+}
+
+/* FONT section */
+
+p, b, .petstatsblock, .petimage, .petpetpet, .petlinks, .petbelongingscontainer, .petBDstats, .pettrophy, .my-content{
+    font-family:var(--font-main);
+    color:var(--text-color-main);
+    font-size: 1rem;
+}
+
+#center:first-of-type b, h1{
+font-family: var(--font-title);
+color: var(--text-color-main);
+font-size:2rem;
+}
+
+#center font{
+    background: radial-gradient(hotpink, maroon);
+    background-clip: text;
+    color: transparent;
+}
+
+.petBDstats b, .petstatsblock b{
+    font-weight:lighter;
+}
+
+.petpetpet b, .petimage b, h2, h3, .petbelongingscontainer b:first-of-type{
+    font-family: var(--font-title);
+    color: var(--text-color-main);
+    font-size:1.5rem;
+    }
+
+.pet_belonging{font-size:0.8rem;}
+
+.petbelongingscontainer{
+    anchor-name: --belong;
+    padding-top: 2rem;
+    margin-bottom:-40px;
+}
+
+.petbelongingscontainer p:first-of-type{
+    text-align:center !important;
+    position: absolute;
+    position-anchor: --belong;
+    position-area: top center;
+    margin-bottom: -2rem;}
+
+h1, h2, h3, h4{
+    text-align:center;
+    margin-top: 0;}
+
+.petstatsblock, .petstatsblock p, .petstatsblock b{
+    font-size:0.8rem;
+    line-height:1.2rem;
+    }
+
+.lore a, .lore a:visited{
+    text-decoration:none;
+    color: var(--text-color-main);
+    font-family: var(--font-main);
+    font-weight:normal;
+    font-size:large;
+}
+
+.lore a:hover{
+    background-color: var(--text-color-title);
+}
+
+/* end FONT section */
+
+
+/* centers the lookup */
+map+table{margin:auto;}
+#content_td{width:100% !important;
+    min-width: 100%;
+    max-width: none !important;}
+/* .content{max-width:none !important;} */
+td:has(.content){width:100%;}
+
+/* fix for centering both columns */
+.content{
+    width: 1100px !important;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-template-areas: "lookup lookup";
+    justify-items: left;
+    max-width: 3000px !important;
+    margin: auto;
+    }
+
+
+/* allows the pet stats to be separated from the pet image */
+.pettop{display:contents;}
+
+/* NPC Cleanup */
+hr, .hdr, #hdr, .sidebar-container, #mb, .footertext, .results, .navhover{
+    display:none;}
+
+/* Hides pet name from under image - optional */
+.petimage b{display:none;}
+
+/* fix for pet trophy space */
+/* if you have trophies you can delete the below */
+#pettrophies, #pettrophies p{display:none;}
+#pettrophies + p{display:none;}
+
+.petBDstats, .petlinks{display: none;}
+
+@media screen and (max-width:1000px){
+    .content{
+        max-width: none !important;
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .petlookupcontainer{
+        grid-template-areas:
+        "header header"
+        "pet stats"
+        "lore lore"
+        "petpet petpet"
+        "belong belong"
+        "content content"
+        "BD links";
+    }
+
+    .lore{
+        position: relative;
+        border:none;
+        width:100%;
+        transform:none;
+        padding:0;
+        grid-area:lore;
+    }
+}
+
+
+</style>
+
+<!-- <div class="my-content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
+</div> -->
+
+<div class="lore">
+    <h1>Begin's Lore</h1>
+    <img src="https://neopetsclassic.com/images/items/Heart_letter.gif">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae quaerat nulla esse quisquam iste necessitatibus? Consequatur aut facilis veniam autem, maxime vero praesentium aliquam corporis repellendus odio, in est.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ratione facilis quae, obcaecati perspiciatis eius sit quidem in delectus? Commodi eius totam sapiente maiores quod nam blanditiis quam necessitatibus eum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
+    <p>Example border art is by <a href="https://www.lejlart.com/apple.html">appledust</a>.</p>
+</div>

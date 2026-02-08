@@ -1,5 +1,5 @@
-<!-- updated 2-5-2026 revisions -->
-<!-- commission test for escarglow -->
+ <!-- updated 2-8-26 5pm -->
+<!-- commission test for escarglow by buddy -->
 
 <meta name="viewport" content="width=device-width">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,73 +8,199 @@
 
 <style>
 
+    /* CODE TABLE OF CONTENTS
+
+    This code is designed for you to do
+    99% of your editing in two places:
+    1. The Variable section at the top, where you can change colors/fonts/borders and they will auto-apply all over the page
+    2. The HTML section at the very bottom, where you can write your content, add images, etc.
+
+1. Variables - edit your fonts, colors, backgrounds
+2. Overlay codes - if using
+3. Font section - centering, sizes, etc
+3. Main grid format codes
+4. NPC cleanup/format
+6. Media queries - for mobile responsiveness
+7. HTML section - add your content! */
+
+
 :root{
+
+     /* VARIABLES
+    change your colors, border image, etc here.
+    sections go from general to specific */
+
+    /* border art */
     --border: 20px solid transparent;
     --border-pic: url(https://solaria.neocities.org/guides/borderimage/whitelace.png) 34 round;
-    --page-bg: hotpink;
+
+    /* main large background */
+    --page-bg: url(https://images.unsplash.com/photo-1770287691979-6b8ec41f5331?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+    /* content background color */
     --container-bg: lightpink;
-    --grid-bg: white;
-    --text-color-main: hotpink;
-    --text-color-title: goldenrod;
+
+
+    /* border around all images */
+    --border-img: 2px solid maroon;
+
+    /* text colors and font faces 
+    The main and title fonts are included in the Google fonts pre-load above. */
+    --text-color-main: #8e0023;
+    --text-color-title: rgb(255, 200, 61);
     --font-main: "Pirata One", Garamond, serif;
-    --font-title: Quintessential, serif;
+    --font-title: "Quintessential", serif;
+
+    /* change bold fonts to normal width - I added this for my display example because the Pirata bold is dense.
+    If you do NOT want to un-bold text, delete this line OR change it to "auto;"*/
+    --font-weight: lighter;
+
+    /* special:
+    changes color/adds gradient to the color word
+    e.g. Begin the VALENTINE Lenny */
+    --text-special: radial-gradient(hotpink, maroon);
 }
+
+/* OVERLAY CODES */
+
+/* pet image overlay code */
+/* if using an overlay:
+remove the comment (slashes and asterisks) around code below */
+
+    /*
+    .petimage img{
+    content:url(LINK);
+    width:150px;
+    height:150px;
+    }
+    */
+
+/* BD overlay code */
+/* if using, remove the comment around code below */
+
+    /*
+    .petBDstats img{
+    content:url(LINK);
+    width:150px;
+    height:150px;
+    }
+    */
+
 
 body{
     box-sizing:border-box;
-    background-color: var(--page-bg);
+    background: var(--page-bg);
 }
+
+img{
+    border: var(--border-img);
+}
+
+/* FONT section */
+
+p, b, .petstatsblock, .petimage, .petpetpet, .petlinks, .petbelongingscontainer, .petBDstats, .pettrophy, .my-content{
+    font-family:var(--font-main);
+    color:var(--text-color-main);
+    font-size: 1rem;
+}
+
+#center:first-of-type b, h1{
+font-family: var(--font-title);
+color: var(--text-color-main);
+font-size:2rem;
+}
+
+/* applies custom gradient to the pet name header */
+#center font{
+    background: var(--text-special);
+    background-clip: text;
+    color: transparent;
+}
+
+.petBDstats b, .petstatsblock b{font-weight:var(--font-weight);}
+
+.petpetpet b, .petimage b, h2, h3, .petbelongingscontainer b:first-of-type{
+    font-family: var(--font-title);
+    color: var(--text-color-main);
+    font-size:1.5rem;
+    }
+
+.pet_belonging{font-size:0.8rem;}
+
+.petbelongingscontainer{
+    anchor-name: --belong;
+    padding-top: 2rem;
+    margin-bottom:-40px !important;
+}
+
+.petbelongingscontainer p:first-of-type{
+    text-align:center !important;
+    position: absolute;
+    position-anchor: --belong;
+    position-area: top center;
+    margin-bottom: -2rem;}
+
+h1, h2, h3, h4{
+    text-align:center;
+    margin-top: 0;}
+
+.petstatsblock, .petstatsblock p, .petstatsblock b{
+    font-size:0.8rem;
+    line-height:1.2rem;
+    }
+
+.lore a, .lore a:visited{
+    text-decoration:none;
+    color: var(--text-color-main);
+    font-family: var(--font-main);
+    font-weight:normal;
+    font-size:large;
+}
+
+.lore a:hover{
+    background-color: var(--text-color-title);
+}
+
+/* end FONT section */
+
+
+/* Main GRID format codes */
 
 .petlookupcontainer{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
     border: var(--border);
     border-image: var(--border-pic);
     border-image-outset: 17px;
     background: var(--container-bg);
     grid-template-areas:
+
+    /* THIS IS THE KEY!!
+    The Layout for the main column.
+    if you want to add new areas,
+    like pet trophies,
+    just add another line
+    in quotation marks, like:
+    "tropy trophy" 
+    put the line where you want it to appear
+    */
     "header header"
     "pet stats"
     "petpet petpet"
-    "belong belong"
-"content content"
-    "BD links";
+    "belong belong";
 justify-content: center;
 align-items: center;
 anchor-name: --main;
+margin:3em;
 }
 
-/* .petlookupcontainer{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border: var(--border);
-    border-image: var(--border-pic);
-    border-image-outset: 17px;
-    background: var(--container-bg);
-    grid-template-areas:
-    "header header lore"
-    "pet stats lore"
-    "petpet petpet lore"
-    "belong belong lore"
-"content content lore"
-    "BD links lore";
-justify-content: center;
-align-items: center;
-} */
-
-.petlookupcontainer > * {
-margin: 0;}
-
-.my-content + p {display:none;}
-
-.petstatsblock{background-color: var(--container-bg);}
-
-.petBDstats{width:100% !important;}
-
-
+.petlookupcontainer > * {margin: 0;}
 
 
 /* Grid section names */
+/* If you rearrange the grid,
+these are the names to use */
 .petimage{grid-area:pet;}
 .petpetpet{grid-area:petpet;}
 .petBDstats{grid-area:BD;}
@@ -82,11 +208,10 @@ margin: 0;}
 .petlinks{grid-area:links;}
 .pettrophy{grid-area:trophy;}
 .petbelongingscontainer{grid-area:belong;}
-.my-content{grid-area:content;}
-/*nav{grid-area:nav;}*/
 #center:first-of-type{grid-area:header;}
-/* the header above is the pet name e.g. Joe the Red Uni */
+/* the "header" area above is the pet name e.g. Joe the Red Uni */
 
+/* Your lore box - positioned to the right of the main content */
 .lore{
     position:absolute;
     position-anchor: --main;
@@ -95,18 +220,38 @@ margin: 0;}
     border-image: var(--border-pic);
     border-image-outset: 17px;
     background: var(--container-bg);
-    width: clamp(300px, fit-content, 500px);
-    padding: 3em;
+    width: 20rem;
+    max-height: 870px;
+    overflow-y: scroll;
+    padding: 2em 3em;
+    transform: translateX(8vw);
 }
 
+/* centers any images you add to the lore column */
+.lore img{
+    display:block;
+    margin:auto;
+}
 
 /* centers the lookup */
 map+table{margin:auto;}
 #content_td{width:100% !important;
     min-width: 100%;
     max-width: none !important;}
-.content{max-width:none !important;}
+/* .content{max-width:none !important;} */
 td:has(.content){width:100%;}
+
+/* fix for centering both columns */
+.content{
+    width: 1100px !important;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-template-areas: "lookup lookup";
+    justify-items: left;
+    max-width: 3000px !important;
+    margin: auto;
+    }
+
 
 /* allows the pet stats to be separated from the pet image */
 .pettop{display:contents;}
@@ -114,6 +259,9 @@ td:has(.content){width:100%;}
 /* NPC Cleanup */
 hr, .hdr, #hdr, .sidebar-container, #mb, .footertext, .results, .navhover{
     display:none;}
+
+/* Hides BD and pet links */
+.petBDstats, .petlinks{display: none;}
 
 /* Hides pet name from under image - optional */
 .petimage b{display:none;}
@@ -123,14 +271,89 @@ hr, .hdr, #hdr, .sidebar-container, #mb, .footertext, .results, .navhover{
 #pettrophies, #pettrophies p{display:none;}
 #pettrophies + p{display:none;}
 
+/* makes stat block same height as image,
+makes it scroll */
+.petstatsblock{
+    background-color: var(--container-bg);
+    overflow-y:scroll;
+    max-height: 170px;}
+
+/* balances pet image with stats */
+.petimage{margin-left:auto;}
+
+/* 
+I kept the BD and link format code below,
+ in case you ever add them back to the layout. 
+*/
+
+/* balances BD stats */
+.petBDstats{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items:end;
+    width: 120% !important;
+}
+
+.petBDstats p {margin-top:0;}
+
+/* lines up links vertically */
+.petlinks{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
+
+/* Media query section
+Grid adapts for small screens,
+merging all the content into one column. */
+
+@media screen and (max-width:1000px){
+    .content{
+        max-width: none !important;
+        width: 100% !important;
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .petlookupcontainer{
+        grid-template-areas:
+        "header header"
+        "pet stats"
+        "lore lore"
+        "petpet petpet"
+        "belong belong";
+    }
+
+    .lore{
+        position: relative;
+        border:none;
+        width:100%;
+        transform:none;
+        padding:0;
+        grid-area:lore;
+    }
+}
+
 
 </style>
 
-<div class="my-content">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
-</div>
+<!-- end of CSS section finally whew -->
+
+<!-- HTML section! -->
+
 
 <div class="lore">
-    <h1>Lore</h1>
+
+<!-- your text and images go inside here   -->
+
+    <h1>Begin's Lore</h1>
+    <img src="https://neopetsclassic.com/images/items/Heart_letter.gif">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae quaerat nulla esse quisquam iste necessitatibus? Consequatur aut facilis veniam autem, maxime vero praesentium aliquam corporis repellendus odio, in est.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ratione facilis quae, obcaecati perspiciatis eius sit quidem in delectus? Commodi eius totam sapiente maiores quod nam blanditiis quam necessitatibus eum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex illum libero dolores reiciendis autem modi ea dolorum, unde iure quos, cumque dolore mollitia quis quae molestiae? Officiis, suscipit? Quaerat!</p>
+    <p>Example border art is by <a href="https://solaria.neocities.org/">Solaria.</a>.</p>
+
+    <!-- end of content section -->
 </div>
