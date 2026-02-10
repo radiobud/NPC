@@ -94,8 +94,8 @@ remove the comment (slashes and asterisks) around code below */
     background: var(--container-bg);
     grid-area: nft;
     margin:auto;
-    font-family: var(--font-main);
-    color:var(--text-color-main);}
+    font-family: var(--font-main) !important;
+    color:var(--text-color-main) !important;}
 
 /* general page things */
 
@@ -130,6 +130,12 @@ font-size:2rem;
 }
 
 .petBDstats b, .petstatsblock b{font-weight:var(--font-weight);}
+
+.petlookupcontainer font:nth-of-type(2){
+    position:absolute;
+    position-anchor: --header;
+    position-area: bottom;
+}
 
 .petpetpet b, .petimage b, h2, h3, .petbelongingscontainer b:first-of-type{
     font-family: var(--font-title);
@@ -197,15 +203,17 @@ h1, h2, h3, h4{
     "tropy trophy" 
     put the line where you want it to appear
     */
-    "nft nft"
     "header header"
     "pet stats"
     "petpet petpet"
-    "belong belong";
+    "belong belong"
+    "nft nft";
 justify-content: center;
 align-items: center;
 anchor-name: --main;
 margin:3em;
+max-height: 850px;
+overflow:scroll;
 }
 
 .petlookupcontainer > * {margin: 0;}
@@ -254,7 +262,7 @@ these are the names to use */
 .petlinks{grid-area:links;}
 .pettrophy{grid-area:trophy;}
 .petbelongingscontainer{grid-area:belong;}
-#center:first-of-type{grid-area:header;}
+#center:first-of-type{grid-area:header; anchor-name: --header;}
 /* the "header" area above is the pet name e.g. Joe the Red Uni */
 
 /* Your lore box - positioned to the right of the main content */
@@ -329,12 +337,13 @@ merging all the content into one column. */
 
     .petlookupcontainer{
         grid-template-areas:
-        "nft nft"
         "header header"
         "pet stats"
         "lore lore"
         "petpet petpet"
-        "belong belong";
+        "belong belong"
+        "nft nft";
+        max-height:none;
     }
 
     .lore{
