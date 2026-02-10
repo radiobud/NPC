@@ -59,6 +59,12 @@
     changes color/adds gradient to the color word
     e.g. Begin the VALENTINE Lenny */
     --text-special: radial-gradient(hotpink, maroon);
+
+    /*LOOKUP MAX HEIGHT
+    creates a max height for the left column to hide empty space*/
+    /* to turn off max height, change this value to none; */
+    --max-height: 850px;
+
 }
 
 /* OVERLAY CODES and Important Things */
@@ -179,6 +185,16 @@ h1, h2, h3, h4{
     background-color: var(--text-color-title);
 }
 
+a, a:visited{
+    text-decoration:none;
+    color: var(--text-color-main);
+    font-family: var(--font-main);
+    font-weight:normal;
+    font-size:large;
+}
+
+a:hover{background-color: var(--text-color-title);}
+
 /* end FONT section */
 
 
@@ -212,7 +228,7 @@ justify-content: center;
 align-items: center;
 anchor-name: --main;
 margin:3em;
-max-height: 850px;
+max-height: var(--max-height);
 overflow:scroll;
 }
 
