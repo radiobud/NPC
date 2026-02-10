@@ -1,5 +1,5 @@
- <!-- updated 2-8-26 5pm -->
-<!-- commission test for escarglow by buddy -->
+ <!-- updated 2-9-26 7pm -->
+<!-- commission for escarglow by buddy -->
 
 <meta name="viewport" content="width=device-width">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
 1. Variables - edit your fonts, colors, backgrounds
 2. Overlay codes - if using
 3. Font section - centering, sizes, etc
-3. Main grid format codes
-4. NPC cleanup/format
+3. NPC cleanup/format
+4. Main grid format codes
 6. Media queries - for mobile responsiveness
 7. HTML section - add your content! */
 
@@ -61,7 +61,7 @@
     --text-special: radial-gradient(hotpink, maroon);
 }
 
-/* OVERLAY CODES */
+/* OVERLAY CODES and Important Things */
 
 /* pet image overlay code */
 /* if using an overlay:
@@ -86,6 +86,18 @@ remove the comment (slashes and asterisks) around code below */
     }
     */
 
+/* hides BD stats and Link icons */
+.petBDstats, .petlinks{display:none !important;}
+
+/*optional: if you have a Not-UFT banner, this changes its bg to match the lookup*/
+.petlookupcontainer table:first-of-type{
+    background: var(--container-bg);
+    grid-area: nft;
+    margin:auto;
+    font-family: var(--font-main);
+    color:var(--text-color-main);}
+
+/* general page things */
 
 body{
     box-sizing:border-box;
@@ -130,7 +142,7 @@ font-size:2rem;
 .petbelongingscontainer{
     anchor-name: --belong;
     padding-top: 2rem;
-    margin-bottom:-40px !important;
+    margin-bottom:-20px !important;
 }
 
 .petbelongingscontainer p:first-of-type{
@@ -185,6 +197,7 @@ h1, h2, h3, h4{
     "tropy trophy" 
     put the line where you want it to appear
     */
+    "nft nft"
     "header header"
     "pet stats"
     "petpet petpet"
@@ -196,6 +209,39 @@ margin:3em;
 }
 
 .petlookupcontainer > * {margin: 0;}
+
+/* makes stat block same height as image,
+makes it scroll */
+.petstatsblock{
+    background-color: var(--container-bg);
+    overflow-y:scroll;
+    max-height: 170px;}
+
+/* balances pet image with stats */
+.petimage{margin-left:auto;}
+
+/* 
+I kept the BD and link format code below,
+ in case you ever add them back to the layout. 
+*/
+
+/* balances BD stats */
+.petBDstats{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items:end;
+    width: 120% !important;
+}
+
+.petBDstats p {margin-top:0;}
+
+/* lines up links vertically */
+.petlinks{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
 
 
 /* Grid section names */
@@ -221,8 +267,6 @@ these are the names to use */
     border-image-outset: 17px;
     background: var(--container-bg);
     width: 20rem;
-    max-height: 870px;
-    overflow-y: scroll;
     padding: 2em 3em;
     transform: translateX(8vw);
 }
@@ -271,39 +315,6 @@ hr, .hdr, #hdr, .sidebar-container, #mb, .footertext, .results, .navhover{
 #pettrophies, #pettrophies p{display:none;}
 #pettrophies + p{display:none;}
 
-/* makes stat block same height as image,
-makes it scroll */
-.petstatsblock{
-    background-color: var(--container-bg);
-    overflow-y:scroll;
-    max-height: 170px;}
-
-/* balances pet image with stats */
-.petimage{margin-left:auto;}
-
-/* 
-I kept the BD and link format code below,
- in case you ever add them back to the layout. 
-*/
-
-/* balances BD stats */
-.petBDstats{
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-    align-items:end;
-    width: 120% !important;
-}
-
-.petBDstats p {margin-top:0;}
-
-/* lines up links vertically */
-.petlinks{
-    display: flex;
-    flex-direction:column;
-    gap: 20px;
-}
-
 /* Media query section
 Grid adapts for small screens,
 merging all the content into one column. */
@@ -318,6 +329,7 @@ merging all the content into one column. */
 
     .petlookupcontainer{
         grid-template-areas:
+        "nft nft"
         "header header"
         "pet stats"
         "lore lore"

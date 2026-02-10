@@ -1,0 +1,87 @@
+<!-- updated 2-8-26 by buddy for faerie -->
+
+<!--This is for Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+     /* VARIABLES
+    change your colors, border image, etc here.
+    sections go from general to specific */
+
+    /* border art */
+    --border-width: 20px;
+    --border-style: solid;
+    --border-image: linear-gradient(to right, rgb(188, 128, 188), #cbc6ff) 1;
+    --shadow: 10px 10px 10px #c6c3ff;
+
+    /* main large background */
+    --page-bg: url(https://images.unsplash.com/photo-1629194893765-3a904e9080dd?q=80&w=1438&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+    /* content background color */
+    --container-bg: rgb(234, 195, 230);
+
+
+    /* border around all images */
+    --border-img: 2px solid rgb(68, 44, 83);
+
+    /* text colors and font faces 
+    The main and title fonts are included in the Google fonts pre-load above. */
+    --text-color-main: #1f022e;
+    --text-color-title: rgb(114, 57, 120);
+    --font-main: "Combo", Garamond, serif;
+    --font-title: "Quintessential", serif;
+
+    /* change bold fonts to normal width - I added this for my display example because the Pirata bold is dense.
+    If you do NOT want to un-bold text, delete this line OR change it to "auto;"*/
+    --font-weight: lighter;
+
+    /* special:
+    changes color/adds gradient to the color word
+    e.g. Begin the VALENTINE Lenny */
+    --text-special: radial-gradient(rgb(120, 125, 183), rgb(69, 40, 83));
+}
+
+body{
+    background: var(--page-bg);
+}
+
+/*font style*/
+*, p, a, #userinfo {
+font-family: var(--font-main);
+color: var(--text-color-main);}
+
+/* Centers the userlookup, do not remove */
+map + table{margin:auto;
+margin-top: 20px !important;}
+/* IF NEEDED */
+#content_td{margin:auto;}
+
+/*Below is the main box for your user lookup*/
+#content_td{
+    width: 600px;
+    height: 600px;
+overflow: scroll;
+scrollbar-width: none;
+    background-color: white;
+    margin: 0 auto;
+margin-top: 0 !important; 
+    border-width: var(--border-width);
+    border-style: var(--border-style);
+    border-image: var(--border-image);
+box-shadow: var(--shadow);
+display:block;
+}
+
+.content{
+max-height:700px;
+overflow:scroll;}
+
+/*removes main NPC elements*/
+#hdr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
+
+
+</style>

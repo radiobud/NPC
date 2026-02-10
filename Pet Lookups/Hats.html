@@ -1,0 +1,345 @@
+<meta name="viewport" content="width=device-width">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+     /* VARIABLES
+    sections go from general to specific */
+
+    /* entire webpage background color */
+    /* --page-bg: url(https://images.unsplash.com/photo-1559560823-8b9e5becd4ba?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    --page-bg: url(https://images.unsplash.com/photo-1654539294654-37fe3b7343a0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    
+    /* lookup container border and color */
+    --container-border: 4px solid #6d92dc;
+    --container-bg: #c8b6df;
+
+    /* note/content */
+    --note-bg: transparent;
+    --note-border: none;
+
+    /* text colors and font choices
+    Some Google fonts are pre-loaded above.
+    you can use any font name in quotes */
+    --text-color-main: rgb(53, 36, 36);
+    --text-color-accent: rgb(176, 27, 92);
+    --text-color-links: rgb(128, 0, 36);
+    --font-main: Arsenal, sans-serif;
+    --font-title: Quintessential, serif;
+}
+/* 
+:root{
+--lookup-bg: white;
+--dark-bg: rgb(133, 48, 91);
+--body-bg: lightpink;
+--textcolor-main: rgb(133, 48, 91);
+--textcolor-light: hotpink;
+--font-main: Arsenal, Lexica, Tahoma, sans-serif;
+--font-fancy: Quintessential, Georgia, sans-serif;
+} */
+
+.petlookupcontainer{
+    width:clamp(600px, 900px, 1000px);
+    display:grid;
+    gap:10px;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-areas:
+
+"header header"
+"belong belong"
+"pettop pettop"
+"note note";
+
+    padding: 2em;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: -40px;
+    margin-left: 2%; /*this is a slight mobile fix */
+    background-color: var(--container-bg);
+    border: var(--container-border);
+    border-radius: 3em;
+    anchor-name: --lookup;
+}
+
+/* Grid section names */
+/* You can rearrange the grid template areas using these names */
+.pettop{grid-area:pettop;}
+.petimage{grid-area:pet;}
+.petpetpet{grid-area:petpet;}
+.petBDstats{grid-area:BD;}
+.petstatsblock{grid-area:stats;}
+.petlinks{grid-area:links;}
+.pettrophy{grid-area:trophy;}
+.petbelongingscontainer{grid-area:belong;}
+.note{grid-area:note;}
+#center:first-of-type{grid-area:header;}
+
+.pettop{display:contents;}
+
+.petimage, .petpetpet, .petBDstats, .petstatsblock, .petlinks, .pettrophy, .petbelongingscontainer, .my-content, #center:first-of-type{
+    margin: 0;
+}
+
+.petimage{
+width:150px;
+anchor-name: --pet;}
+
+@keyframes ripple {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+100% {
+    transform: translateY(0px);
+  }
+
+}
+
+.pet_belonging{
+    animation-name: ripple;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.pet_belonging:nth-of-type(1){
+    animation-delay: -10s;
+}
+
+.pet_belonging:nth-of-type(2){
+    animation-delay: -9.8s;
+}
+
+.pet_belonging:nth-of-type(3){
+    animation-delay: -9.6s;
+}
+
+.pet_belonging:nth-of-type(4){
+    animation-delay: -9.4s;
+}
+
+.pet_belonging:nth-of-type(5){
+    animation-delay: -9.2s;
+}
+
+.pet_belonging:nth-of-type(6){
+    animation-delay: -10s;
+}
+
+.pet_belonging:nth-of-type(7){
+    animation-delay: -9.8s;
+}
+
+.pet_belonging:nth-of-type(8){
+    animation-delay: -9.6s;
+}
+
+.pet_belonging:nth-of-type(9){
+    animation-delay: -9.4s;
+}
+
+.pet_belonging:nth-of-type(10){
+    animation-delay: -9.2s;
+}
+
+/*NPC cleanup*/
+hr, .petlinks, .petBDstats, #pettrophies {display:none;}
+.sidebar-container, #hdr, .hdr, #mb, .navhover, #retrotopbar, .results, .footertext {display:none;}
+
+/*Centers the lookup*/
+map+table{margin:auto; padding-right:100px;}
+#content_td {width: 100%;}
+
+body{
+background: var(--page-bg);
+background-size: cover;
+box-sizing:border-box;}
+
+.petlookupcontainer img{
+    border: var(--container-border) !important;
+}
+
+
+/*Fonts*/
+
+body, 
+p,
+.petstatsblock,
+.pet_belonging,
+.petImage,
+#center,
+a {
+    font-family: var(--font-main);
+    color: var(--text-color-main);}
+
+/*just the header font*/
+h1, 
+#center:first-of-type {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: var(--text-color-main);}
+
+a{
+    font-size: 130%;
+    color:var(--text-color-links);
+    text-decoration:none;}
+
+
+.desc p{font-size:1.2rem;}
+
+span{background-color:var(--page-bg);}
+
+.petlookupContainer{
+width: 600px;
+margin: auto;
+padding: 2em 3em;
+border: var(--container-border);
+border-radius: 20px;
+background-color: var(--container-bg);
+margin-top: 10%;
+box-shadow: inset 0 0 10px var(--container-bg);
+}
+
+
+.pettop{
+display:flex;
+flex-direction:row;
+gap: 10px;
+align-items:center;
+justify-content:center;
+    }
+
+
+.petpetpet img:first-of-type{
+position:absolute;
+position-anchor: --pet;
+position-area: left;
+margin-top: 100px;}
+
+#mailbox{
+position:absolute;
+position-anchor: --title;
+position-area: right;
+    transform: scale(0.5);}
+
+.note{
+text-align:center;
+margin:auto;
+width: 500px;
+padding:1em;
+border: var(--note-border);
+border-radius: 1000px;
+background-color: var(--note-bg);}
+
+.note p{margin: 0;}
+
+.note p, .note h1, .note a, .note a:visited{
+font-family: var(--font-fancy);
+font-size: 2rem;
+text-decoration:none;
+color: var(--textcolor-main);
+}
+
+.note a:hover{
+text-decoration-line: underline;
+text-decoration-color: hotpink;
+text-decoration-style: dotted;
+text-decoration-thickness: 0.3rem;
+}
+
+.petstatsblock{
+background:var(--container-bg);
+height: 170px;
+width: 170px;
+overflow:scroll;
+padding: 1em 2em;
+    border: 5px dotted lightpink;
+    border-radius: 1000px;
+    transform: translateX(70px);}
+
+.petbelongingscontainer{
+margin-top: 30px;}
+
+.petbelongingscontainer img{
+border:none;}
+
+.petbelongingscontainer p:first-of-type{
+text-align:center !important;
+font-family: var(--font-title);
+font-size: 1.5rem;
+anchor-name: --title;
+width: fit-content;
+    margin: 1em auto 3em auto;}
+
+
+.note, .note h1{
+    font-family: var(--font-main);
+    color: var(--text-color-main);
+    background-color: var(--container-bg);
+}
+
+nav{
+gap: 20px;
+position: absolute;
+top: 5px;
+margin: auto;
+width: 700px;}
+
+nav ul{
+list-style-type:none;
+padding:0;
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+gap: 20px;
+width: 600px;}
+
+nav li a, nav li a:visited{
+text-decoration: none;
+color: var(--text-color-main);
+font-family: Combo, Lexica, Tahoma, sans-serif;
+font-size: 1.2rem;
+display: block;
+padding: 5px 10px;
+background-color: var(--container-bg);
+border: var(--container-border);
+width: fit-content;}
+
+nav li a:hover{
+background-color: var(--text-color-accent);
+background-size: 50%;
+color: white;}
+
+
+@media (max-width:400px){
+    body{
+    background-size:auto;
+        background-position: 0 0;
+    }
+}
+
+</style>
+
+
+<div class="note">
+<p>So many hats, so little time.
+</div>
+
+<nav>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</nav>
