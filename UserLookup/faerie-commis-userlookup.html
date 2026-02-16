@@ -1,0 +1,273 @@
+<!--for Faerie lookup 2-14-26 by buddy-->
+
+<!--pre-load for Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+<!--allows for responsive sizing-->
+<meta name="viewport" content="width=device-width">
+
+<style>
+/* CSS begins here */
+
+/* TABLE OF CONTENTS 
+
+You can search the all-caps section name to find it. e.g. "variables"
+
+1. VARIABLES - change border colors, bg image, fonts all in one place
+2. IMAGE OVERLAYS- for fancy art edits if desired
+3. MAIN BODY - big code for body/layout
+4. FONT CODES - where each font size etc is applied
+5. BIG HEADER - font and colors for the big username header
+7. MEDIA QUERY - fix for small screen sizes
+8. YOUR CONTENT STARTS HERE - for your description, images, anything
+
+8 is in the HTML section.
+Everything else is inside the style tags.
+
+If you have any issues or questions,
+let me know and I'll try to troubleshoot!
+
+-Buddy
+*/
+
+/* Section 1. VARIABLES */
+/* You can edit your font colors etc in this section.
+You should not have to worry about them anywhere else. */
+
+:root{
+    /* border one, two, and shine are the gradient colors */
+    --border-one:#e6b1fd;
+    --border-two: #ebbdfe;
+    --border-shine: white; /* shine effect line */
+
+    /* Glow effect for entire center box */
+    --border-glow: 0 0 10px rgb(241, 227, 252);
+
+    /* Background image of entire page */
+    /* Current image: sparkly forest */
+    --page-bg: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/animesher.com_purple-landscape-sparkle.gif);
+
+    /* font colors */
+    --text-color-main: rgb(131, 0, 131); /* basic font across page */
+    --text-color-special: #d19ce6; /* for titles and mini headers */
+    --text-color-header: #d19ce6; /* for your username big header */
+
+    /* Header Font
+    It says shadow, but this is actually the main header color.
+    The shadow shows in front because of the transparent text */
+    --header-text-shadow: -2px -2px rgb(109, 81, 175);
+
+    /* Font families */
+    --font-style-main: Jost, Arsenal, sans-serif;
+    --font-style-special: Quintessential, Garamond, serif;
+    --font-style-header: "Grenze Gotisch", Quintessential, serif;
+
+    /* Font sizes */
+    --font-size: 0.8rem; /* main page font */
+    --font-size-special: 1.3rem; /* headers */
+    --font-size-header: 7rem; /* big username header*/
+
+    /* Mini borders around all images */
+    --img-border: 2px solid #e6b1fd;
+}
+
+/* Section 2. IMAGE OVERLAYS */
+
+/* use if you want to replace your shield image */
+/* if you pick a larger image, try changing height and width to defaults (150px by 100px) */
+#usershield img{
+    content:url(https://neopetsclassic.com/images/games/poetry/82.gif);
+    height:fit-content; /*default is 150px;*/
+}
+
+/* if you use image overlays on your lookup,
+use the code below. 
+make sure you copy the exact current pet pose image for ORIG-URL! */
+
+/* 
+img src[ORIG-URL] {
+    content: url(NEW-URL);
+    width: 80px;
+    height: 80px; }
+*/
+
+
+
+/* Section 3. MAIN BODY CODE */
+/* You should not need to mess with this section */
+
+    body{
+        box-sizing:border-box;
+        background: var(--page-bg);
+        background-size:cover
+    }
+
+    /* centers the lookup, applies gradient borders,
+    sets width */
+    map+table{
+        background: 
+        linear-gradient(25deg, var(--border-one) 48%, var(--border-shine) 50%, var(--border-two) 52%) border-box;
+        background-size: 500% 100%;
+        background-position: left;
+        border:50px solid transparent;
+        margin:50px auto 0 auto !important;
+        border-radius:1em;
+        box-shadow: var(--border-glow);
+    }
+    
+    /* starting position for shine effect */
+    map+table:hover{
+        background-position: left;
+        animation: shine 2s ease;
+    }
+
+    /* animation for the shine effects */
+    @keyframes shine {
+    to {background-position: right;}
+    }
+
+    #userHeader{anchor-name:--header;}
+
+
+    /*removes main NPC elements*/
+#hdr, hr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
+
+    /* sets height and width of the center area */
+    .content{
+        max-height:900px;
+        width: 728px;
+        overflow:scroll;}
+
+    /* keeps pet area same width as content */
+    .userlookupPets{width:100%; max-width: none !important;}
+
+
+    /* outer area of center box */
+#content_td{
+    background-color:white;
+    padding: 0 10px 0 0;
+    box-shadow: 0 0 10px rgb(247, 195, 245);
+    border-radius:10px;
+    color: var(--text-color-main);
+    font-family: var(--font-style-main);
+}
+
+/* Borders: adds a small border around each pic to match the big border */
+#userShield img, .userlookuplinks img, .userlookuppets img, #siteTrophies img, #siteCharms img, #gameTrophies img, #contactLinks img, .content img {
+    border: var(--img-border);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--border-two);
+}
+
+/*Section 4. FONT CODES */
+*, p, a, #userinfo, .userlookuplinks {
+font-family: var(--font-style-main);
+color: var(--text-color-main);
+font-size: var(--font-size);}
+
+
+/* font for headers */
+h1, h2, h3, .special{
+    color: var(--text-color-special);
+    font-family: var(--font-style-special);
+    font-size: var(--font-size-special);
+}
+
+/* Font for links */
+.content a, .content a:visited{
+    color:var(--text-color-special);
+    text-decoration:none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Font color when links are hovered over */
+.content a:hover{
+    color:var(--text-color-main);
+    text-shadow: var(--text-color-special) 0 0 5px;
+}
+
+
+/* Section 5. BIG HEADER - Styles for your username header */
+#my-header{
+font-family: var(--font-style-header);
+    color: transparent;
+    font-size: var(--font-size-header);
+    position: absolute;
+    position-anchor: --header;
+    position-area: top center;
+    text-shadow: var(--header-text-shadow); /*text shadow becomes the main color because of the transparent clip */
+    transform: rotate(-10deg) translateY(-25px); /*tilts text at slight angle */
+    background: linear-gradient(25deg, var(--text-color-main) 48%, var(--border-shine) 50%, var(--text-color-main) 52%);
+    background-clip: text;
+    background-size: 400% 100%;
+    background-position: left;
+    animation: shine 2s ease infinite;
+}
+
+/* Section 6. YOUR CONTENT - Styles for your HTML section */
+
+.my-content{
+    padding: 0 2rem;
+    margin-bottom: 20px;
+}
+
+/* blurb is the class name I gave to mini boxes */
+.blurb{
+    max-width:50%; /*if you need more width, change this */
+    margin:auto;
+}
+
+.blurb ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+
+/* Section 7. MEDIA QUERY - positions the header for a small screen */
+
+@media screen and (max-width:450px){
+    .content{
+        max-height:none;
+    }
+    #my-header{
+    position-anchor:unset;
+    top: 10px;
+    left: 270px;
+    }
+}
+
+/* end of CSS section! :)*/
+</style>
+
+<div class="my-content">
+<!-- 
+    SECTION 8.
+YOUR CONTENT STARTS HERE :) 
+ -->
+
+<h1>Header example</h1>
+<p>Welcome to my lookup.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iste repellendus sed officiis quas ratione omnis, odit delectus doloremque esse mollitia. Itaque eaque hic excepturi adipisci pariatur maiores eum asperiores!</p>
+
+<!-- the "blurb" class is for smaller indented boxes if you want -->
+<div class="blurb">
+    <h2>Goals</h2>
+
+<ul> <!-- example list -->
+    <li>Paint every pet</li>
+    <li>Gallery</li>
+    <li>Win the lottery</li>
+</ul>
+</div>
+
+<!-- add links in this format if you want -->
+<h2>Feel free to check out my <a href="https://neopetsclassic.com/island/tradingpost/browse/?type=browse&category=3&search_string=pal">trades</a> or <a href="https://neopetsclassic.com/market/browseshop/?owner=XIX">shop</a>.</h2>
+
+</div>
+
+<!-- this is your username header.
+You can change the text! -->
+<div id="my-header">Faerie</div>

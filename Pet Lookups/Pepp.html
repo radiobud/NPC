@@ -1,0 +1,71 @@
+<style>
+
+:root{
+
+     /* VARIABLES
+    change your colors, border image, etc here.
+    sections go from general to specific */
+
+    /* border art */
+    --border: 32px solid transparent;
+    --border-pic: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/pixelart/fairy-border.png) 32 round;
+
+    /* alt
+    --border-pic: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/pixelart/purple%20frame%201.png) 12 round; */
+
+    /* main large background */
+    --page-bg: #c865b2;
+
+    /* content background color */
+    --container-bg: white;
+
+    /* border around all images */
+    --border-img: 2px solid maroon;
+
+    /* text colors and font faces 
+    The main and title fonts are included in the Google fonts pre-load above. */
+    --text-color-main: #8e0023;
+    --text-color-title: rgb(255, 200, 61);
+    --font-main: "Pirata One", Garamond, serif;
+    --font-title: "Quintessential", serif;
+
+    /* change bold fonts to normal width - I added this for my display example because the Pirata bold is dense.
+    If you do NOT want to un-bold text, delete this line OR change it to "auto;"*/
+    --font-weight: lighter;
+
+    /* special:
+    changes color/adds gradient to the color word
+    e.g. Begin the VALENTINE Lenny */
+    --text-special: radial-gradient(hotpink, maroon);
+
+    /*LOOKUP MAX HEIGHT
+    creates a max height for the left column to hide empty space*/
+    /* to turn off max height, change this value to none; */
+    --max-height: 850px;
+
+}
+
+map+table{margin:auto;}
+
+.petlookupcontainer{
+    background:var(--container-bg);
+    border: var(--border);
+    border-image:var(--border-pic);
+}
+
+.hdr, #hdr, hr, #mb, .navhover, .footertext, .results, .sidebar-container{display:none;}
+
+#center:first-of-type{
+    anchor-name: --header;
+}
+
+#castle{
+    position:absolute;
+    position-anchor: --header;
+    position-area: right;
+}
+
+</style>
+
+<img id="castle" src='https://neopetsclassic.com/images/template_images/faerie_floating_castle.gif'>
+

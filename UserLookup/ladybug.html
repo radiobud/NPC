@@ -1,0 +1,68 @@
+
+<style>
+
+    /* IMPORTANT */
+    /* Make sure to check positioning on any container elements for the art.
+    If position: relative is applied, the anchor positioning might not work.
+    Position: static may fix it.  */
+
+    .content{anchor-scope: --header;}
+
+/* location anchors for the floating art */
+    /* in order moving down the lookup */
+
+#userHeader{anchor-name: --header;}
+
+#userinfo{anchor-name:--info;}
+
+#usershield img{anchor-name: --shield;}
+
+.userLookupLinks{anchor-name: --links;}
+/* can get more specific with nth-of-type */
+
+.userLookupPets{anchor-name: --pets;}
+/* or */
+.userLookupPets b:first-of-type{anchor-name:--pets-header;}
+
+#siteTrophies{anchor-name: --site-trophies;}
+
+#siteCharms{anchor-name: --charms;}
+
+#gameTrophies{anchor-name: --game-trophies;}
+
+#contactLinks{anchor-name: --contact;}
+
+/* Floating Art Elements */
+/* just example selectors */
+
+.heart{
+    position:absolute;
+    position-anchor: --header;
+    position-area: left;
+}
+
+/* if needed, add a translateX() or translateY() value and tinker with pixels. */
+/* example: */
+.envelope{
+    position:absolute;
+    position-anchor: --pets;
+    position-area: top right;
+    transform: translateX(-100px);
+}
+
+.ribbon{
+    position:absolute;
+    position-anchor: --charms;
+    position-area: top left;
+}
+
+
+</style>
+
+<!-- then the actual HTML for the art -->
+
+<img class="heart" src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/pixelart/gameboy.png">
+
+<img class="envelope" src="URL">
+
+<img class="ribbon" src="URL">

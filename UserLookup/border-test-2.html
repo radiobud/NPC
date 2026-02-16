@@ -1,0 +1,204 @@
+<!--for faerie lookup 2-13-26 by buddy-->
+
+<!--This is for Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width">
+
+<style>
+
+:root{
+    --border-one:#e6b1fd;
+    --border-two: #ebbdfe;
+    --border-shine: white;
+    --page-bg: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/animesher.com_purple-landscape-sparkle.gif);
+    --border-glow: 0 0 10px rgb(241, 227, 252);
+
+    /* font colors */
+    --text-color-main: rgb(131, 0, 131);
+    --text-color-special: #d19ce6;
+    --text-color-header: #d19ce6;
+    --header-text-shadow: -2px -2px rgb(109, 81, 175);
+
+    /* font families */
+    --font-style-main: Jost, Arsenal, sans-serif;
+    --font-style-special: Quintessential, Garamond, serif;
+    --font-style-header: "Grenze Gotisch", Quintessential, serif;
+
+    /* font sizes */
+    --font-size: 0.8rem;
+    --font-size-header: 7rem;
+
+    /* general page borders */
+    --img-border: 2px solid #e6b1fd;
+}
+
+    body{
+        background: rgb(72, 37, 72);
+        box-sizing:border-box;
+        background: var(--page-bg);
+        background-size:cover
+    }
+
+    
+    map+table{
+	background: 
+    linear-gradient(25deg, var(--border-one) 48%, var(--border-shine) 50%, var(--border-two) 52%) border-box;
+	background-size: 500% 100%;
+    background-position: left;
+    border:50px solid transparent;
+    width:500px;
+    height:400px;
+    margin:40px auto 0 auto;
+    border-radius:1em;
+    box-shadow: var(--border-glow);
+}
+
+.container4:hover, map+table:hover{
+    background-position: left;
+    animation: shine 2s ease;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 20% 50%;
+	}
+	90% {
+		background-position: 70% 50%;
+	}
+	100% {
+		background-position: 20% 50%;
+	}
+}
+
+@keyframes shine {
+    to {background-position: right;}
+}
+
+.text, #content_td{
+    background-color:white;
+    width:600px;
+    height:300px;
+    padding: 0;
+    box-shadow: 0 0 10px rgb(247, 195, 245);
+    border-radius:10px;
+    color: var(--text-color-main);
+    font-family: var(--font-style-main);
+}
+
+#userShield img, .userlookuplinks img, .userlookuppets img, #siteTrophies img, #siteCharms img, #gameTrophies img, #contactLinks img {
+    border: var(--img-border);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--border-two);
+}
+
+/*font style*/
+*, p, a, #userinfo {
+font-family: var(--font-style-main);
+color: var(--text-color-main);}
+
+/* Centers the userlookup, do not remove */
+map + table{margin:auto;
+margin-top: 50px !important;}
+/* IF NEEDED */
+#content_td{margin:auto;}
+
+
+.content{
+max-height:900px;
+width: 728px;
+overflow:scroll;}
+
+
+/*removes main NPC elements*/
+#hdr, hr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
+
+#usershield img{content:url(https://neopetsclassic.com/images/games/poetry/82.gif);
+height:fit-content;
+}
+
+h1, h2, h3, .special{
+    color: var(--text-color-special);
+    font-family: var(--font-style-special);
+}
+
+#userHeader{anchor-name:--header;}
+
+#my-header{
+font-family: var(--font-style-header);
+    color: transparent;
+    font-size: var(--font-size-header);
+    position: absolute;
+    position-anchor: --header;
+    position-area: top center;
+    text-shadow: var(--header-text-shadow);
+    transform: rotate(-10deg) translateY(-25px);
+    background: linear-gradient(25deg, var(--text-color-main) 48%, var(--border-shine) 50%, var(--text-color-main) 52%);
+    background-clip: text;
+    background-size: 400% 100%;
+    background-position: left;
+    animation: shine 2s ease infinite;
+}
+
+.blurb{
+    max-width:50%;
+    margin:auto;
+}
+
+.blurb ul{
+        list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.my-content{
+    padding: 0 2rem;
+    margin-bottom: 20px;
+}
+
+.content a, .content a:visited{
+color:var(--text-color-special);
+text-decoration:none;
+font-family: inherit;
+font-size: inherit;
+}
+
+.content a:hover{
+    color:var(--text-color-main);
+    text-shadow: var(--text-color-special) 0 0 5px;
+}
+
+.userlookupPets{width:100%; max-width: none !important;}
+
+@media screen and (max-width:450px){
+    .content{
+        max-height:none;
+    }
+    #my-header{
+    position-anchor:unset;
+    top: 10px;
+    left: 270px;
+    }
+}
+
+
+</style>
+<div class="my-content">
+<h1>Hey there!</h1>
+<p>This is a lookup code test.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iste repellendus sed officiis quas ratione omnis, odit delectus doloremque esse mollitia. Itaque eaque hic excepturi adipisci pariatur maiores eum asperiores!</p>
+
+<div class="blurb"><h2>Goals</h2>
+<ul>
+    <li>Paint every pet</li>
+    <li>Gallery</li>
+    <li>Win the lottery</li>
+</ul>
+</div>
+
+<h2>Feel free to check out my <a href="https://neopetsclassic.com/island/tradingpost/browse/?type=browse&category=3&search_string=pal">trades</a> or <a href="https://neopetsclassic.com/market/browseshop/?owner=XIX">shop</a>.</h2>
+
+</div>
+
+<div id="my-header">Faerie</div>

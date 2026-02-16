@@ -1,0 +1,146 @@
+<style>
+    .container{
+        border-width: 50px;
+        /* border-radius: 20px; */
+        border-style:solid;
+        border-image: linear-gradient(rgb(235, 174, 248), rgb(156, 115, 180)) 10 round;
+        height: 400px;
+        width: 500px;
+        color: purple;
+        background-color:white;
+        margin:auto;
+        padding:3em;
+        box-shadow: inset 0 0 10px 10px rgb(224, 151, 224);
+        background-clip:border-box;
+        anchor-name: --container;
+    }
+
+    body{
+        background: rgb(72, 37, 72);
+        box-sizing:border-box;
+        background: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/purple-sparkly-city.jpg);
+        background-size:cover
+    }
+
+    .shine{
+        width:10px;
+        height:10px;
+        border: 0px solid white;
+        border-radius:50%;
+        position:absolute;
+        position-anchor: --container;
+        position-area: center right;
+    }
+
+    .container2{
+	background: linear-gradient(-45deg, #a949b1, #e73cc2, #ae5bac, #ebbdfe, white);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	/* height: 100vh;
+    width:100vw; */
+    background-clip:border-box;
+    border:50px solid transparent;
+    width:500px;
+    height:400px;
+    margin:auto;
+    border-radius:1em;
+    box-shadow:0 0 10px rgb(241, 227, 252);
+}
+
+    .container3{
+	background: 
+    linear-gradient(-45deg, #a949b1, #e73cc2, #ae5bac, #ebbdfe, white) border-box;
+	background-size: 500% 500%;
+	animation: gradient 5s ease infinite;
+    /* background-clip:border-box; */
+    border:50px solid transparent;
+    width:500px;
+    height:400px;
+    margin:auto;
+    border-radius:1em;
+    box-shadow:0 0 10px rgb(241, 227, 252);
+}
+
+    .container4{
+	background: 
+    linear-gradient(25deg, #e6b1fd 48%, /* #e73cc2, #ae5bac,*/white 50%, #ebbdfe 52%) border-box;
+	background-size: 500% 100%;
+    background-position: left;
+	/* animation: shine 4s ease infinite; */
+    /* background-clip:border-box; */
+    border:50px solid transparent;
+    width:500px;
+    height:400px;
+    margin:40px auto 0 auto;
+    border-radius:1em;
+    box-shadow:0 0 10px rgb(241, 227, 252);
+}
+
+.container4:hover{
+    background-position: left;
+    animation: shine 2s ease;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 20% 50%;
+	}
+	90% {
+		background-position: 70% 50%;
+	}
+    /* 95%{
+        background-position:
+        70% 20%;
+    } */
+	100% {
+		background-position: 20% 50%;
+	}
+}
+
+@keyframes shine {
+    to {background-position: right;}
+}
+
+.text{
+    background-color:white;
+    width:400px;
+    height:300px;
+    padding: 3em;
+    box-shadow: 0 0 10px rgb(247, 195, 245);
+    border-radius:0.5em;
+    color: rgb(131, 0, 131);
+}
+
+</style>
+
+<div class="lookup">
+
+<!-- <div class="container">
+    <h1>Container test</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolorem est culpa suscipit quos et ullam quidem incidunt minima. Fugit, corrupti error architecto incidunt sapiente obcaecati ratione. Soluta, laborum laudantium.</p>
+</div>
+<br>
+<div class="container2">
+<div class="text">
+    <h1>Container test 2</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolorem est culpa suscipit quos et ullam quidem incidunt minima. Fugit, corrupti error architecto incidunt sapiente obcaecati ratione. Soluta, laborum laudantium.</p>
+    </div>
+</div>
+<br>
+<div class="container3">
+<div class="text">
+    <h1>Container test 3</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolorem est culpa suscipit quos et ullam quidem incidunt minima. Fugit, corrupti error architecto incidunt sapiente obcaecati ratione. Soluta, laborum laudantium.</p>
+    </div>
+</div>
+<br> -->
+<div class="container4">
+<div class="text">
+    <h1>Container test 4</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolorem est culpa suscipit quos et ullam quidem incidunt minima. Fugit, corrupti error architecto incidunt sapiente obcaecati ratione. Soluta, laborum laudantium.</p>
+    </div>
+</div>
+
+
+<div class="shine"></div>
+</div>
