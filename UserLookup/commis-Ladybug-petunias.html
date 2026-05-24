@@ -1,0 +1,228 @@
+<!--This is for Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Quintessential&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+
+/*
+*{outline: 1px solid red;}*/
+
+    /* TABLE OF CONTENTS */
+
+    /* Search the all-caps section name to jump
+    1. VARIABLES - one-stop edit for colors etc
+    2. OVERLAYS - if you are using
+    3. BIG CODE - body, sizing, NPC cleanup
+    4. YOUR LAYOUT - position and boxes etc
+    4.5 POSITIONED ELEMENTS - floating pics
+    5. FONT CODES - usage, link text, etc
+    6. MEDIA QUERIES - for small screens
+    
+    */
+
+    /* Section 1. VARIABLES */
+
+:root{
+
+    /* BG image and Color variables */
+
+        /* main large background */
+        /* current: large pink petunias */
+    --page-bg: url(https://images.unsplash.com/photo-1652359266153-856341c3da28?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+        /* main box background color */
+    --container-bg: rgb(234, 195, 230);
+    --container-border: 12px solid #d943af;
+
+    /* Font variables */
+
+        /* Font colors */
+    --text-color-main: rgb(131, 0, 131); /* basic font across page */
+    --text-color-special: #d19ce6; /* for titles and mini headers */
+    --text-color-header: #d19ce6; /* for your username big header */
+
+        /* Font families */
+    --font-style-main: Combo, Jost, Arsenal, sans-serif;
+    --font-style-special: Quintessential, Garamond, serif;
+    --font-style-header: "Grenze Gotisch", Quintessential, serif;
+
+        /* Font sizes */
+    --font-size: 1rem; /* main page font */
+    --font-size-special: 1.3rem; /* headers */
+
+    /* Mini borders around all images */
+    --img-border: 6px solid #d943af;
+    --border-glow: 0 0 5px var(--text-color-special);
+
+    /* special:
+    changes color/adds gradient to text */
+    --text-gradient: radial-gradient(rgb(120, 125, 183), rgb(69, 40, 83));
+}
+
+/* Section 2. OVERLAYS - if using! 
+    They are currently commented out.
+    Delete the comment symbols around code to use it */
+
+    /* 
+    img[src="PETPOSE"] {
+        content: url("NEWLINK")
+    } 
+    */
+
+/* Section 3. BIG CODE - should not need to edit */
+
+body{
+    box-sizing: border-box;
+    background: var(--page-bg);
+    background-size: cover;
+}
+
+       /*removes main NPC elements*/
+#hdr, hr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
+
+
+    /* keeps pet area same width as content */
+.userlookupPets{width:100%; max-width: none !important;}
+
+/* Section 4. YOUR LAYOUT */
+
+    /* centers the lookup, optional bg */
+map+table{
+    border: var(--container-border);
+    border-radius:1em;
+    box-shadow: var(--border-glow);
+    margin:50px auto 0 auto;
+}
+
+    /* sets height and width of the center area */
+.content{
+    max-height:900px;
+    width: 728px;
+    overflow:scroll;
+    padding: 30px;
+    }
+
+#content_td{
+    background: var(--container-bg);
+    max-width: none !important;
+}
+
+    /* Borders: adds a small border around each pic to match the big border */
+#userShield img, .userlookuplinks img, .userlookuppets img, #siteTrophies img, #siteCharms img, #gameTrophies img, #contactLinks img, .content img {
+    border: var(--img-border);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--text-color-special);
+}
+
+
+    /* Section 4.5. POSITIONED ELEMENTS - ANCHOR NAMES */
+
+    /* location anchors for the floating art */
+    /* in order, moving down the lookup */
+
+    /* you can move your images later
+    using these anchor names */
+
+#userHeader{anchor-name: --header;}
+
+#userinfo{anchor-name:--info;}
+
+#usershield img{anchor-name: --shield;}
+
+.userLookupLinks{anchor-name: --links;}
+/* can get more specific with nth-of-type */
+
+.userLookupPets{anchor-name: --pets;}
+/* or */
+.userLookupPets b:first-of-type{anchor-name:--pets-header;}
+
+#siteTrophies{anchor-name: --site-trophies;}
+
+#siteCharms{anchor-name: --charms;}
+
+#gameTrophies{anchor-name: --game-trophies;}
+
+#contactLinks{anchor-name: --contact;}
+
+/* Section 4.6. POSITIONED ELEMENTS - Pics */
+
+
+.sticker{
+    border: var(--img-border);
+    box-shadow: 5px 5px 15px lightpink !important;
+    position-visibility: /*no-overflow*/ anchors-visible;
+    border-radius: 30px !important;
+}
+
+.pic-header{
+    position: absolute;
+    position-anchor: --header;
+    position-area: top left;
+}
+
+.pic-shield{
+    position: absolute;
+    position-anchor: --shield;
+    position-area: right;
+    margin-left: 50px;
+    transform: rotate(10deg);
+}
+
+.pic-charms{
+    position: absolute;
+    position-anchor: --links;
+    position-area: left;
+}
+
+.pic-contact{
+    position: absolute;
+    position-anchor: --pets-header;
+    position-area: bottom right;
+    transform: translate(350px, 100px) rotate(-10deg);
+}
+
+
+/*Section 5. FONT CODES */
+
+*, p, a, #userinfo, .userlookuplinks {
+font-family: var(--font-style-main);
+color: var(--text-color-main);
+font-size: var(--font-size);}
+
+
+/* font for headers */
+h1, h2, h3, .special{
+    color: var(--text-color-special);
+    font-family: var(--font-style-special);
+    font-size: var(--font-size-special);
+}
+
+/* Font for links */
+.content a, .content a:visited{
+    color:var(--text-color-special);
+    text-decoration:none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Font color when links are hovered over */
+.content a:hover{
+    color:var(--text-color-main);
+    text-shadow: var(--text-color-special) 0 0 5px;
+}
+
+
+</style>
+
+<!-- then the actual HTML for the art -->
+
+<img class="sticker pic-shield" src="https://neopetsclassic.com/images/pets/Meerca/meerca_valentine_baby.gif">
+
+<img class="sticker pic-charms" src="https://neopetsclassic.com/images/secondary_pets/Draik/defended/draik_mutant_valentine_left.gif">
+
+<img class="sticker pic-contact" src="https://neopetsclassic.com/images/items/Valentine_Dragoyle.gif">
+
+<img class="sticker pic-header" src="https://neopetsclassic.com/images/items/Valentine-Candychan.gif">
