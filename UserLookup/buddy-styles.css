@@ -603,7 +603,7 @@ background-image:none;}
     position: absolute;
     position-anchor: --header;
     position-area: left;
-    transform: rotate(-5deg) translate(-380px);
+    transform: rotate(-5deg) translate(-395px, 10px);
     width: 80px;
     font-weight: bold;
     line-height: 1;
@@ -613,6 +613,20 @@ background-image:none;}
     box-sizing: border-box;
     background-size: 500%;
     font-size: 0.6rem;
+}
+
+#guestbook:hover{
+    transform: rotate(-10deg) translate(-395px, 10px);
+}
+
+#guestbook:hover::before{
+    content: "";
+    border-style: solid;
+    position: absolute;
+    right: -1;
+    top: -1;
+    border-width: 16px;
+    border-color: #342f49 #342f49 rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3);
 }
 
 #lilguy{
