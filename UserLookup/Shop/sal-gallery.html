@@ -1,0 +1,102 @@
+<style>
+
+.blog{
+width: 500px;
+height: 300px;
+padding: 20px;
+margin: auto;
+background-image: url(https://u.cubeupload.com/audiobuddy/audiobg.jpg);
+background-size: cover;
+}
+
+.code{
+margin-left:100px;
+background-color:black;
+color:#94d194;}
+
+h2{text-align:center;}
+
+.blog--text{
+width:350px;
+height: 240px;
+overflow-y:scroll;
+}
+
+</style>
+<div class="blog">
+<h2>Hello, and welcome to my gallery.</h2>
+<div class="blog--text">
+<br>
+<h3>Updates of the week:</h3>
+<ul>
+<li>Userlookup code experiments!</li>
+<li>Getting back into restocking... thrill!</li>
+<li>Reconnecting on discord</li>
+<li>Personal life: one more month of teacher summer!</li>
+</ul>
+<h3>Would you ever consider joining a new guild?</h3>
+<p>Why not join <a href="https://neopetsclassic.com/guilds/guild/?id=33">The Kingdom</a>? We are active with seasonal events and giveaways, and the guild board is a welcoming place.</p>
+<h3>Do you like to play RPGs?</h3>
+<p>I am a huge advocate for Monster of the Week, a story-centered RPG system that is about fighting monsters and dealing with personal demons. It's possibly my favorite system, because it values character choices and vivid storytelling. It is also so dramatic! Sal is the character I am playing this year in a MotW game - it's my first time getting to be on the player side of the table in this system. Sal has been learning to cook, and only wants to cook one thing: breakfast. This gallery is dedicated to his experiments.</p>
+</div>
+</div>
+
+<p>Get the code for this gallery's custom "blog":<p>
+<textarea class="code" rows="8" cols="50">
+<style>
+
+/*CSS comments appear inside these symbols and are not public*/
+
+
+/*this removes the shopkeeper image and their little quote*/
+.loggedIn{display:none;}
+
+/*this styles the div containing a bg-image. Its width and height are set so that it will be predictable, and you can set the scroll div based on these dimensions.
+the property "background-size: cover" is used to make the image fit without white space, but there are other options.
+You can also give this box a border, rounded corners, etc of course.
+*/
+.bg-image{
+width: 500px;
+height: 300px;
+padding: 20px;
+margin: auto;
+background-image: url(https://u.cubeupload.com/audiobuddy/audiobg.jpg); /*just my example*/
+background-size: cover;
+}
+
+h2{text-align:center;}
+
+/*Below is the main text-box.
+I made this div width much less than the container, because my example has a prominent image on the right side.
+The scroll height is also shorter than the container (bg-image) div, so that there is padding on the bottom.
+(This height is actually much less because I included a header outside the scroll div. If you remove the header, you can make the height almost the same as the bg-image div, minus a couple dozen px for padding maybe.)
+Finally, if your text is hard to read over your image, consider adding a semi-opaque bg color to this text div. I left an example one below but commented out within the / *  * /symbols; remove those to test it out.*/
+.text{
+width:350px;
+height: 240px;
+overflow-y:scroll;
+/*background-color: rgba(175, 182, 175, 0.2);*/
+}
+</style>
+<!--html comments will appear inside these symbols and are not public-->
+
+<div class="bg-image"><!--just for the bg-->
+    <!--the h2 will not scroll away because it is outside the text div. Move it inside the text div to make it scroll along, or you can just delete it-->
+<h2>Hello, and welcome to my gallery.</h2>
+
+    <!--next is the scrolling text div-->
+<div class="text">
+<br>
+<h3>Shop Header</h3>
+<ul>
+<li>Here is a list</li>
+<li>A list item</li>
+<li>Another list item!</li>
+<li>And yet another list item</li>
+</ul>
+<h3>Would you ever consider joining a new guild?</h3>
+<p>Why not join <a href="https://neopetsclassic.com/guilds/guild/?id=33">The Kingdom</a>? We are active with seasonal events and giveaways, and the guild board is a welcoming place.</p>
+<p>More paragraph text etc</p>
+</div>
+</div>
+</textarea>

@@ -1,0 +1,314 @@
+
+<!-- snippet for hiding NPC toolbars and sidebar -->
+
+<textarea>
+<style>
+
+/*---------HIDE DEFAULT NPC BARS ---------- */
+/*
+If you are NOT HIDING any of these elements,
+just delete their line from the list .
+--------------------------------------------------*/
+
+.navhover, /*left sidebar*/
+#mb, /*bottom edge of left sidebar*/
+.hdr, /*top toolbar on default theme*/
+#hdr, /*page-specific art header*/
+.footertext /*legal text at bottom*/
+    {
+    display:none;
+    }  
+
+/*---------VARIABLES MY BELOVED  ---------- */
+/* You can change your entire layout color scheme
+in one section, as long as you're consistent.
+Notice when the variables are used, the format is
+var(--name-of-variable);
+--------------------------------------------------*/
+
+:root{
+    --bg-color: #ffd9da;
+    --sidebar-bg-color: rgb(194 151 255);
+    --border-color: #400c26;
+    /*if you want your sidebar partly transparent,
+    use rgba instead e.g. rgba(194, 151, 255, 0.5) */
+
+    --shadow: 5px 5px 20px rgba(138, 112, 138, 0.5);
+
+    --main-font: "Arial Narrow", Verdana, sans-serif;
+    --main-font-color: #400c26;
+
+    --header-font: Lucida, serif;
+    --header-font-color: #400c26;
+
+    --special-font: Courier, monospace;
+    --special-font-color: goldenrod;
+}
+
+
+/*  OPTIONAL CUSTOM NPC top toolbar.
+You CAN'T style the left sidebar because 
+it uses baked-in images, BUT...
+You CAN style the top toolbar to be transparent/use custom fonts.
+That's important if your bg makes it hard to read.  
+I usually just hide it, though.*/
+
+#sfp_nav{
+    color: var(--main-font-color);
+}
+
+/* -------------------SIDEBAR TRICKS---------------------------- */
+/* OPINION....
+I think the right-hand sidebar should always be visible
+on activity pages like user shops. Buuuut...
+if you just want to hide it entirely, use the section at the end
+ - search "PURIST" :P
+------------------------------------------------------------- */
+
+
+/* -------------OPTIONAL EXPLANATION--------------- */
+/* .sidebar-container has 3 main sub-sections.
+You MUST remove the bg image for ALL three of these.
+-------------------------------------------------------*/
+
+.sidebar-section.st,
+.sidebar-section.se,
+.sidebar-section.sm-filler{
+    background-image:none;
+}
+
+.sidebar-section{padding: 0; } /*optional but nicer*/
+
+/* ----- KEY STYLING FOR RIGHT SIDEBAR ------- */
+
+.sidebar-container{
+    /* REGULAR LOOK */
+    background-color: var(--sidebar-bg-color);
+    color: var(--header-font-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    
+    /* DIMENSIONS
+    I like to make the sidebar just small enough
+    to see the RS timers. It scrolls. */
+    position: absolute;
+    transform: translateX(50px);
+    min-height: 0; /*necessary or it ignores height*/
+    height: 320px;
+    overflow: scroll;
+}
+
+/* target specific sidebar fonts */
+.sidebar-container a, .sidebar-container p,
+.sidebar-container b, .sidebar-container td,
+#sfp_am_txt, .sfp_clk_txt, .sfp_clk_txt font{
+    color: var(--header-font-color);
+}
+
+/* optional but helps clocks be legible */
+.sfp_clk_txt font{font-weight: bolder;}
+
+/* style the RS and RE timers */
+#sfp_clock{
+    background-color: var(--sidebar-bg-color);
+    color: var(--header-font-color);
+    border-color: var(--border-color);
+}
+    </style>
+</textarea>
+
+<textarea>
+<style>
+nav {
+position: absolute;
+background-color: pink;
+padding: 20px;
+border-radius: 30px;
+font-family:Garamond;
+border: 2px dotted gray;
+transform: rotateZ(-90deg);
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav ul a {
+display: block;
+padding: 10px 0;
+margin-left: 0;
+color:rgb(59, 17, 59);
+}
+
+details::details-content {
+transition: height 1s, transform 1s;
+}
+
+details[open]::details-content {
+height: 220px;
+transform: rotateZ(90deg);}
+</style>
+
+
+<nav>
+<details>
+<summary>Back to Neopia</summary>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</details>
+</nav>
+</textarea>
+
+<!-- PURIST no sidebar at all -->
+
+<textarea>
+    <style>
+/*  ------  PURIST? ------ */
+/* Hide sidebar entirely?
+You just need one line --- */
+
+.sidebar-container{ display: none; }
+    </style>
+</textarea>
+
+
+<textarea>
+    <style>
+map+table{margin:auto;}
+    </style>
+</textarea>
+
+
+
+<textarea>
+    <style>
+/*---------CENTER the GALLERY ---------- */
+/*NOTE on dimensions:
+The top margin is 200px,
+to make room for the header.
+If you don't use a header, you don't need
+a top margin.
+-----------------------------------------*/
+map + table{
+    margin: auto;
+    margin-top: 200px;}
+
+
+
+/* important: allows a heder to be positioned
+relative to the top of the container  */
+/* ---- anchor positioning :>) ------- */
+.content{anchor-name: --main;}
+
+
+/*-------YOUR CUSTOM HEADER - OPTIONAL -------- */
+/* You can change the background-image, size etc.
+-----------------------------------------------*/
+.my-header{
+    position: absolute;
+    position-anchor: --main;
+    position-area: top;
+    transform: translateY(-40px);
+
+    /* dimensions -
+    make sure your map+table height is greater than this header's height*/
+    height: 140px;
+    width: 500px;
+
+    /* customize */
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/purple-clouds-freepik.jpg);
+    background-size: cover;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-shadow: 2px 2px 2px linen;
+    color: #5f2341;
+    font-size: 1.5rem;
+    font-family: Garamond, serif;
+    border-radius: 30px;
+}
+
+    </style>
+
+<header class="my-header">
+    insert text here
+</header>
+</textarea>
+
+<!--overlay-->
+<textarea>
+    <style>
+/*-------SHOPKEEPER OVERLAY-------- */
+.loggedIn img{
+content: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/purple-clouds-freepik.jpg);
+height: 150px;
+width: 150px;
+}
+    </style>
+
+</textarea>
+
+<!-- basic page edits - bg image font etc -->
+ <!-- plus root variables -->
+<textarea>
+    <style>
+/*---------VARIABLES MY BELOVED  ---------- */
+/* You can change your entire layout color scheme
+in one section, as long as you're consistent.
+Notice when the variables are used, the format is
+var(--name-of-variable);
+--------------------------------------------------*/
+
+:root{
+    --bg-color: #ffd9da;
+    --sidebar-bg-color: rgb(194 151 255);
+    --border-color: #400c26;
+    /*if you want your sidebar partly transparent,
+    use rgba instead e.g. rgba(194, 151, 255, 0.5) */
+
+    --shadow: 5px 5px 20px rgba(138, 112, 138, 0.5);
+
+    --main-font: "Arial Narrow", Verdana, sans-serif;
+    --main-font-color: #400c26;
+
+    --header-font: Lucida, serif;
+    --header-font-color: #400c26;
+
+    --special-font: Courier, monospace;
+    --special-font-color: goldenrod;
+}
+
+
+
+/*---------ENTIRE PAGE - OPTIONAL ---------- */
+/* 
+1. BG color/image (first example of variable)
+2. Give all images rounded corners
+2. Specific fonts (color + type)
+---------------------------------------------*/
+body{
+    background-color: var(--bg-color);
+    /* or */
+    background-image:url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/sunrise-ben-klewais-unsplash.jpg);
+}
+
+img{border-radius:20px;}
+
+/* FONTS */
+a, p, b {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+}
+
+/* FONT - style links when hovered*/ 
+a:hover{color: var(--special-font-color);}
+    </style>
+</textarea>
+

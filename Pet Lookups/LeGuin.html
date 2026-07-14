@@ -8,10 +8,11 @@ interpolate-size: allow-keywords;
 box-sizing: border-box;
 }
 
+/* doing nothing?
 .pettop, .petbelongingscontainer {
-background-color: linen;
+background-color: none;
 font-family:Garamond;
-}
+} */
 
 .petlinks, .petbdstats { display: none;}
 
@@ -19,13 +20,6 @@ font-family:Garamond;
 position: relative;
 }
 
-/*
-#center.petpetpet {
-position: absolute;
-right: 40px;
-top: 300px;
-}
-*/
 
 .petLookupContainer {
 background-image: url(https://u.cubeupload.com/audiobuddy/leguin3.png);
@@ -45,17 +39,11 @@ position: relative;
 left: 20%;
 }
 
-.petbelongingscontainer{
-position:absolute;
-bottom: -450px;
-left:40%;
-color:gray;}
+.petpetpet, .pettrophy{display:none;}
 
-.petpetpet{display:none;}
+#retroTopBar, .navhover, .hdr, #mb, hr, #hdr, .sidebar-container { display:none;}
 
-#retroTopBar, .navhover, .hdr, #mb, hr, #hdr { display:none;}
-
-.sidebar-container{
+/* .sidebar-container{
 position: absolute;
 right: 10px;
 top: 30px;
@@ -74,20 +62,8 @@ color: var(--light-color);
 #nst_clock{background: black; color:gray;}
 
 .retro_txt_clr{color: black;}
+ */
 
-/*
-.sidebar-section.sm-filler {
-background-image: url(https://u.cubeupload.com/audiobuddy/sidebarmd.png);
-background-size: 229px auto;}
-
-.sidebar-section.st {
-background-image: url(https://u.cubeupload.com/audiobuddy/sidebartop.png);
-background-size: 229px auto;}
-
-.sidebar-section.se {
-background-image: url(https://u.cubeupload.com/audiobuddy/sidebarbtmfix.png);
-background-size: 229px auto;}
-*/
 
 .petLookupContainer img {
 border-radius: 20px;
@@ -118,7 +94,10 @@ position: relative;
 left: 100px;}
 
 #center b{
-background-color:lightgray;border: 2px dashed black;border-radius:10px; padding: 10px;}
+background-color:lightgray;
+border: 2px dashed black;
+border-radius:10px;
+padding: 10px;}
 
 a {
 text-decoration: none;
@@ -150,6 +129,23 @@ min-width: 450px;
 max-width: 800px;
 position: relative;
 top: 300px;
+anchor-name: --bubble;
+}
+
+.petbelongingscontainer{
+position: absolute;
+    position-anchor: --bubble;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position-area: right;
+    transform: translateX(100px);
+    background-color: lightgray;
+    border: 2px dotted lightblue;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px gray;
+    padding: 10px;
+    color: gray;
 }
 
 p {
@@ -223,16 +219,6 @@ details[open]::details-content {
 height: 220px;
 transform: rotateZ(90deg);}
 
-/*
-#happy {
-position: absolute;
-top: -30px;
-right: -40px;
-width: 120px;
-border-radius: 20px;
-box-shadow: 0 5px 10px gray;
-}
-*/
 
 #leguin_photo{
 align-items:center;

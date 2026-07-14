@@ -10,6 +10,12 @@ background-size:cover;*/
 interpolate-size: allow-keywords;
 }
 
+/*CENTER*/
+map+table{
+margin: auto;
+padding-right: 100px;
+}
+
 .pettop, .petbelongingscontainer {
 background-color: linen;
 font-family:Garamond;
@@ -44,9 +50,10 @@ left: 40%;
 }
 
 #retroTopBar, .navhover, .hdr, #mb, #hdr, hr { display:none;}
-.petlinks, .petbdstats { display: none;}
+.petlinks, .petbdstats, .sidebar-container { display: none;}
 
 
+/*
 .sidebar-container{
 position: absolute;
 right: 10px;
@@ -66,6 +73,8 @@ color: var(--light-color);
 #nst_clock{background: black; color:gray;}
 
 .retro_txt_clr{color: black;}
+
+*/
 
 /*
 .sidebar-section.sm-filler {
@@ -87,6 +96,10 @@ border-radius: 20px;
 
 .petStatsBlock {
 background-color: linen;
+}
+
+.petTop{
+    anchor-name: --pet;
 }
 
 .petImage {
@@ -205,10 +218,14 @@ box-shadow: 0 5px 10px gray;
 
 #borges_photo{
 align-items:center;
-position:fixed;
+position: absolute;
+position-anchor: --pet;
+position-area: left;
+/* position:fixed;
 left:10px;
-top: 5%;
+top: 5%; */
 z-index: -1;
+transform: translateX(-280px);
 }
 
 #happypose {
@@ -217,7 +234,6 @@ width: 80px;
 
 </style>
 
-<main>
 <figure id="borges_photo">
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Jorge_Luis_Borges.jpg" alt="Borges photo in black and white: an elderly man in a suit, with a long face and an expression of thought">
 <figcaption>Jorge Luis Borges</figcaption>
@@ -242,5 +258,3 @@ width: 80px;
 </nav>
 
 </div>
-
-</main>

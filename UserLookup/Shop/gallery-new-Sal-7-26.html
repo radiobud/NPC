@@ -1,0 +1,237 @@
+<style>
+
+html{interpolate-size: allow-keywords;}
+
+/*---------VARIABLES-------- */
+
+:root{
+    --bg-color: #ffd9da;
+    --sidebar-bg-color: rgb(194 151 255);
+    --border-color: #400c26;
+
+    --shadow: 5px 5px 20px rgb(138 112 138 / 50%);
+
+    --main-font: "Arial Narrow", Verdana, sans-serif;
+    --main-font-color: #400c26;
+
+    --header-font: Lucida, serif;
+    --header-font-color: #400c26;
+
+    --special-font: Courier, monospace;
+    --special-font-color: goldenrod;
+}
+
+/*---------CENTER the GALLERY ---------- */
+map + table{
+    margin: auto;
+    margin-top: 200px;}
+
+
+/*---------ENTIRE PAGE----- */
+
+body{
+    background-color: var(--bg-color);
+    /* or */
+    background-image:url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/sunrise-ben-klewais-unsplash.jpg);
+}
+
+img{border-radius:20px;}
+
+/* FONTS */
+a, p, b {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+}
+
+/* style links when hovered*/ 
+a:hover{color: var(--special-font-color);}
+
+
+/*---------HIDE DEFAULT NPC BARS ---------- */
+
+.navhover, /*left sidebar*/
+#mb, /*bottom edge of left sidebar*/
+.hdr, /*top toolbar on default theme*/
+#hdr, /*page-specific art header*/
+.footertext /*legal text at bottom*/
+{
+    display:none;
+}
+
+
+#sfp_nav{
+    color: var(--main-font-color);
+}
+
+
+.sidebar-section.st,
+.sidebar-section.se,
+.sidebar-section.sm-filler{
+    background-image:none;
+}
+
+.sidebar-section{padding: 0; }
+
+/* ----- KEY STYLING FOR RIGHT SIDEBAR ------- */
+
+.sidebar-container{
+    background-color: var(--sidebar-bg-color);
+    color: var(--header-font-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    position: absolute;
+    transform: translateX(50px);
+    min-height: 0; /*necessary or it ignores height*/
+    height: 320px;
+    overflow: scroll;
+}
+
+.sidebar-container a, .sidebar-container p,
+.sidebar-container b, .sidebar-container td,
+#sfp_am_txt, .sfp_clk_txt, .sfp_clk_txt font{
+    color: var(--header-font-color);
+}
+
+/* optional but helps clocks be legible */
+.sfp_clk_txt font{font-weight: bolder;}
+
+/* style the RS and RE timers */
+#sfp_clock{
+    background-color: var(--sidebar-bg-color);
+    color: var(--header-font-color);
+    border-color: var(--border-color);
+}
+
+
+/*---------SHOPKEEPER OVERLAY  */
+.loggedIn img{
+content: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/purple-clouds-freepik.jpg);
+height: 150px;
+width: 150px;
+}
+
+
+/* important: allows the header to be positioned
+relative to the top of the container  */
+/* ---- anchor positioning :>) ------- */
+.content{anchor-name: --main;}
+
+
+.my-header{
+    position: absolute;
+    position-anchor: --main;
+    position-area: top;
+    transform: translateY(-40px);
+
+    /* dimensions -
+    make sure your map+table height is greater than this header's height*/
+    height: 140px;
+    width: 500px;
+
+    /* customize */
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/purple-clouds-freepik.jpg);
+    background-size: cover;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-shadow: 2px 2px 2px linen;
+    color: #5f2341;
+    font-size: 1.5rem;
+    font-family: Garamond, serif;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+}
+
+
+/*  ------  PURIST? ------ */
+/* Hide sidebar entirely?
+You just need one line --- */
+
+/* .sidebar-container{ display: none; } */
+
+.arrow{
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/pixelart/arrow.png);
+    width: 180px;
+    height: 128px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-wrap: nowrap;
+    position: absolute;
+    position-anchor: --main;
+    position-area: top right;
+    z-index: 2;
+    color: white;
+    font-family: monospace;
+    font-size: 1.8em;
+    box-sizing: border-box;
+    padding: 20px;
+    transform: translate(1px, 45px);
+}
+
+nav {
+position: absolute;
+background-color: var(--bg-color);
+padding: 20px;
+border-radius: 30px;
+font-family:Garamond;
+border: 2px dotted gray;
+/* height: 30px;
+transition: height 1s ease-in-out; */
+}
+/* 
+details[open] nav{
+    height: 250px;
+} */
+
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+nav ul a {
+display: block;
+padding: 10px 0;
+margin-left: 0;
+color:rgb(59, 17, 59);
+}
+
+/* 
+details::details-content {
+block-size:0;
+opacity: 0;
+transition: opacity 1s ease-in-out, block-size 1s ease-in-out,
+content-visibility 1s allow-discrete;
+}
+
+details[open]::details-content {
+block-size: auto;
+opacity: 1;
+/* height: 220px; */
+} */
+
+</style>
+
+<!--end of CSS, start of your HTML-->
+
+<header class="my-header">
+<h1>Tests in progress!</h1>
+</header>
+
+<p>Pixel cloud art from <a href="https://www.magnific.com/free-vector/flat-design-pixel-art-cloud-illustration_38528399.htm#fromView=image_search_similar&page=1&position=0&uuid=4e8ef97e-cbed-4042-aa32-464861a53a6a&query=Pixel+clouds">Magnific (previously freepik)</a></p>
+
+<p class="arrow">It scrolls!</p>
+
+
+<details>
+<summary>Back to Neopia</summary>
+<nav>
+<ul>
+<li><a href="https://neopetsclassic.com/petcentral/">Pet Central</a></li>
+<li><a href="https://neopetsclassic.com/explore/">Explore</a></li>
+<li><a href="https://neopetsclassic.com/neoboards/">Boards</a></li>
+<li><a href="https://neopetsclassic.com/gameroom/">Games</a></li>
+<li><a href="https://neopetsclassic.com/objects/">Shops</a></li>
+<li><a href="https://neopetsclassic.com/help/">Help</a></li>
+</ul>
+</nav>
+</details>

@@ -1,0 +1,677 @@
+<!--lookup experiment july 2026-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Combo&family=Grenze+Gotisch&family=Jost:wght@100..900&family=Lekton&family=Pirata+One&family=Playwrite+US+Trad+Guides&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Quintessential&display=swap" rel="stylesheet">
+
+<style>
+
+/* note:
+class .re is the random event table
+header class .shh
+bold text inside header has tag important on color 
+pic class .img specifically td.img
+text class .txt specifically td.img
+the whole RE shape is .re tbody I think (to shape/bg it))
+ */
+
+
+:root{
+    /* --special: goldenrod; */
+    --lightbg: #c2d6d6;
+    --hfont: Quintessential, Garamond, serif;
+    --mainfont: Jost, Garamond, serif;
+    --neutral-brown: #a9705f;
+    --darker-brown: #9e6737;
+    --nice-wood-brown: hsl(15, 34%, 56%);
+    /* --special-darker: #233b59; */
+    /* --special: hsl(214, 71%, 32%); 
+    --special-darker: hsl(from(var--special) h s calc(l-20%)); */
+    --special: hsl(15, 34%, 56%);
+    --special-darker: #805027;
+    /* --special-darker: hsl(from(var--special) h s calc(l-20%)); */
+    --maroon: rgb(149, 44, 44, 0.5);
+}
+
+body{
+    font-family: Lekton;
+    font-size: 1.2rem;
+    background-color: var(--lightbg);
+    background-image: url(https://images.unsplash.com/photo-1680633479327-0863e6ff0222?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: repeat;
+    background-size: 35%;
+}
+
+a, p, b, font, li{
+    font-family: Lekton;
+    color: #191616;
+    font-size: 0.8rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Lekton;
+    color: #191616;
+}
+
+
+#center p, ul, .wrapper p,
+h4, h5, h6{
+    background-color: linen;
+    padding: 10px 20px;
+    transform: scale(0.7);
+}
+
+a:hover{
+    color: goldenrod;
+}
+
+ul li{
+    text-align: left;
+}
+
+/*text styling*/
+.userLookupPets b{
+    /* font-family: "Playwrite US Trad Guides"; */
+    font-family: "Bodoni Moda", serif;
+    font-weight: 500;
+    color: #383333;
+    background-color: #d8d8d8;
+    display: block;
+}
+
+.userLookupPets + p b{
+    font-family: "Playwrite US Trad Guides";
+    font-size: 1.5rem;
+    color: #383333;
+    background-color: #d8d8d8;
+    display: block;
+}
+
+
+/* Centers the userlookup, do not remove */
+map + table{margin:auto;
+margin-top: 20px !important;}
+/* IF NEEDED */
+#content_td{margin:auto;}
+
+.content{
+    display: grid !important;
+    grid-template-columns: 
+    3fr 2fr 2fr;
+    grid-template-rows:
+    100px minmax(400px, auto);
+    grid-template-areas:
+    "main head head"
+    "main pet pet";
+justify-content: center;
+/* align-items:center; */
+width: 80vw;
+overflow: visible;
+/* width: clamp(400px, 900px, 80vw); */
+height:fit-content;
+margin-top: 4%;
+position: relative;
+anchor-name: --grid;
+background-color: var(--special);
+z-index: 2;
+box-shadow: -5px 5px 30px black;
+}
+
+ /*removes main NPC elements*/
+#hdr, hr, .hdr, .navhover, #mb, .sidebar-container, #retroTopBar, .footertext {display:none;}
+
+/*Grid-areas*/
+#userHeader{grid-area:head;}
+/* .userLookupLinks{grid-area:links;} */
+.userLookupPets{grid-area:pet;}
+/* #siteCharms{grid-area:charms;}
+#siteTrophies{grid-area:site;} */
+/* #gameTrophies{grid-area:trophies;} */
+/* #contactLinks{grid-area:contact;} */
+#center + p{grid-area:coreinfo;}
+#center{grid-area: main;}
+#icon{grid-area:icon;}
+
+/*userinfo core*/
+#center + p{
+    display: block;
+    transition: box-shadow 0.3s ease-out, width 1s ease-in-out, transform 1s ease-in-out;
+    position: absolute;
+    position-anchor: --pets;
+    position-area: right;
+    left: 0;
+    top: 150px;
+    width: 400px;
+    transform: translateX(-380px);
+    max-height: 300px !important;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border: 4px solid var(--special);
+    scrollbar-width: none;
+    padding: 20px;
+    padding-right: 70px;
+    z-index: 1;
+}
+
+#center + p::before{
+    position: absolute;
+    right: -380px;
+    width: 400px;
+    height: 30px;
+    transform: rotate(90deg);
+    background-color: linen;
+    content: "About Me";
+    transform-origin: top left;
+    font-family: Lekton;
+    color: #383333;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/notebook%20paper.png);
+    background-size: 10%;
+}
+
+#center+p:hover{
+    width: 400px;
+    transform: translateX(-40px);
+    box-shadow: inset 5px 5px 5px var(--special-darker);
+}
+
+#userHeader{
+    transition: max-height 1s ease-in-out;
+    anchor-name: --header;
+    background-color: var(--special);
+    z-index: 2;
+}
+/* #userInfoContainer{
+    display: block;
+    transition: max-height 1s ease-in-out, max-width 1s ease-in-out;
+    position: absolute;
+    position-anchor: --pets;
+    position-area: right;
+    left: 0;
+    max-width: 100px !important;
+    max-height: 300px !important;
+}
+
+#userInfoContainer:hover{
+    max-width:400px !important;
+} */
+
+/* .userLookupLinks{
+    width: 50px;
+    transition: width 1s ease-in-out, box-shadow 0.3s ease-out;
+    position: absolute;
+    position-anchor: --header;
+    position-area: right;
+    left: -50px;
+    padding-left: 100px;
+    anchor-name: --links;
+} */
+
+/* .userLookupLinks::before{
+    position:absolute;
+    right: -50px;
+    top: 30px;
+    width: 150px;
+    height: 30px;
+    transform: rotate(90deg);
+    background-color:linen;
+    content: "Avatars";
+    font-family: Lekton;
+    color: #383333;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/notebook%20paper.png);
+    background-size: 10%;
+} */
+
+/* .userLookupLinks:hover::before{
+    box-shadow: 5px 5px 5px rgb(149, 44, 44, 0.5);
+}
+
+.userLookupLinks:hover{
+    width: 400px;
+    overflow-y: scroll;
+    scrollbar-width: 0;
+    box-shadow: inset 5px 5px 5px var(--special-darker);
+} */
+
+
+/*revamp avatar links drawer*/
+.userLookupLinks{
+    display: block;
+    transition: box-shadow 0.3s ease-out, width 1s ease-in-out, transform 1s ease-in-out;
+    position: absolute;
+    position-anchor: --header;
+    position-area: right;
+    left: 0;
+    top: 0;
+    width: 600px;
+    height: 100px;
+    transform: translateX(-580px);
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border: 4px solid var(--special);
+    scrollbar-width: none;
+    padding: 20px;
+    padding-right: 70px;
+    z-index: 1;
+}
+
+.userLookupLinks::before{
+    position: absolute;
+    right: -380px;
+    width: 100px;
+    height: 30px;
+    transform: rotate(90deg);
+    background-color: linen;
+    content: "Wishlist";
+    transform-origin: top left;
+    font-family: Lekton;
+    color: #383333;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/notebook%20paper.png);
+    background-size: 10%;
+}
+
+.userLookupLinks:hover{
+    width: 400px;
+    transform: translateX(-40px);
+    box-shadow: inset 5px 5px 5px var(--special-darker);
+}
+
+
+
+.userLookupPets{
+    display: block;
+    max-height: 400px;
+    width: 100% !important;
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+    anchor-name: --pets;
+    transition: max-height 1s ease-in-out;
+    z-index: 2;
+    background-color:linen !important;
+    transform: rotate(-10deg);
+    box-shadow: -2px 2px 5px rgb(58 17 17 / 50%);
+}
+
+/* .userLookupPets::after{
+    content: "";
+    background-color: var(--nice-wood-brown);
+    background-image: url(https://www.transparenttextures.com/patterns/wood-pattern.png);
+    position: absolute;
+    z-index: 2;
+    width: 300px;
+    height: 400px;
+    transform: rotate(10deg);
+} */
+
+#siteCharms{
+    width: 50px;
+    transition: width 1s ease-in-out, box-shadow 0.3s ease-out;
+    position: absolute;
+    position-anchor: --site;
+    position-area: top center;
+    padding-left: 100px;
+    right: 0px;
+    anchor-name: --charms;
+    margin-bottom: 10px;
+}
+
+#siteCharms:hover{
+    width: 400px;
+    margin-left: 20px;
+    box-shadow: inset 5px 5px 5px var(--special-darker);
+}
+
+#siteCharms > b, #siteCharms > font, #siteCharms > br, #siteCharms > a{
+    display:none;
+}
+
+#siteCharms::before{
+    position:absolute;
+    left: -50px;
+    top: 30px;
+    width: 150px;
+    height: 30px;
+    transform: rotate(-90deg);
+    background-color:linen;
+    content: "Charms";
+    font-family: Lekton;
+    color: #383333;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/notebook%20paper.png);
+    background-size: 10%;
+}
+
+#siteTrophies{
+    transition: width 1s ease-in-out, box-shadow 0.3s ease-out;
+    position: absolute;
+    width: 50px;
+    /* height: 100px; */
+    position-anchor: --main;
+    position-area: left;
+    right: -50px;
+    padding-left: 100px;
+    anchor-name: --site;
+}
+
+#siteTrophies:hover{
+    width: 400px;
+    margin-left: 20px;
+    box-shadow: inset 5px 5px 5px var(--special-darker);
+}
+
+#siteTrophies > b, #siteTrophies > font, #siteTrophies > br, #siteTrophies > a{
+    display:none;
+}
+
+#siteTrophies::before{
+    position:absolute;
+    left: -50px;
+    top: 30px;
+    width: 150px;
+    height: 30px;
+    transform: rotate(-90deg);
+    background-color:linen;
+    content: "NPC Trophies";
+    font-family: Lekton;
+    color: #383333;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/notebook%20paper.png);
+    background-size: 10%;
+}
+
+#gameTrophies{
+    max-width: 450;
+    height: 50px;
+    transition: height 1s ease-in-out, box-shadow 0.3s ease-out;
+    position:absolute;
+    position-anchor: --main;
+    position-area: bottom;
+    anchor-name: --trophies;
+    top:0;
+    padding-top: 50px !important;
+    overflow-y:scroll;
+}
+
+#gameTrophies::before{
+    position:absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color:linen;
+    content: "Trophies";
+    font-family: Lekton;
+    color: #383333;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/notebook%20paper.png);
+    background-size: 10%;
+}
+
+#gameTrophies:hover{
+    height: 600px;
+    box-shadow: inset 5px 5px 5px var(--special-darker);
+}
+
+#gameTrophies > b, #gameTrophies > font, #gameTrophies > br, #gameTrophies > a{
+    display:none;
+}
+
+#contactLinks{
+    transition: box-shadow 0.3s ease-in-out, width 1s ease-in-out;
+    anchor-name: --contact;
+    width: 50px;
+    position: absolute;
+    position-anchor: --site;
+    position-area: bottom center;
+    right: 0px;
+    padding-left: 100px;
+    margin-top: 10px;
+}
+
+#contactLinks:hover{
+    width: 400px;
+    box-shadow: inset 5px 5px 5px var(--special-darker) ;
+}
+
+#contactLinks > b, #contactLinks > font, #contactLinks > br, #contactLinks > a{
+    display:none;
+}
+
+#contactLinks::before{
+    content: "Contact";
+    position: absolute;
+    left: -50px;
+    top: 30px;
+    width: 150px;
+    height: 30px;
+    background-color: linen;
+    transform: rotate(-90deg);
+    font-family: Lekton;
+    color: #383333;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/BGs/notebook%20paper.png);
+    background-size: 10%;
+}
+
+.wrapper{
+    max-height: 100px;
+    transition: max-height 1s ease-in-out;
+}
+
+#userHeader, #center{
+box-sizing: border-box;
+overflow-y: scroll;
+min-height: 0;
+max-height: 200px;
+}
+
+#gameTrophies, #userLookupPets{
+    box-sizing:border-box;
+    border: 4px solid var(--special);
+}
+
+#siteCharms, #siteTrophies,
+.userLookupLinks, #contactLinks{
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border: 4px solid var(--special);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#siteCharms, #siteTrophies,
+.userLookupLinks, #contactLinks,
+#gameTrophies, .userLookupPets,
+#center + p{
+    background-color:var(--special);
+}
+
+img{
+    border-radius:30px;
+    border: var(--lightblue);
+}
+
+#siteCharms, #siteTrophies, #contactLinks{
+    height: 130px;
+}
+
+.userLookupLinks{
+    height:100px;
+    padding-left: 100px !important;
+}
+
+#center{
+    max-height: 100% !important;
+    transition: max-height 1s ease-in-out, height 1s ease-in-out;
+    anchor-name: --main;
+    background-color: var(--special);
+    z-index: 2;
+    anchor-name: --main;
+    padding: 20px;
+}
+
+ /* .userLookupLinks, #siteCharms,
+ #siteTrophies, #gameTrophies,
+#contactLinks{
+    transition: min-width 1s ease-in-out max-height 1s ease-in-out;
+} */
+
+/* .userLookupPets:hover, */
+#gameTrophies:hover{
+max-height: 500px !important;
+overflow: scroll;
+}
+
+/* #gameTrophies div{
+    scale:0.5;
+} */
+
+/* #siteCharms:hover, #siteTrophies:hover,
+#contactLinks:hover
+.userLookupLinks:hover
+{
+
+} */
+
+
+.clear{display:none;}
+
+.userLookupPets{
+    box-sizing:border-box;
+    overflow: scroll !important;
+}
+
+.userLookupPets + table{
+    width: 100% !important;
+    max-width: 450px;
+}
+
+#radio-area{
+    position: absolute;
+    position-anchor: --main;
+    position-area: top right;
+    transform: translate(20px, -20px);
+}
+
+#radio{
+    width: 92px;
+    height: 67px;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/radio-unsplash-thesidelens.png);
+    filter: drop-shadow(-4px 4px 5px rgb(28, 28, 56, 30%));
+    background-size: contain;
+    transform: rotate(10deg);
+}
+
+#radioplayer{
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    transition: width 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* #playtape{
+    background-image:url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/tapes-unsplash-etiennegirardet.png);
+    background-size:contain;
+    width: 100px;
+    height: 75px;
+}
+
+#playtape::before{
+    content:"play";
+    font-family: monospace;
+    opacity: 0;
+}
+
+#playtape:hover::before{
+    opacity:1;
+} */
+
+#tapelabel{
+    display:block;
+    background-image: url(https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/tape-single.png);
+    background-size: cover;
+    width: 40px;
+    height: 25px;
+    transform: rotate(-20deg) translateY(20px);
+    font-family: monospace;
+    color: white;
+    line-height:25px;
+}
+
+#tapelabel:hover{
+    filter: drop-shadow(3px 3px 3px rgb(219, 227, 54));
+}
+
+#playtape{
+    opacity: 0;
+}
+
+#playtape:checked ~ #radioplayer{
+    opacity:1;
+    width: 200px;
+}
+
+.content, #center, #userHeader, #siteCharms, .userLookupLinks, #siteTrophies, #contactLinks, #gameTrophies, #center + p{
+    background-color: var(--nice-wood-brown);
+    background-image: url(https://www.transparenttextures.com/patterns/wood-pattern.png);
+}
+
+.content, #siteCharms, #contactLinks, .userLookupLinks, #siteTrophies, #gameTrophies, #center + p{
+    border: 4px solid var(--darker-brown);
+}
+
+#tablecover{
+    position: absolute;
+    position-anchor: --header;
+    position-area: bottom right;
+    height: 360px;
+    width: 350px;
+    top: 25px;
+    background-color: var(--nice-wood-brown);
+    background-image: url(https://www.transparenttextures.com/patterns/wood-pattern.png);
+    z-index: 1;
+}
+
+.tilt-right{ transform:rotate(5deg) !important; }
+
+.tilt-left{ transform: rotate(-12deg); }
+
+/* #radio:hover #radioplayer{
+    width: 200px;
+    opacity: 1;
+} */
+
+</style>
+
+<div id="tablecover"></div>
+
+<h1 id="icon">
+<img src = "https://file.garden/aSuzW6Q8vUmjy3BN/NPC/pics/kintsugi.png">
+</h1>
+<div class="wrapper">
+    <h2>Layout Experiment in Progress!</h2>
+    <p><a href="https://neopetsclassic.com/petcentral/">Back to Neopia</a></p>
+    <h3>Current Goals</h3>
+    <ul class="tilt-right">
+    <li>Read 1500 books to LeGuin
+        <ul>
+            <li>current: <i>1375</i></li>
+        </ul>
+    </li>
+    <li>Two new pets</li>
+        </ul>
+    <h3>Credits:</h3>
+    <ul class="tilt-left">
+        <li>Song: "Aulon Raid" by The Mountain Goats (of course)</li>
+        <li>Cassette Sounds: Zapsplat <a href="https://www.zapsplat.com/author/masterofdreams/?_gl=1*1003wkt*_up*MQ..*_ga*MTc4NDI5MzQ0Ny4xNzgzNTMzNDgz*_ga_901GQX73MS*czE3ODM1MzM0ODMkbzEkZzEkdDE3ODM1MzM0OTAkajUzJGwwJGgw">Master of Dreams</a></li>
+        <li>Cassette image: Unsplash by <a href="https://unsplash.com/@etiennegirardet">Etienne Girardet</a></li>
+        <li>Radio image: Unsplash by thesidelens</li>
+        <li>Floor tile image: Unsplash by <a href="https://unsplash.com/@samsolutt">samsolutt</a></li>
+        <li>Wood-grain pattern: from <a href="https://www.transparenttextures.com/wood-pattern.html">Transparent Textures</a></li>
+    </ul>
+</div>
+
+<div id="radio-area">
+<input type="checkbox" name="playtape" id="playtape" value="playtape">
+<label id="tapelabel" for="playtape">PLAY</label>
+<audio id="radioplayer" controls>
+        <source src="https://file.garden/aSuzW6Q8vUmjy3BN/NPC/sound/Aulon%20Raid%20with%20Tape%20FX-smaller.mp3" type="audio/mpeg">
+    </audio>
+<div id="radio">
+</div>
+</div>
