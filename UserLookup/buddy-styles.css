@@ -478,9 +478,10 @@ overflow: scroll;
     position: absolute;
     position-anchor: --main;
     position-area: top right;
-    transform: translate(20px, -20px);
+    transform: translate(-400px, 0);
     perspective: 800px;
     transform-style: preserve-3d;
+    z-index: 10;
 }
 
 #radio{
@@ -510,7 +511,7 @@ overflow: scroll;
     font-family: monospace;
     color: white;
     line-height:25px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 #tapelabel:hover{
@@ -563,7 +564,7 @@ background-image:none;}
     background-size: cover;
     width: 100px;
     height: 120px;
-    transform: translate(-350px, 370px);
+    transform: translate(300px, 500px);
     position: absolute;
     position-anchor: --header;
     position-area: left;
@@ -577,7 +578,7 @@ background-image:none;}
 }
 
 #goodbye:hover{
-    transform: translate(-350px, 370px) rotate(-20deg);
+    transform: translate(300px, 500px) rotate(-20deg);
 }
 
 #goodbye:hover a{
@@ -616,7 +617,7 @@ background-image:none;}
 }
 
 #guestbook:hover{
-    transform: rotate(-10deg) translate(-395px, 10px);
+    transform: rotate(-6deg) translate(-395px, 10px);
 }
 
 #guestbook:hover::before{
